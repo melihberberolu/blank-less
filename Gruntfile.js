@@ -1,4 +1,5 @@
 var config = {
+  // template directory
   template: ''
 };
 

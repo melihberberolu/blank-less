@@ -1,6 +1,6 @@
-<?php include("_header.inc") ?>
+<?php include("_head.inc") ?>
 
-<?php include("_nav-header.inc") ?>
+<?php include("_nav.inc") ?>
 
 
 
