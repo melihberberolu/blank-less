@@ -1,0 +1,409 @@
+/////////////
+// loading //
+/////////////
+.loading(@width: 36px, @height: 36px, @color:red, @duration: 0.7s, @bg-color:rgba(0,0,0,.1), @border: 3px) {
+  &:after {
+    content: "";
+    margin: 0;
+    font-size: 0.4em;
+    position: absolute;
+    text-indent: -9999em;
+    border-top: @border solid rgba(0, 0, 0, 0.1);
+    border-right: @border solid rgba(0, 0, 0, 0.1);
+    border-bottom: @border solid rgba(0, 0, 0, 0.1);
+    border-left: @border solid @color;
+    .prefix(animation, spin @duration infinite linear);
+    border-radius: 50%;
+    width: @width;
+    height: @height;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
+
+/////////
+// dim //
+/////////
+.dim(@color: rgba(255,255,255,0.6)) {
+  position: relative;
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255,255,255,0.6);
+    z-index: 110;
+  }
+}
+
+
+
+
+
+
+//=========================================
+//              BUTTON THEMES             =
+//=========================================
+.button-theme(@text-color; @bg-color; @border-color; @text-hover-color; @bg-hover-color; @border-hover-color; @text-active-color; @bg-active-color; @border-active-color ) {
+  color: @text-color;
+  background-color: @bg-color;
+  border-color: @border-color;
+  &.hover,
+  &:hover {
+    color: @text-hover-color;
+    background-color: @bg-hover-color;
+    border-color: @border-hover-color;
+  }
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    // color: @text-active-color;
+    background-color: @bg-active-color;
+    border-color: @border-active-color;
+  }
+}
+
+.button-darken(@color) {
+  color: #fff;
+  background-color: @color;
+  &.hover,
+  &:hover {
+    background-color: darken(@color, 20%);
+  }
+  &.focus,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: lighten(@color, 20%);
+  }
+}
+
+.button-lighten(@color) {
+  color: #fff;
+  background-color: @color;
+  &.hover,
+  &:hover {
+    background-color: lighten(@color, 20%);
+  }
+  &.focus,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: darken(@color, 20%);
+  }
+}
+//--------  End of button themes  ---------//
+
+
+
+////////////
+// prefix //
+////////////
+.prefix(@property, @value) {
+  -webkit-@{property}: @value;
+     -moz-@{property}: @value;
+      -ms-@{property}: @value;
+       -o-@{property}: @value;
+          @{property}: @value;
+}
+
+
+
+////////////////
+//transitions //
+////////////////
+.trans(@duration :0.1s ) {
+  .prefix(transition, all @duration linear);
+}
+.transition(@value) {
+  .prefix(transition, @value);
+}
+.trans-delay(@delay1 :0.1s) {
+  .prefix(transition-delay, @delay1);
+}
+///////////////
+// animation //
+///////////////
+.anim-delay(@delay1 :0.1s) {
+  .prefix(animation-duration, @trans1 ease-out);
+}
+
+.animation(@keyframe_name, @duration, @ease) {
+  .prefix(animation, @keyframe_name @duration @ease);
+}
+
+/////////////
+//clearfix //
+/////////////
+.clear-after() {
+  &:after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    clear:both;
+  }
+}
+.clear-before() {
+  &:before {
+    content: "";
+    display: block;
+    visibility: hidden;
+    clear:both;
+  }
+}
+.clearfix() {
+  .clear-after();
+  .clear-before();
+}
+
+//////////////////////
+// Placeholder text //
+//////////////////////
+.placeholder(@color: #BFBFBF) {
+  &:-moz-placeholder            { color: @color; }
+  &::-moz-placeholder           { color: @color; }
+  &:-ms-input-placeholder       { color: @color; }
+  &::-webkit-input-placeholder  { color: @color; }
+}
+
+
+
+
+.opacity(@opacity) {
+  opacity: @opacity;
+  @opacity-ie: (@opacity * 100);
+  filter: ~"alpha(opacity=@{opacity-ie})";
+}
+
+
+
+
+
+.selected(@color, @background) {
+  &::selection {
+    background: @background;
+    color: @color;
+  }
+  &::-moz-selection {
+    background: @background;
+    color: @color;
+  }
+}
+
+
+
+
+
+/////////
+//font //
+/////////
+.f1() { font-family: @font1; }
+.f2() { font-family: @font2; }
+.f3() { font-family: @font3; }
+.f4() { font-family: @font4; }
+.f5() { font-family: @font5; }
+
+
+
+
+////////////////
+// custom css //
+////////////////
+.mp0() {
+  margin: 0;
+  padding: 0;
+}
+.btn() {
+  background-color: transparent;
+  border:0;
+  outline:none;
+  margin: 0;
+  padding: 0;
+}
+.tr() {
+  border:0;
+  outline:none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+.full() {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.absolute() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+
+
+
+
+
+
+///////////////
+// Transform //
+///////////////
+.rotate(@degrees) {
+  .prefix(transform, rotate(@degrees));;
+}
+
+.scale(@ratio) {
+  .prefix(transform, scale(@ratio));
+}
+
+.translate(@x; @y) {
+  .prefix(transform, translate(@x, @y));
+}
+
+.skew(@x; @y) {
+  .prefix(transform, skew(@x, @y));
+}
+
+.translate3d(@x; @y; @z) {
+  .prefix(transform, translate3d(@x, @y, @z));
+}
+
+.rotateX(@degrees) {
+  .prefix(transform, rotateX(@degrees));
+}
+
+.rotateY(@degrees) {
+  .prefix(transform, rotateY(@degrees));
+}
+
+
+
+
+//===================================
+//              FLEXBOX             =
+//===================================
+
+// flex container
+.flex-display() {
+  display: -webkit-box;
+  display:    -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.flex-display-inline() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+}
+.flex-direction(@value) {
+  -webkit-flex-direction: @value;
+      -ms-flex-direction: @value;
+          flex-direction: @value;
+}
+.flex-wrap(@value) {
+  -webkit-flex-wrap: @value;
+      -ms-flex-wrap: @value;
+          flex-wrap: @value;
+}
+.flex-justify-content(@value) {
+  -webkit-justify-content: @value;
+            -ms-flex-pack: @value;
+          justify-content: @value;
+}
+.flex-align-items(@value) {
+  -webkit-align-items: @value;
+    -webkit-box-align: @value;
+       -ms-flex-align: @value;
+       -moz-box-align: @value;
+          align-items: @value;
+}
+.flex-align-content(@value) {
+  -webkit-align-content: @value;
+     -ms-flex-line-pack: @value;
+          align-content: @value;
+}
+
+// flex items
+.flex(@value) {
+  -webkit-box-flex: @value;
+     -moz-box-flex: @value;
+      -webkit-flex: @value;
+          -ms-flex: @value;
+              flex: @value;
+}
+.flex-order(@value) {
+  -webkit-box-ordinal-group: @value;
+     -moz-box-ordinal-group: @value;
+             -ms-flex-order: @value;
+              -webkit-order: @value;
+                      order: @value;
+}
+.flex-align-self(@value) {
+  -ms-flex-item-align: auto;
+   -webkit-align-self: auto;
+           align-self: auto;
+}
+//--------  End of flexbox  ---------//
+
+
+
+//==================================
+//              COLUMN             =
+//==================================
+.columns(@args) {
+    -webkit-columns: @args;
+    -moz-columns: @args;
+    columns: @args;
+}
+.column-count(@count) {
+    -webkit-column-count: @count;
+    -moz-column-count: @count;
+    column-count: @count;
+}
+.column-gap(@gap) {
+    -webkit-column-gap: @gap;
+    -moz-column-gap: @gap;
+    column-gap: @gap;
+}
+.column-width(@width) {
+    -webkit-column-width: @width;
+    -moz-column-width: @width;
+    column-width: @width;
+}
+.column-rule(@args) {
+    -webkit-column-rule: @args;
+    -moz-column-rule: @args;
+    column-rule: @args;
+}
+//--------  End of column  ---------//
+
+
+
+
+
+///////////////
+// selection //
+///////////////
+.selection(@text-color, @background-color) {
+  &::-moz-selection {color: @text-color; background-color: @background-color;}
+  &::selection {color: @text-color; background-color: @background-color;}
+}
+
+
+
+
+
+

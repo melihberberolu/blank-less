@@ -1,0 +1,50 @@
+{
+  "name": "blank-less",
+  "version": "1",
+  "homepage": "https://github.com/eomerx/blank-less",
+  "authors": [
+    "Omer Aslanbakan"
+  ],
+  "description": "Blank template",
+  "moduleType": [
+    "amd",
+    "globals"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.11.2",
+    "modernizer": "~2.8.2",
+    "html5shiv": "~3.7.2",
+    "fontawesome": "~4.3.0",
+    "bootstrap": "~3.3.4",
+    "webfontloader": "~1.5.15"
+  },
+  "otherDependencies": {
+    "magnific-popup": "~1.0.0",
+    "handlebars": "~3.0.0",
+    "select2": "~3.5.2",
+    "requirejs": "~2.1.16",
+    "jquery-ui": "~1.11.4",
+    "iCheck": "~1.0.2",
+    "history.js": "~1.8.0",
+    "unveil": "~1.3.0",
+    "pjax": "~0.2.1",
+    "owl-carousel2": "*",
+    "flexslider": "*",
+    "js-url": "~1.8.6",
+    "imagesloaded": "~3.1.8",
+    "form.validation": "*"
+  },
+  "requirejsDependencies": {
+    "require-css": "~0.1.8",
+    "requirejs-handlebars": "~0.1.1"
+  }
+}
