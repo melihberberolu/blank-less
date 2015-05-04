@@ -4,18 +4,11 @@ var config = {
 
 module.exports = function(grunt) {
 
-  /**
-    cmd /c npm install grunt -cli --save-dev && npm install grunt-contrib-concat --save-dev && npm install grunt -cli --save-dev && npm install grunt-contrib-concat --save-dev && npm install grunt-contrib-jshint --save-dev && npm install grunt-contrib-uglify --save-dev && npm install grunt-contrib-watch --save-dev && npm install grunt-contrib-less --save-dev && npm install grunt-autoprefixer --save-dev && npm install grunt-contrib-copy --save-dev && npm install grunt-banner --save-dev && npm install grunt-contrib-htmlmin --save-dev && npm install grunt-imageoptim --save-dev && npm install grunt-shell --save-dev
-   */
-
 
   // 1. All configuration goes here
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-
-    // banner
-    banner: '\/** \n      Proje \n      http:\/\/www.proje.com \n      Ömer Aslanbakan \n      http:\/\/twitter.com\/Eomerx \n      omer@venividitech.com \n *\/',
 
 
     // Configurable paths
@@ -436,7 +429,7 @@ module.exports = function(grunt) {
       npm install grunt-banner --save-dev
       grunt.loadNpmTasks('grunt-banner');
     */
-    usebanner: {
+/*    usebanner: {
       st: {
         options: {
           position: 'top',
@@ -451,7 +444,7 @@ module.exports = function(grunt) {
           ]
         }
       }
-    },
+    },*/
 
 
 
@@ -491,7 +484,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-contrib-handlebars');
-  grunt.loadNpmTasks('grunt-banner');
   grunt.loadNpmTasks('grunt-shell');
   // grunt.loadNpmTasks('grunt-browser-sync');
   // grunt.loadNpmTasks('grunt-sanitize');
@@ -500,6 +492,6 @@ module.exports = function(grunt) {
   // grunt.loadNpmTasks('grunt-contrib-copy');
   // grunt.loadNpmTasks('grunt-contrib-htmlmin');
   // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-  grunt.registerTask('default', ['less', 'usebanner', 'concat', 'uglify']);
-  grunt.registerTask('0000-default', ['concat', 'uglify', 'less', 'usebanner']);
+  grunt.registerTask('default', ['less', 'concat', 'uglify']);
+  grunt.registerTask('0000-default', ['concat', 'uglify', 'less']);
 };
