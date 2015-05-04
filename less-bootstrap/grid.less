@@ -46,15 +46,11 @@
 
 .row {
   .make-row();
-
   // paddless row
-  .row {
-    .make-row();
-    &.row-paddless {
-      > [class^=col-] {
-        padding-left: 0;
-        padding-right: 0;
-      }
+  &.row-paddless {
+    > [class^=col-] {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }
