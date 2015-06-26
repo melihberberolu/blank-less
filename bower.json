@@ -46,5 +46,15 @@
   "requirejsDependencies": {
     "require-css": "~0.1.8",
     "requirejs-handlebars": "~0.1.1"
+  },
+  "AngularDependencies": {
+    "angular": "~1.4.1",
+    "angular-bootstrap": "~0.13.0",
+    "angular-route": "~1.4.1",
+    "angular-animate": "~1.4.1",
+    "angular-cookies": "~1.4.1",
+    "angular-loader": "~1.4.1",
+    "angular-resource": "~1.4.1",
+    "angular-sanitize": "~1.4.1"
   }
 }
