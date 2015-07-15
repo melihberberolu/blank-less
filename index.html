@@ -59,14 +59,11 @@
   <script type="text/javascript" src="http://127.0.0.1:35729/livereload.js"></script>
 
 </head>
-
 <body>
 
 
-
-
-
   <div class="container">
+
 
     <!-- Navbar
     ================================================== -->
@@ -78,97 +75,91 @@
           </div>
 
           <div class="bs-component">
-            <div class="navbar navbar-default">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Brand</a>
+            <nav class="navbar navbar-default">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">Brand</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                  </form>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Link</a></li>
+                  </ul>
+                </div>
               </div>
-              <div class="navbar-collapse collapse navbar-responsive-collapse">
-                <ul class="nav navbar-nav">
-                  <li class="active"><a href="#">Active</a></li>
-                  <li><a href="#">Link</a></li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li class="divider"></li>
-                      <li class="dropdown-header">Dropdown header</li>
-                      <li><a href="#">Separated link</a></li>
-                      <li><a href="#">One more separated link</a></li>
-                    </ul>
-                  </li>
-                </ul>
-                <form class="navbar-form navbar-left">
-                  <input type="text" class="form-control col-lg-8" placeholder="Search">
-                </form>
-                <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#">Link</a></li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li class="divider"></li>
-                      <li><a href="#">Separated link</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            </nav>
           </div>
 
           <div class="bs-component">
-            <div class="navbar navbar-inverse">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Brand</a>
+            <nav class="navbar navbar-inverse">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">Brand</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                  </form>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Link</a></li>
+                  </ul>
+                </div>
               </div>
-              <div class="navbar-collapse collapse navbar-inverse-collapse">
-                <ul class="nav navbar-nav">
-                  <li class="active"><a href="#">Active</a></li>
-                  <li><a href="#">Link</a></li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li class="divider"></li>
-                      <li class="dropdown-header">Dropdown header</li>
-                      <li><a href="#">Separated link</a></li>
-                      <li><a href="#">One more separated link</a></li>
-                    </ul>
-                  </li>
-                </ul>
-                <form class="navbar-form navbar-left">
-                  <input type="text" class="form-control col-lg-8" placeholder="Search">
-                </form>
-                <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#">Link</a></li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li class="divider"></li>
-                      <li><a href="#">Separated link</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            </nav>
           </div><!-- /example -->
 
         </div>
@@ -357,7 +348,7 @@
       <!-- Headings -->
 
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-4">
           <div class="bs-component">
             <h1>Heading 1</h1>
             <h2>Heading 2</h2>
@@ -368,7 +359,7 @@
             <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-4">
           <div class="bs-component">
             <h2>Example body text</h2>
             <p>Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
@@ -379,7 +370,7 @@
           </div>
 
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-4">
           <div class="bs-component">
             <h2>Emphasis classes</h2>
             <p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
@@ -427,7 +418,7 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="page-header">
-            <h1>Tables</h1>
+            <h1 id="tables">Tables</h1>
           </div>
 
           <div class="bs-component">
@@ -569,8 +560,8 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <div class="col-lg-10">
-                    <button class="btn btn-default">Cancel</button>
+                  <div class="col-lg-10 col-lg-offset-2">
+                    <button type="reset" class="btn btn-default">Cancel</button>
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </div>
                 </div>
@@ -578,7 +569,7 @@
             </form>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-4 col-lg-offset-1">
 
             <form class="bs-component">
               <div class="form-group">
@@ -650,7 +641,7 @@
       </div>
 
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-4">
           <h2 id="nav-tabs">Tabs</h2>
           <div class="bs-component">
             <ul class="nav nav-tabs">
@@ -684,7 +675,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-4">
           <h2 id="nav-pills">Pills</h2>
           <div class="bs-component">
             <ul class="nav nav-pills">
@@ -726,7 +717,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-4">
           <h2 id="nav-breadcrumbs">Breadcrumbs</h2>
           <div class="bs-component">
             <ul class="breadcrumb">
@@ -750,7 +741,7 @@
 
 
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-4">
           <h2 id="pagination">Pagination</h2>
           <div class="bs-component">
             <ul class="pagination">
@@ -782,7 +773,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-4">
           <h2 id="pager">Pager</h2>
           <div class="bs-component">
             <ul class="pager">
@@ -796,7 +787,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-4">
 
         </div>
       </div>
@@ -818,7 +809,7 @@
         <div class="col-lg-12">
           <h2>Alerts</h2>
           <div class="bs-component">
-            <div class="alert alert-dismissable alert-warning">
+            <div class="alert alert-dismissible alert-warning">
               <button type="button" class="close" data-dismiss="alert">&times;</button>
               <h4>Warning!</h4>
               <p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, <a href="#" class="alert-link">vel scelerisque nisl consectetur et</a>.</p>
@@ -827,25 +818,25 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-4">
           <div class="bs-component">
-            <div class="alert alert-dismissable alert-danger">
+            <div class="alert alert-dismissible alert-danger">
               <button type="button" class="close" data-dismiss="alert">&times;</button>
               <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-4">
           <div class="bs-component">
-            <div class="alert alert-dismissable alert-success">
+            <div class="alert alert-dismissible alert-success">
               <button type="button" class="close" data-dismiss="alert">&times;</button>
               <strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-4">
           <div class="bs-component">
-            <div class="alert alert-dismissable alert-info">
+            <div class="alert alert-dismissible alert-info">
               <button type="button" class="close" data-dismiss="alert">&times;</button>
               <strong>Heads up!</strong> This <a href="#" class="alert-link">alert needs your attention</a>, but it's not super important.
             </div>
@@ -853,7 +844,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-4">
           <h2>Labels</h2>
           <div class="bs-component" style="margin-bottom: 40px;">
             <span class="label label-default">Default</span>
@@ -864,7 +855,7 @@
             <span class="label label-info">Info</span>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-4">
           <h2>Badges</h2>
           <div class="bs-component">
             <ul class="nav nav-pills">
@@ -977,7 +968,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-4">
           <div class="bs-component">
             <ul class="list-group">
               <li class="list-group-item">
@@ -995,7 +986,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-4">
           <div class="bs-component">
             <div class="list-group">
               <a href="#" class="list-group-item active">
@@ -1008,7 +999,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-4">
           <div class="bs-component">
             <div class="list-group">
               <a href="#" class="list-group-item">
@@ -1031,7 +1022,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-4">
           <div class="bs-component">
             <div class="panel panel-default">
               <div class="panel-body">
@@ -1054,7 +1045,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-4">
           <div class="bs-component">
             <div class="panel panel-primary">
               <div class="panel-heading">
@@ -1084,7 +1075,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-4">
           <div class="bs-component">
             <div class="panel panel-danger">
               <div class="panel-heading">
@@ -1113,21 +1104,21 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-4">
           <div class="bs-component">
             <div class="well">
               Look, I'm in a well!
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-4">
           <div class="bs-component">
             <div class="well well-sm">
               Look, I'm in a small well!
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-4">
           <div class="bs-component">
             <div class="well well-lg">
               Look, I'm in a large well!
@@ -1144,12 +1135,34 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="page-header">
-            <h1>Dialogs</h1>
+            <h1 id="dialogs">Dialogs</h1>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-6 mb50">
+        <div class="col-lg-6">
+          <h2>Modals</h2>
+          <div class="bs-component">
+            <div class="modal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">Modal title</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>One fine body…</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
           <h2>Popovers</h2>
           <div class="bs-component">
             <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Left</button>
@@ -1161,8 +1174,6 @@
 
             <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Right</button>
           </div>
-        </div>
-        <div class="col-lg-6 mb50">
           <h2>Tooltips</h2>
           <div class="bs-component">
             <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="" data-original-title="Tooltip on left">Left</button>
@@ -1177,24 +1188,78 @@
       </div>
     </div>
 
-    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <div id="source-modal" class="modal fade">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Source Code</h4>
+          </div>
+          <div class="modal-body">
+            <pre></pre>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
 
+  <script type="text/javascript">
+    $("document").ready(function() {
+      (function(){
 
+        $("a[href='#']").click(function(e) {
+          e.preventDefault();
+        });
 
+        var $button = $("<div id='source-button' class='btn btn-primary btn-xs'>&lt; &gt;</div>").click(function(){
+          var html = $(this).parent().html();
+          html = cleanSource(html);
+          $("#source-modal pre").text(html);
+          $("#source-modal").modal();
+        });
 
+        $('.bs-component [data-toggle="popover"]').popover();
+        $('.bs-component [data-toggle="tooltip"]').tooltip();
 
+        $(".bs-component").hover(function(){
+          $(this).append($button);
+          $button.show();
+        }, function(){
+          $button.hide();
+        });
 
+        function cleanSource(html) {
+          var lines = html.split(/\n/);
 
+          lines.shift();
+          lines.splice(-1, 1);
 
+          var indentSize = lines[0].length - lines[0].trim().length,
+              re = new RegExp(" {" + indentSize + "}");
 
+          lines = lines.map(function(line){
+            if (line.match(re)) {
+              line = line.substring(indentSize);
+            }
 
+            return line;
+          });
 
+          lines = lines.join("\n");
 
+          return lines;
+        }
 
+      })();
+    }); //document.ready
+  </script>
 
+  <style type="text/css">
+    .page-header h1{font-size:4em}.bs-docs-section{margin-top:8em}.bs-component{position:relative}.bs-component .modal{position:relative;top:auto;right:auto;left:auto;bottom:auto;z-index:1;display:block}.bs-component .modal-dialog{width:90%}.bs-component .popover{position:relative;display:inline-block;width:220px;margin:20px}#source-button{position:absolute;top:0;right:0;z-index:100;font-weight:700}.nav-tabs{margin-bottom:15px}.progress{margin-bottom:10px}footer{margin:5em 0}footer li{float:left;margin-right:1.5em;margin-bottom:1.5em}footer p{clear:left;margin-bottom:0}.splash{padding:9em 0 2em;background-color:#141d27;background-image:url(../img/bg.jpg);background-size:cover;background-attachment:fixed;color:#fff;text-align:center}.splash .logo{width:160px}.splash h1{font-size:3em}.splash #social{margin:2em 0}.splash .alert{margin:2em 0}.section-tout{padding:4em 0 3em;border-bottom:1px solid rgba(0,0,0,.05);background-color:#eaf1f1}.section-tout .fa{margin-right:.5em}.section-tout p{margin-bottom:3em}.section-preview{padding:4em 0 4em}.section-preview .preview{margin-bottom:4em;background-color:#eaf1f1}.section-preview .preview .image{position:relative}.section-preview .preview .image:before{box-shadow:inset 0 0 0 1px rgba(0,0,0,.1);position:absolute;top:0;left:0;width:100%;height:100%;content:"";pointer-events:none}.section-preview .preview .options{padding:1em 2em 2em;border:1px solid rgba(0,0,0,.05);border-top:none;text-align:center}.section-preview .preview .options p{margin-bottom:2em}.section-preview .dropdown-menu{text-align:left}.section-preview .lead{margin-bottom:2em}@media (max-width:767px){.section-preview .image img{width:100%}}.sponsor{text-align:center}.sponsor a:hover{text-decoration:none}@media (max-width:767px){.splash{padding-top:4em}.splash .logo{width:100px}.splash h1{font-size:2em}#banner{margin-bottom:2em;text-align:center}}
+  </style>
 
 
 </body>
+
 </html>
