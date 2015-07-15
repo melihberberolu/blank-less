@@ -472,6 +472,9 @@ module.exports = function(grunt) {
       delete_all_compressed_images: {
         command: 'cd <%= config.template %>img && del *.min.jpg && del *.min.png'
       },
+      http_server: {
+        command: 'http-server -o'
+      }
     }
 
   });
