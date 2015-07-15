@@ -223,7 +223,7 @@ browser = {
   iphone         : /iPhone/gi.test(nua),
   ipad           : /iPad/gi.test(nua),
   android        : /Android/gi.test(nua),
-  androidVersion : this.android ? nua.match(/Android ([0-9\.]+);/)[1] : "",
+  androidVersion : /Android/gi.test(nua) ? nua.match(/Android ([0-9\.]+);/)[1] : "",
   ie             : /MSIE/gi.test(nua),
   ie11           : /MSIE 11/gi.test(nua),
   ie10           : /MSIE 10/gi.test(nua),
@@ -235,9 +235,9 @@ browser = {
   ucBrowser      : /UCBrowser/gi.test(nua),
   x64            : /WOW64/gi.test(nua),
   x86            : /WOW86/gi.test(nua),
-  tablet         : $(window).width() >= 768 && this.mobile,
-  desktop        : $(window).width() >= 768 && !this.mobile,
-  phone          : $(window).width() < 768 && this.mobile,
+  tablet         : $(window).width() >= 768 && /Mobile/gi.test(nua),
+  desktop        : $(window).width() >= 768 && !/Mobile/gi.test(nua),
+  phone          : $(window).width() < 768 && /Mobile/gi.test(nua),
 };
 window.browser = browser;
 console.groupCollapsed("browser variables");
