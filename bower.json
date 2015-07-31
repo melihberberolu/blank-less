@@ -20,41 +20,43 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "1.11.2",
-    "modernizer": "~2.8.2",
-    "html5shiv": "~3.7.2",
-    "fontawesome": "~4.3.0",
-    "bootstrap": "~3.3.4",
-    "webfontloader": "~1.5.15"
+    "jquery": "",
+    "modernizer": "",
+    "html5shiv": "",
+    "fontawesome": "",
+    "bootstrap": "",
+    "handlebars": "",
+    "webfontloader": ""
   },
   "otherDependencies": {
-    "magnific-popup": "~1.0.0",
-    "handlebars": "~3.0.0",
-    "select2": "~3.5.2",
-    "requirejs": "~2.1.16",
-    "jquery-ui": "~1.11.4",
-    "iCheck": "~1.0.2",
-    "history.js": "~1.8.0",
-    "unveil": "~1.3.0",
-    "pjax": "~0.2.1",
-    "owl-carousel2": "*",
-    "flexslider": "*",
-    "js-url": "~1.8.6",
-    "imagesloaded": "~3.1.8",
-    "form.validation": "*"
+    "magnific-popup": "",
+    "select2": "",
+    "requirejs": "",
+    "jquery-ui": "",
+    "iCheck": "",
+    "history.js": "",
+    "unveil": "",
+    "pjax": "",
+    "owl-carousel2": "",
+    "flexslider": "",
+    "js-url": "",
+    "imagesloaded": "",
+    "form.validation": ""
   },
   "requirejsDependencies": {
-    "require-css": "~0.1.8",
-    "requirejs-handlebars": "~0.1.1"
+    "require-css": "",
+    "requirejs-handlebars": ""
   },
   "AngularDependencies": {
-    "angular": "~1.4.1",
-    "angular-bootstrap": "~0.13.0",
-    "angular-route": "~1.4.1",
-    "angular-animate": "~1.4.1",
-    "angular-cookies": "~1.4.1",
-    "angular-loader": "~1.4.1",
-    "angular-resource": "~1.4.1",
-    "angular-sanitize": "~1.4.1"
+    "angular": "",
+    "angular-bootstrap": "",
+    "angular-route": "",
+    "angular-animate": "",
+    "angular-cookies": "",
+    "angular-loader": "",
+    "angular-resource": "",
+    "angular-sanitize": ""
+  },
+  "devDependencies": {
   }
 }
