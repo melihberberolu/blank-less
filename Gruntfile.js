@@ -304,6 +304,32 @@ module.exports = function(grunt) {
 
 
 
+    /////////////
+    // css min //
+    /////////////
+    /*
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    npm install grunt-contrib-cssmin --save-dev
+     */
+    cssmin: {
+      options: {
+        shorthandCompacting: false,
+        roundingPrecision: -1
+      },
+      target: {
+        files: {
+          'site/templates/css/master.css': [
+            'site/templates/css/font-awesome.css',
+            'site/templates/css/bootstrap.css',
+            'site/templates/css/style.css'
+          ]
+        }
+      }
+    }
+
+
+
+
     /*
       npm install grunt-contrib-requirejs --save-dev
       grunt.loadNpmTasks('grunt-contrib-requirejs');
@@ -311,10 +337,12 @@ module.exports = function(grunt) {
     requirejs: {
       compile: {
         options: {
+          name: "app",
           baseUrl: "js",
           mainConfigFile: "js/config.js",
-          // name: "path/to/almond", // assumes a production build using almond
-          out: "js/require-built.js"
+          out: "js/require-master.js",
+          include: "lib/require.min.js",
+          preserveLicenseComments: false
         }
       }
     },
@@ -371,55 +399,6 @@ module.exports = function(grunt) {
 
 
 
-    //////////////////
-    // browser sync //
-    //////////////////
-    /*
-      npm install grunt-browser-sync --save-dev
-      grunt.loadNpmTasks('grunt-browser-sync');
-    */
-    // browserSync: {
-    //   bsFiles: {
-    //     src: [
-    //       '.htaccess',
-    //       '*.html',
-    //       '*.php',
-    //       '*.inc',
-    //       '*.js',
-    //       '*.jpg',
-    //       '*.png',
-    //       '*.gif',
-    //       '*.svg',
-    //       '*.eot',
-    //       '*.woff',
-    //       '<%= config.template %>**/*.html',
-    //       '<%= config.template %>**/*.php',
-    //       '<%= config.template %>**/*.inc',
-    //       '<%= config.template %>**/*.js',
-    //       '<%= config.template %>**/*.jpg',
-    //       '<%= config.template %>**/*.png',
-    //       '<%= config.template %>**/*.gif',
-    //       '<%= config.template %>**/*.svg',
-    //       '<%= config.template %>**/*.eot',
-    //       '<%= config.template %>**/*.woff',
-    //     ]
-    //   },
-    //   options: {
-    //     server: {
-    //       baseDir: "./"
-    //     }
-    //   }
-    // },
-    // browserSync: {
-    //   dev: {
-    //     bsFiles: {
-    //       src: 'assets/css/style.css'
-    //     },
-    //     options: {
-    //       proxy: "local.dev"
-    //     }
-    //   }
-    // }
 
 
 
@@ -488,14 +467,14 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-contrib-handlebars');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-shell');
-  // grunt.loadNpmTasks('grunt-browser-sync');
-  // grunt.loadNpmTasks('grunt-sanitize');
   // grunt.loadNpmTasks('grunt-contrib-connect');
   // grunt.loadNpmTasks('grunt-autoprefixer');
   // grunt.loadNpmTasks('grunt-contrib-copy');
   // grunt.loadNpmTasks('grunt-contrib-htmlmin');
   // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
   grunt.registerTask('default', ['less', 'concat', 'uglify']);
+  grunt.registerTask('compress', ['concat:master', 'uglify:masterjs', 'cssmin']);
   grunt.registerTask('0000-default', ['concat', 'uglify', 'less']);
 };
