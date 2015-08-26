@@ -23,7 +23,7 @@
     "jquery": "latest",
     "modernizer": "latest",
     "html5shiv": "latest",
-    "webfontloader": "latest",
+    "webfontloader": "latest"
   },
   "otherDependencies": {
     "fontawesome": "latest",

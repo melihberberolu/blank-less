@@ -325,7 +325,7 @@ module.exports = function(grunt) {
           ]
         }
       }
-    }
+    },
 
 
 
@@ -369,63 +369,6 @@ module.exports = function(grunt) {
 
 
 
-    /////////////
-    // connect //
-    /////////////
-    /*
-    grunt.loadNpmTasks('grunt-contrib-connect');
-    npm install grunt-contrib-connect --save-dev
-     */
-/*    connect: {
-      options: {
-        port: 9000,
-        open: true,
-        livereload: 35729,
-        // Change this to '0.0.0.0' to access the server from outside
-        hostname: 'localhost',
-      },
-      livereload: {
-        options: {
-          middleware: function(connect) {
-            return [
-              // connect.static('.tmp'),
-              // connect().use('/bower_components', connect.static('./bower_components')),
-              // connect.static(config.template)
-            ];
-          }
-        }
-      }
-    },*/
-
-
-
-
-
-
-    ////////////
-    // banner //
-    ////////////
-    /*
-      npm install grunt-banner --save-dev
-      grunt.loadNpmTasks('grunt-banner');
-    */
-/*    usebanner: {
-      st: {
-        options: {
-          position: 'top',
-          banner: '<%= banner %>'
-        },
-        files: {
-          src: [
-            '<%= config.template %>css/style.css',
-            '<%= config.template %>css/bootstrap.css',
-            '<%= config.template %>js/master.js',
-            '<%= config.template %>css/master.css'
-          ]
-        }
-      }
-    },*/
-
 
 
     ////////////
@@ -453,6 +396,9 @@ module.exports = function(grunt) {
       },
       http_server: {
         command: 'http-server -o'
+      },
+      livereload_http_server: {
+        command: 'lr-http-server'
       }
     }
 
@@ -465,16 +411,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-contrib-handlebars');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-shell');
-  // grunt.loadNpmTasks('grunt-contrib-connect');
-  // grunt.loadNpmTasks('grunt-autoprefixer');
-  // grunt.loadNpmTasks('grunt-contrib-copy');
-  // grunt.loadNpmTasks('grunt-contrib-htmlmin');
-  // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
+
   grunt.registerTask('default', ['less', 'concat', 'uglify']);
-  grunt.registerTask('compress', ['concat:master', 'uglify:masterjs', 'cssmin']);
   grunt.registerTask('0000-default', ['concat', 'uglify', 'less']);
 };
