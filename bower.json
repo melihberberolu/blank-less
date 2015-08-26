@@ -42,7 +42,9 @@
     "imagesloaded": "latest",
     "jquery-pjax": "latest",
     "form.validation": "latest",
-    "lodash": "latest"
+    "lodash": "latest",
+    "taffy": "*"
+
   },
   "requirejsDependencies": {
     "requirejs": "latest",
