@@ -3,12 +3,36 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta charset="utf-8">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <meta name="robots" content="noindex">
-  <meta name="googlebot" content="noindex">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- seo -->
+  <meta name="author" content="">
+  <meta name="copyright" content="" />
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- google plus -->
+  <link rel="author" href=""/>
+  <link rel="publisher" href=""/>
+  <!-- open graph & facebook -->
+  <meta property="og:title" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr">
+  <meta property="og:site_name" content="">
+  <meta property="og:image" content="">
+  <meta property="og:description" content="" >
+  <meta property="og:url" content="" />
+  <meta property="fb:page_id" content="" />
+  <!-- twitter -->
+  <meta property="twitter:account_id" content="" />
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
 
   <!-- favicon -->
   <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
@@ -27,13 +51,10 @@
 
   <title>Blank</title>
 
-  <!--[if lt IE 9]>
+  <!--[if lt IE 10]>
     <script type="text/javascript" src="js/html5shiv.js"></script>
-    <script type="text/javascript" src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    <script type="text/javascript" src="js/old-browsers.js"></script>
+    <script type="text/javascript" src="js/modernizr-2.8.3.js"></script>
   <![endif]-->
-
-  <!-- fonts -->
 
   <?php include("_scripts.inc"); ?>
 
