@@ -43,7 +43,9 @@
     "jquery-pjax": "latest",
     "form.validation": "latest",
     "lodash": "latest",
-    "taffy": "*"
+    "taffy": "*",
+    "scriptjs": "latest",
+    "underscore": "latest"
 
   },
   "requirejsDependencies": {
