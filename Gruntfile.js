@@ -164,9 +164,17 @@ module.exports = function(grunt) {
           // livereload: 35729
         },
       },*/
-      stylecss: {
+      less: {
         files: ['<%= config.template %>less/*.less'],
         tasks: ['less:stylecss'],
+        options: {
+          spawn: true,
+          // livereload: 35729
+        },
+      },
+      sass: {
+        files: ['<%= config.template %>scss/*.scss'],
+        tasks: ['sass:stylecss'],
         options: {
           spawn: true,
           // livereload: 35729
@@ -188,9 +196,17 @@ module.exports = function(grunt) {
           livereload: 35729
         },
       },
-      bootstrap: {
+      lessBootstrap: {
         files: ['<%= config.template %>less-bootstrap/*.less'],
         tasks: ['less:bootstrap'],
+        options: {
+          spawn: false,
+          // livereload: 35729
+        },
+      },
+      sassBootstrap: {
+        files: ['<%= config.template %>scss-bootstrap/*.scss'],
+        tasks: ['sass:bootstrap'],
         options: {
           spawn: false,
           // livereload: 35729
@@ -304,6 +320,35 @@ module.exports = function(grunt) {
 
 
 
+    ////////////////
+    // grunt scss //
+    ////////////////
+    /*
+    npm install grunt-contrib-sass --save-dev
+    grunt.loadNpmTasks('grunt-contrib-sass');
+     */
+    sass: {
+      stylecss: {
+        options: {
+          style: 'expanded'
+        },
+        files: {
+          '<%= config.template %>css/style.css': '<%= config.template %>scss/style.scss'
+        }
+      },
+      bootstrap: {
+        options: {
+          style: 'expanded'
+        },
+        files: {
+          '<%= config.template %>css/bootstrap.css': '<%= config.template %>scss-bootstrap/bootstrap.scss'
+        }
+      },
+    },
+
+
+
+
     /////////////
     // css min //
     /////////////
@@ -411,11 +456,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-contrib-handlebars');
   grunt.loadNpmTasks('grunt-shell');
 
   grunt.registerTask('default', ['less', 'concat', 'uglify']);
-  grunt.registerTask('0000-default', ['concat', 'uglify', 'less']);
 };
