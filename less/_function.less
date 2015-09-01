@@ -1,3 +1,18 @@
+////////////
+// prefix //
+////////////
+.prefix(@property, @value) {
+  -webkit-@{property}: @value;
+     -moz-@{property}: @value;
+      -ms-@{property}: @value;
+       -o-@{property}: @value;
+          @{property}: @value;
+}
+
+
+
+
+
 /////////////
 // loading //
 /////////////
@@ -38,7 +53,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(255,255,255,0.6);
+    background-color: @color;
     z-index: 110;
   }
 }
@@ -103,16 +118,6 @@
 
 
 
-////////////
-// prefix //
-////////////
-.prefix(@property, @value) {
-  -webkit-@{property}: @value;
-     -moz-@{property}: @value;
-      -ms-@{property}: @value;
-       -o-@{property}: @value;
-          @{property}: @value;
-}
 
 
 
