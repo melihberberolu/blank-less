@@ -1,4 +1,4 @@
-.linear() {
+@mixin linear() {
   -webkit-transition-timing-function: linear;
      -moz-transition-timing-function: linear;
       -ms-transition-timing-function: linear;
@@ -6,7 +6,7 @@
           transition-timing-function: linear;
 }
 
-.ease() {
+@mixin ease() {
   -webkit-transition-timing-function: ease;
      -moz-transition-timing-function: ease;
       -ms-transition-timing-function: ease;
@@ -14,7 +14,7 @@
           transition-timing-function: ease;
 }
 
-.ease-in() {
+@mixin ease-in() {
   -webkit-transition-timing-function: ease-in;
      -moz-transition-timing-function: ease-in;
       -ms-transition-timing-function: ease-in;
@@ -22,7 +22,7 @@
           transition-timing-function: ease-in;
 }
 
-.ease-out() {
+@mixin ease-out() {
   -webkit-transition-timing-function: ease-out;
      -moz-transition-timing-function: ease-out;
       -ms-transition-timing-function: ease-out;
@@ -30,7 +30,7 @@
           transition-timing-function: ease-out;
 }
 
-.ease-in-out() {
+@mixin ease-in-out() {
   -webkit-transition-timing-function: ease-in-out;
      -moz-transition-timing-function: ease-in-out;
       -ms-transition-timing-function: ease-in-out;
@@ -38,7 +38,7 @@
           transition-timing-function: ease-in-out;
 }
 
-.easeInQuad() {
+@mixin easeInQuad() {
   -webkit-transition-timing-function: cubic-bezier(0.550, 0.085, 0.680, 0.530);
      -moz-transition-timing-function: cubic-bezier(0.550, 0.085, 0.680, 0.530);
       -ms-transition-timing-function: cubic-bezier(0.550, 0.085, 0.680, 0.530);
@@ -46,7 +46,7 @@
           transition-timing-function: cubic-bezier(0.550, 0.085, 0.680, 0.530);
 }
 
-.easeInCubic() {
+@mixin easeInCubic() {
   -webkit-transition-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
      -moz-transition-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
       -ms-transition-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
@@ -54,7 +54,7 @@
           transition-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
 }
 
-.easeInQuart() {
+@mixin easeInQuart() {
   -webkit-transition-timing-function: cubic-bezier(0.895, 0.030, 0.685, 0.220);
      -moz-transition-timing-function: cubic-bezier(0.895, 0.030, 0.685, 0.220);
       -ms-transition-timing-function: cubic-bezier(0.895, 0.030, 0.685, 0.220);
@@ -62,7 +62,7 @@
           transition-timing-function: cubic-bezier(0.895, 0.030, 0.685, 0.220);
 }
 
-.easeInQuint() {
+@mixin easeInQuint() {
  -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
    -moz-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
     -ms-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
@@ -70,7 +70,7 @@
         transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
 }
 
-.easeInSine() {
+@mixin easeInSine() {
   -webkit-transition-timing-function: cubic-bezier(0.470, 0.000, 0.745, 0.715);
      -moz-transition-timing-function: cubic-bezier(0.470, 0.000, 0.745, 0.715);
       -ms-transition-timing-function: cubic-bezier(0.470, 0.000, 0.745, 0.715);
@@ -78,7 +78,7 @@
           transition-timing-function: cubic-bezier(0.470, 0.000, 0.745, 0.715);
 }
 
-.easeInExpo() {
+@mixin easeInExpo() {
   -webkit-transition-timing-function: cubic-bezier(0.950, 0.050, 0.795, 0.035);
      -moz-transition-timing-function: cubic-bezier(0.950, 0.050, 0.795, 0.035);
       -ms-transition-timing-function: cubic-bezier(0.950, 0.050, 0.795, 0.035);
@@ -86,7 +86,7 @@
           transition-timing-function: cubic-bezier(0.950, 0.050, 0.795, 0.035);
 }
 
-.easeInCirc() {
+@mixin easeInCirc() {
   -webkit-transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335);
      -moz-transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335);
       -ms-transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335);
@@ -94,7 +94,7 @@
           transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335);
 }
 
-.easeInBack() {
+@mixin easeInBack() {
   -webkit-transition-timing-function: cubic-bezier(0.600, 0, 0.735, 0.045); // older webkit
   -webkit-transition-timing-function: cubic-bezier(0.600, -0.280, 0.735, 0.045);
      -moz-transition-timing-function: cubic-bezier(0.600, -0.280, 0.735, 0.045);
@@ -103,7 +103,7 @@
           transition-timing-function: cubic-bezier(0.600, -0.280, 0.735, 0.045);
 }
 
-.easeOutQuad() {
+@mixin easeOutQuad() {
   -webkit-transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
      -moz-transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
       -ms-transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
@@ -111,7 +111,7 @@
           transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
 
-.easeOutCubic() {
+@mixin easeOutCubic() {
   -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
      -moz-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
       -ms-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
@@ -119,7 +119,7 @@
           transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
 }
 
-.easeOutQuart() {
+@mixin easeOutQuart() {
   -webkit-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
      -moz-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
       -ms-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
@@ -127,7 +127,7 @@
           transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
 }
 
-.easeOutQuint() {
+@mixin easeOutQuint() {
   -webkit-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
      -moz-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
       -ms-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
@@ -135,7 +135,7 @@
           transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
 }
 
-.easeOutSine() {
+@mixin easeOutSine() {
   -webkit-transition-timing-function: cubic-bezier(0.390, 0.575, 0.565, 1.000);
      -moz-transition-timing-function: cubic-bezier(0.390, 0.575, 0.565, 1.000);
       -ms-transition-timing-function: cubic-bezier(0.390, 0.575, 0.565, 1.000);
@@ -143,7 +143,7 @@
           transition-timing-function: cubic-bezier(0.390, 0.575, 0.565, 1.000);
 }
 
-.easeOutExpo() {
+@mixin easeOutExpo() {
   -webkit-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);
      -moz-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);
       -ms-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);
@@ -151,7 +151,7 @@
           transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);
 }
 
-.easeOutCirc() {
+@mixin easeOutCirc() {
   -webkit-transition-timing-function: cubic-bezier(0.075, 0.820, 0.165, 1.000);
      -moz-transition-timing-function: cubic-bezier(0.075, 0.820, 0.165, 1.000);
       -ms-transition-timing-function: cubic-bezier(0.075, 0.820, 0.165, 1.000);
@@ -159,7 +159,7 @@
           transition-timing-function: cubic-bezier(0.075, 0.820, 0.165, 1.000);
 }
 
-.easeOutBack() {
+@mixin easeOutBack() {
   -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1); // older webkit
   -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
      -moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
@@ -168,7 +168,7 @@
           transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 }
 
-.easeInOutQuad() {
+@mixin easeInOutQuad() {
   -webkit-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
      -moz-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
       -ms-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
@@ -176,7 +176,7 @@
           transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
-.easeInOutCubic() {
+@mixin easeInOutCubic() {
   -webkit-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000);
      -moz-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000);
       -ms-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000);
@@ -184,7 +184,7 @@
           transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000);
 }
 
-.easeInOutQuart() {
+@mixin easeInOutQuart() {
   -webkit-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
      -moz-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
       -ms-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
@@ -192,7 +192,7 @@
           transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
 }
 
-.easeInOutQuint() {
+@mixin easeInOutQuint() {
   -webkit-transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
      -moz-transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
       -ms-transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
@@ -200,7 +200,7 @@
           transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
 }
 
-.easeInOutSine() {
+@mixin easeInOutSine() {
   -webkit-transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950);
      -moz-transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950);
       -ms-transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950);
@@ -208,7 +208,7 @@
           transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950);
 }
 
-.easeInOutExpo() {
+@mixin easeInOutExpo() {
   -webkit-transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000);
      -moz-transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000);
       -ms-transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000);
@@ -216,7 +216,7 @@
           transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000);
 }
 
-.easeInOutCirc() {
+@mixin easeInOutCirc() {
   -webkit-transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
      -moz-transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
       -ms-transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
@@ -224,7 +224,7 @@
           transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
 }
 
-.easeInOutBack() {
+@mixin easeInOutBack() {
   -webkit-transition-timing-function: cubic-bezier(0.680, 0, 0.265, 1); // older webkit
   -webkit-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
      -moz-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);

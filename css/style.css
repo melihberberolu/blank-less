@@ -1,3 +1,496 @@
+/**
+!    Blank-less
+!    http://www.proje.com
+!    Omer Aslanbakan
+!    omer@aslanbakan.com
+!    http://aslanbakan.com
+*/
+html.wf-loading body p, html.wf-loading body a, html.wf-loading body div, html.wf-loading body header, html.wf-loading body footer, html.wf-loading body aside, html.wf-loading body main, html.wf-loading body span, html.wf-loading body b, html.wf-loading body li, html.wf-loading body input, html.wf-loading body select, html.wf-loading body textarea, html.wf-loading body i, html.wf-loading body em, html.wf-loading body span, html.wf-loading body label, html.wf-loading body button, html.wf-loading body strong {
+  color: transparent !important;
+}
+html.wf-loading body input:-moz-placeholder {
+  color: transparent !important;
+}
+html.wf-loading body input::-moz-placeholder {
+  color: transparent !important;
+}
+html.wf-loading body input:-ms-input-placeholder {
+  color: transparent !important;
+}
+html.wf-loading body input::-webkit-input-placeholder {
+  color: transparent !important;
+}
 
+.f1 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.f2 {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+.fw100 {
+  font-weight: 100;
+}
+
+.fw200 {
+  font-weight: 200;
+}
+
+.fw300 {
+  font-weight: 300;
+}
+
+.fw400 {
+  font-weight: 400;
+}
+
+.fw500 {
+  font-weight: 500;
+}
+
+.fw600 {
+  font-weight: 600;
+}
+
+.fw700 {
+  font-weight: 700;
+}
+
+.fw800 {
+  font-weight: 800;
+}
+
+.fw900 {
+  font-weight: 900;
+}
+
+.loading:after {
+  content: "";
+  margin: 0;
+  font-size: 0.4em;
+  position: absolute;
+  text-indent: -9999em;
+  border-top: 3px solid rgba(0, 0, 0, 0.1);
+  border-right: 3px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+  border-left: 3px solid red;
+  -webkit-animation: spin 0.7s infinite linear;
+  -moz-animation: spin 0.7s infinite linear;
+  -ms-animation: spin 0.7s infinite linear;
+  -o-animation: spin 0.7s infinite linear;
+  animation: spin 0.7s infinite linear;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+.dim {
+  position: relative;
+}
+.dim:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  z-index: 110;
+}
+
+.static {
+  position: relative;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
+.visible-on {
+  visibility: visible;
+}
+
+.visible-off {
+  visibility: hidden;
+}
+
+.opacity0 {
+  opacity: 0;
+}
+
+.opacity1 {
+  opacity: 1;
+}
+
+.img-scale {
+  width: 100%;
+  height: auto;
+}
+
+.resize-vertical {
+  resize: vertical;
+}
+
+.resize-horizontal {
+  resize: horizontal;
+}
+
+.resize-none {
+  resize: none;
+}
+
+.hidden-input {
+  position: absolute;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  z-index: -999;
+}
+
+i.icon-2x {
+  font-size: 110%;
+}
+
+i.icon-3x {
+  font-size: 130%;
+}
+
+i.icon-4x {
+  font-size: 160%;
+}
+
+i.icon-5x {
+  font-size: 200%;
+}
+
+i.icon-6x {
+  font-size: 260%;
+}
+
+i.icon-7x {
+  font-size: 320%;
+}
+
+i.icon-8x {
+  font-size: 400%;
+}
+
+i.icon-9x {
+  font-size: 500%;
+}
+
+i.icon-10x {
+  font-size: 700%;
+}
+
+.icon-spin {
+  display: inline-block;
+  -webkit-animation: spin 4s infinite linear;
+  -moz-animation: spin 4s infinite linear;
+  -ms-animation: spin 4s infinite linear;
+  -o-animation: spin 4s infinite linear;
+  animation: spin 4s infinite linear;
+}
+
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(359deg);
+  }
+}
+@-ms-keyframes spin {
+  0% {
+    -ms-transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+
+.test {
+  box-shadow: inset 0 0 0 1px red, 0 0 0 1px red;
+}
+
+.test2 {
+  background-color: green;
+}
+
+.test3 {
+  background-color: orange;
+}
+
+.test4 {
+  background-color: red;
+}
+
+.test5 {
+  background-color: yellow;
+}
+
+.fz-5 {
+  font-size: 5px;
+}
+
+.fz-6 {
+  font-size: 6px;
+}
+
+.fz-7 {
+  font-size: 7px;
+}
+
+.fz-8 {
+  font-size: 8px;
+}
+
+.fz-9 {
+  font-size: 9px;
+}
+
+.fz-10 {
+  font-size: 10px;
+}
+
+.fz-11 {
+  font-size: 11px;
+}
+
+.fz-12 {
+  font-size: 12px;
+}
+
+.fz-13 {
+  font-size: 13px;
+}
+
+.fz-14 {
+  font-size: 14px;
+}
+
+.fz-15 {
+  font-size: 15px;
+}
+
+.fz-16 {
+  font-size: 16px;
+}
+
+.fz-17 {
+  font-size: 17px;
+}
+
+.fz-18 {
+  font-size: 18px;
+}
+
+.fz-19 {
+  font-size: 19px;
+}
+
+.fz-20 {
+  font-size: 20px;
+}
+
+.fz-21 {
+  font-size: 21px;
+}
+
+.fz-22 {
+  font-size: 22px;
+}
+
+.fz-23 {
+  font-size: 23px;
+}
+
+.fz-24 {
+  font-size: 24px;
+}
+
+.fz-25 {
+  font-size: 25px;
+}
+
+.fz-26 {
+  font-size: 26px;
+}
+
+.fz-27 {
+  font-size: 27px;
+}
+
+.fz-28 {
+  font-size: 28px;
+}
+
+.fz-29 {
+  font-size: 29px;
+}
+
+.fz-30 {
+  font-size: 30px;
+}
+
+.fz-31 {
+  font-size: 31px;
+}
+
+.fz-32 {
+  font-size: 32px;
+}
+
+.fz-33 {
+  font-size: 33px;
+}
+
+.fz-34 {
+  font-size: 34px;
+}
+
+.fz-35 {
+  font-size: 35px;
+}
+
+.fz-36 {
+  font-size: 36px;
+}
+
+.fz-37 {
+  font-size: 37px;
+}
+
+.fz-38 {
+  font-size: 38px;
+}
+
+.fz-39 {
+  font-size: 39px;
+}
+
+.fz-40 {
+  font-size: 40px;
+}
+
+.fz-41 {
+  font-size: 41px;
+}
+
+.fz-42 {
+  font-size: 42px;
+}
+
+.fz-43 {
+  font-size: 43px;
+}
+
+.fz-44 {
+  font-size: 44px;
+}
+
+.fz-45 {
+  font-size: 45px;
+}
+
+.fz-46 {
+  font-size: 46px;
+}
+
+.fz-47 {
+  font-size: 47px;
+}
+
+.fz-48 {
+  font-size: 48px;
+}
+
+.fz-49 {
+  font-size: 49px;
+}
+
+.fz-50 {
+  font-size: 50px;
+}
+
+.img-responsive {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+.parent {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
+}
 
 /*# sourceMappingURL=style.css.map */

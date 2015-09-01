@@ -1,0 +1,248 @@
+//=========================================
+//              WEB FONT LOAD             =
+//=========================================
+html.wf-loading {
+  body {
+    p,a,div,header,footer,aside,main,span,b,li,input,select,textarea,i,em,span,label,button,strong {
+      color: transparent !important;
+    }
+    input {
+      &:-moz-placeholder            { color: transparent !important; }
+      &::-moz-placeholder           { color: transparent !important; }
+      &:-ms-input-placeholder       { color: transparent !important; }
+      &::-webkit-input-placeholder  { color: transparent !important; }
+    }
+  }
+}
+//--------  End of web font load  ---------//
+
+
+
+//==========================================
+//              COMMON STYLES              =
+//==========================================
+// font family
+.f1 { @include f1(); }
+.f2 { @include f2(); }
+
+// font weight
+.fw100 { font-weight: 100; }
+.fw200 { font-weight: 200; }
+.fw300 { font-weight: 300; }
+.fw400 { font-weight: 400; }
+.fw500 { font-weight: 500; }
+.fw600 { font-weight: 600; }
+.fw700 { font-weight: 700; }
+.fw800 { font-weight: 800; }
+.fw900 { font-weight: 900; }
+
+
+
+
+
+
+
+/////////////
+// loading //
+/////////////
+.loading {
+  @include loading($width: 36px,  $height: 36px,  $color:red,  $duration: 0.7s,  $border: 3px);
+}
+
+
+/////////
+// dim //
+/////////
+.dim {
+  @include dim();
+}
+
+
+
+
+
+
+
+
+
+
+//////////////
+// position //
+//////////////
+.static {
+  position: relative;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+/////////////
+// display //
+/////////////
+.show {
+  display: block;
+}
+.hidden {
+  display: none;
+}
+.block {
+  display: block;
+}
+.inline-block {
+  display: inline-block;
+}
+.inline {
+  display: inline;
+}
+////////////////
+// visibility //
+////////////////
+.visible-on {
+  visibility: visible;
+}
+.visible-off {
+  visibility: hidden;
+}
+/////////////
+// opacity //
+/////////////
+.opacity0 {
+  opacity: 0;
+}
+.opacity1 {
+  opacity: 1;
+}
+
+
+
+
+
+///////////////////
+// full with img //
+///////////////////
+.img-scale {
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+
+/////////////////////
+// textarea resize //
+/////////////////////
+.resize-vertical {
+  resize: vertical;
+}
+.resize-horizontal {
+  resize: horizontal;
+}
+.resize-none {
+  resize: none;
+}
+
+
+
+
+
+/////////////////
+//hidden input //
+/////////////////
+.hidden-input {
+  position: absolute;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  @include scale(0);
+  z-index: -999;
+}
+
+
+
+
+//=================================================
+//              ICON CLASS ANIMATION              =
+//=================================================
+i.icon-2x { font-size: 110%; }
+i.icon-3x { font-size: 130%; }
+i.icon-4x { font-size: 160%; }
+i.icon-5x { font-size: 200%; }
+i.icon-6x { font-size: 260%; }
+i.icon-7x { font-size: 320%; }
+i.icon-8x { font-size: 400%; }
+i.icon-9x { font-size: 500%; }
+i.icon-10x{ font-size: 700%; }
+.icon-spin {
+  display: inline-block;
+  @include prefix(animation, spin 4s infinite linear);
+}
+@-moz-keyframes spin {
+  0% { -moz-transform: rotate(0deg) }
+  100% { -moz-transform: rotate(359deg) }
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg) }
+  100% { -webkit-transform: rotate(359deg) }
+}
+@-o-keyframes spin {
+  0% { -o-transform: rotate(0deg) }
+  100% { -o-transform: rotate(359deg) }
+}
+@-ms-keyframes spin {
+  0% { -ms-transform: rotate(0deg) }
+  100% { -ms-transform: rotate(359deg) }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg) }
+  100% { transform: rotate(359deg) }
+}
+//-----  End of ICON CLASS ANIMATION  ------//
+
+
+
+
+
+
+
+//========================================
+//              INPUT STYLES             =
+//========================================
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+//--------  End of input styles  ---------//
+
+
+
+
+
+
+
+
+
+
+
+//////////////////
+// test classes //
+//////////////////
+.test {
+  box-shadow: inset 0 0 0 1px red, 0 0 0 1px red;
+}
+.test2 {
+  background-color: green;
+}
+.test3 {
+  background-color: orange;
+}
+.test4 {
+  background-color: red;
+}
+.test5 {
+  background-color: yellow;
+}
