@@ -8,44 +8,35 @@
 @import "../scss-bootstrap/_variables";
 @import "_vars";
 @import "_function";
-@import "_common";
 @import "_easing";
-@import "_font-size";
+@import "_space";
+// @import "_font-size";
+// @import "_animate";
+// @import "_animate-functions";
 
-
-@mixin clearfix {
-  display: inline-block;
-  &:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-  }
-  html & { height: 1px }
-}
+@import "_fonts";
+// @import "_fonts2";
+@import "_icon";
+@import "_common";
 
 
 
 
-@mixin img-responsive($display: block) {
-  display: $display;
-  max-width: 100%; // Part 1: Set a maximum relative to the parent
-  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
-}
-
-.img-responsive {
-  @include img-responsive(inline-block);
-}
+//=====================================
+//             MAIN STYLES            =
+//=====================================
 
 
 
 
 
 
+//=====================================
+//               PLUGINS              =
+//=====================================
 
 
 
-.parent {
-  @include opacity(.5);
-}
+
+
+

@@ -26,15 +26,14 @@ html.wf-loading {
 .f2 { @include f2(); }
 
 // font weight
-.fw100 { font-weight: 100; }
-.fw200 { font-weight: 200; }
-.fw300 { font-weight: 300; }
-.fw400 { font-weight: 400; }
-.fw500 { font-weight: 500; }
-.fw600 { font-weight: 600; }
-.fw700 { font-weight: 700; }
-.fw800 { font-weight: 800; }
-.fw900 { font-weight: 900; }
+@for $i from 1 through 9 {
+  .fw#{$i*100} { font-weight: $i*100; }
+}
+
+// font-size
+@for $i from 5 through 50 {
+  .fz#{$i} { font-size: $i + px; }
+}
 
 
 
@@ -54,7 +53,7 @@ html.wf-loading {
 // dim //
 /////////
 .dim {
-  @include dim();
+  @include dim;
 }
 
 

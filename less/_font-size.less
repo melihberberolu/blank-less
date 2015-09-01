@@ -27,12 +27,12 @@
 }*/
 
 
-.make-font-size (@prefix) {
-  .loop-function (@i) when (@i > @min-font-size - 1) {
+.make-font-size(@prefix) {
+  .loop-function(@i) when (@i > @min-font-size - 1) {
     .@{prefix}-fz-@{i} {
       font-size: ~"@{i}px";
     }
     .loop-function(@i - 1);
   }
-  .loop-function (@max-font-size);
+  .loop-function(@max-font-size);
 }

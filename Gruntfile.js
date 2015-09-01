@@ -345,6 +345,14 @@ module.exports = function(grunt) {
           '<%= config.template %>css/bootstrap.css': '<%= config.template %>scss-bootstrap/bootstrap.scss'
         }
       },
+      fontawesome: {
+        options: {
+          style: 'expanded'
+        },
+        files: {
+          '<%= config.template %>css/font-awesome.css': '<%= config.template %>scss-fa/font-awesome.scss'
+        }
+      }
     },
 
 
