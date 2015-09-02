@@ -1,0 +1,56 @@
+// margin and padding values array
+$space-values : (
+  5,
+  10,
+  15,
+  20,
+  30,
+  40,
+  50
+) !default;
+
+// margin and padding shorthands
+$space-prefixes : (
+  p  : padding,
+  pt : padding-top,
+  pl : padding-left,
+  pr : padding-right,
+  pb : padding-bottom,
+  m  : margin,
+  mt : margin-top,
+  ml : margin-left,
+  mr : margin-right,
+  mb : margin-bottom,
+) !default;
+
+// function definition
+@mixin make-space($name, $values, $prefixes) {
+  @each $attr-short, $attr-long in $prefixes {
+    @each $value in $values {
+      .#{$name}-#{$attr-short}-#{$value} {
+        #{$attr-long}: #{$value};
+      }
+    }
+  }
+}
+
+
+// global range
+@include make-space(xs, $space-values, $space-prefixes);
+
+// sm and up
+@include media-breakpoint-up(sm, $grid-breakpoints) {
+  @include make-space(sm, $space-values, $space-prefixes);
+}
+// md and up
+@include media-breakpoint-up(md, $grid-breakpoints) {
+  @include make-space(md, $space-values, $space-prefixes);
+}
+// lg and up
+@include media-breakpoint-up(lg, $grid-breakpoints) {
+  @include make-space(lg, $space-values, $space-prefixes);
+}
+// xl
+@include media-breakpoint-up(xl, $grid-breakpoints) {
+  @include make-space(xl, $space-values, $space-prefixes);
+}
