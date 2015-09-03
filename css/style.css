@@ -1870,7 +1870,7 @@ i.icon-10x {
   animation: spin 4s infinite linear;
 }
 
-@-moz-keyframes $anim-name {
+@-moz-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -1886,7 +1886,7 @@ i.icon-10x {
     transform: rotate(359deg);
   }
 }
-@-webkit-keyframes $anim-name {
+@-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -1902,7 +1902,7 @@ i.icon-10x {
     transform: rotate(359deg);
   }
 }
-@-o-keyframes $anim-name {
+@-o-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -1918,7 +1918,7 @@ i.icon-10x {
     transform: rotate(359deg);
   }
 }
-@-ms-keyframes $anim-name {
+@-ms-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -1934,7 +1934,7 @@ i.icon-10x {
     transform: rotate(359deg);
   }
 }
-@keyframes $anim-name {
+@keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);

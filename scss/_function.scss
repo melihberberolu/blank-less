@@ -142,10 +142,6 @@
 ///////////////
 // animation //
 ///////////////
-@mixin anim-delay($delay1 :0.1s) {
-  @include prefix(animation-duration, $trans1 ease-out);
-}
-
 @mixin animation($keyframe_name, $duration, $ease) {
   @include prefix(animation, $keyframe_name $duration $ease);
 }
@@ -426,19 +422,19 @@
 
 // keyframes
 @mixin keyframes($anim-name) {
-  @-moz-keyframes $anim-name {
+  @-moz-keyframes #{$anim-name} {
     @content;
   }
-  @-webkit-keyframes $anim-name {
+  @-webkit-keyframes #{$anim-name} {
     @content;
   }
-  @-o-keyframes $anim-name {
+  @-o-keyframes #{$anim-name} {
     @content;
   }
-  @-ms-keyframes $anim-name {
+  @-ms-keyframes #{$anim-name} {
     @content;
   }
-  @keyframes $anim-name {
+  @keyframes #{$anim-name} {
     @content;
   }
 }
