@@ -309,16 +309,20 @@
 // flex container
 @mixin flex-display() {
   display: -webkit-box;
-  display:    -moz-box;
-  display: -ms-flexbox;
+  display: -moz-box;
+  display: box;
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox; // 2011 (IE 10)
   display: flex;
 }
 @mixin flex-display-inline() {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-inline-flexbox;
+  display: -webkit-inline-box;
+  display: -moz-inline-box;
+  display: inline-box;
   display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
 }
 @mixin flex-direction($value) {
@@ -420,3 +424,21 @@
 
 
 
+// keyframes
+@mixin keyframes($anim-name) {
+  @-moz-keyframes $anim-name {
+    @content;
+  }
+  @-webkit-keyframes $anim-name {
+    @content;
+  }
+  @-o-keyframes $anim-name {
+    @content;
+  }
+  @-ms-keyframes $anim-name {
+    @content;
+  }
+  @keyframes $anim-name {
+    @content;
+  }
+}

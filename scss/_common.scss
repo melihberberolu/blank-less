@@ -164,6 +164,8 @@ html.wf-loading {
 
 
 
+
+
 //=================================================
 //              ICON CLASS ANIMATION              =
 //=================================================
@@ -180,25 +182,9 @@ i.icon-10x{ font-size: 700%; }
   display: inline-block;
   @include prefix(animation, spin 4s infinite linear);
 }
-@-moz-keyframes spin {
-  0% { -moz-transform: rotate(0deg) }
-  100% { -moz-transform: rotate(359deg) }
-}
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg) }
-  100% { -webkit-transform: rotate(359deg) }
-}
-@-o-keyframes spin {
-  0% { -o-transform: rotate(0deg) }
-  100% { -o-transform: rotate(359deg) }
-}
-@-ms-keyframes spin {
-  0% { -ms-transform: rotate(0deg) }
-  100% { -ms-transform: rotate(359deg) }
-}
-@keyframes spin {
-  0% { transform: rotate(0deg) }
-  100% { transform: rotate(359deg) }
+@include keyframes(spin) {
+  0% { @include prefix(transform, rotate(0deg)) }
+  100% { @include prefix(transform, rotate(359deg)) }
 }
 //-----  End of ICON CLASS ANIMATION  ------//
 
