@@ -9,6 +9,9 @@ bower_components
 logs
 *.log
 
+# sass cache folder
+.sass-cache
+
 # Runtime data
 pids
 *.pid
@@ -22,6 +25,7 @@ coverage
 
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
+.sublime-grunt.cache
 
 # node-waf configuration
 .lock-wscript
