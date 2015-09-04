@@ -1,16 +1,18 @@
 //=========================================
 //              WEB FONT LOAD             =
 //=========================================
-html.wf-loading {
-  body {
-    p,a,div,header,footer,aside,main,span,b,li,input,select,textarea,i,em,span,label,button,strong {
-      color: transparent !important;
-    }
-    input {
-      &:-moz-placeholder            { color: transparent !important; }
-      &::-moz-placeholder           { color: transparent !important; }
-      &:-ms-input-placeholder       { color: transparent !important; }
-      &::-webkit-input-placeholder  { color: transparent !important; }
+.web-font-preload {
+  html.wf-loading {
+    body {
+      p,a,div,header,footer,aside,main,span,b,li,input,select,textarea,i,em,span,label,button,strong {
+        color: transparent !important;
+      }
+      input {
+        &:-moz-placeholder            { color: transparent !important; }
+        &::-moz-placeholder           { color: transparent !important; }
+        &:-ms-input-placeholder       { color: transparent !important; }
+        &::-webkit-input-placeholder  { color: transparent !important; }
+      }
     }
   }
 }
@@ -34,7 +36,7 @@ html.wf-loading {
   }
   .fw-loop-function(@i - 1);
 }
-.fw-loop-function(9);
+// .fw-loop-function(9);
 
 
 // font size
@@ -45,7 +47,7 @@ html.wf-loading {
   }
   .fz-loop-function(@i - 1);
 }
-.fz-loop-function(@max-font-size);
+// .fz-loop-function(@max-font-size);
 
 
 
