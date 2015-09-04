@@ -1,3 +1,12 @@
+$default-rem-value : 16px;
+
+@function rem-to-px($val) {
+  @return $val * $default-rem-value;
+}
+@function px-to-rem($val) {
+  @return $val / $default-rem-value;
+}
+
 ////////////
 // prefix //
 ////////////
