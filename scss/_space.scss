@@ -1,3 +1,6 @@
+// change to false if its not imported into bootstrap
+$use-bootstrap: true;
+
 // margin and padding values array
 $space-values : (
   5,
@@ -23,7 +26,27 @@ $space-prefixes : (
   mb : margin-bottom,
 ) !default;
 
-// function definition
+// change these if its not imported into bootstrap
+$grid-breakpoints-custom: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 34em,
+  // Medium screen / tablet
+  md: 48em,
+  // Large screen / desktop
+  lg: 62em,
+  // Extra large screen / wide desktop
+  xl: 75em
+) !default;
+
+$breakpoints : $grid-breakpoints-custom;
+@if $use-bootstrap {
+  $breakpoints : $grid-breakpoints;
+}
+
+
+// main function definition
 @mixin make-space($name, $values, $prefixes) {
   @each $attr-short, $attr-long in $prefixes {
     @each $value in $values {
@@ -39,18 +62,18 @@ $space-prefixes : (
 @include make-space(xs, $space-values, $space-prefixes);
 
 // sm and up
-@include media-breakpoint-up(sm, $grid-breakpoints) {
+@include media-breakpoint-up(sm, $breakpoints) {
   @include make-space(sm, $space-values, $space-prefixes);
 }
 // md and up
-@include media-breakpoint-up(md, $grid-breakpoints) {
+@include media-breakpoint-up(md, $breakpoints) {
   @include make-space(md, $space-values, $space-prefixes);
 }
 // lg and up
-@include media-breakpoint-up(lg, $grid-breakpoints) {
+@include media-breakpoint-up(lg, $breakpoints) {
   @include make-space(lg, $space-values, $space-prefixes);
 }
 // xl
-@include media-breakpoint-up(xl, $grid-breakpoints) {
+@include media-breakpoint-up(xl, $breakpoints) {
   @include make-space(xl, $space-values, $space-prefixes);
 }
