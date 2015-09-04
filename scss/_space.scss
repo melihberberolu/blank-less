@@ -16,14 +16,14 @@ $space-values : (
 $space-prefixes : (
   p  : padding,
   pt : padding-top,
-  pl : padding-left,
   pr : padding-right,
   pb : padding-bottom,
+  pl : padding-left,
   m  : margin,
   mt : margin-top,
-  ml : margin-left,
   mr : margin-right,
   mb : margin-bottom,
+  ml : margin-left,
 ) !default;
 
 // change these if its not imported into bootstrap
@@ -64,12 +64,10 @@ $breakpoints : $grid-breakpoints-custom;
 
 // main function definition
 @mixin make-space($name, $values, $prefixes) {
-  @each $breakpoint-name, $breakpoint-value in $prefixes {
-    @each $attr-short, $attr-long in $prefixes {
-      @each $value in $values {
-        .#{$name}-#{$attr-short}-#{$value} {
-          #{$attr-long}: #{$value};
-        }
+  @each $attr-short, $attr-long in $prefixes {
+    @each $value in $values {
+      .#{$name}-#{$attr-short}-#{$value} {
+        #{$attr-long}: #{$value};
       }
     }
   }

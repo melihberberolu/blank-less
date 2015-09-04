@@ -331,7 +331,7 @@ module.exports = function(grunt) {
     sass: {
       stylecss: {
         options: {
-          style: 'expanded'
+          style: 'expanded' // nested, compact, compressed, expanded.
         },
         files: {
           '<%= config.template %>css/style.css': '<%= config.template %>scss/style.scss'
@@ -339,7 +339,7 @@ module.exports = function(grunt) {
       },
       bootstrap: {
         options: {
-          style: 'expanded'
+          style: 'expanded' // nested, compact, compressed, expanded.
         },
         files: {
           '<%= config.template %>css/bootstrap.css': '<%= config.template %>scss-bootstrap/bootstrap.scss'
@@ -347,7 +347,7 @@ module.exports = function(grunt) {
       },
       fontawesome: {
         options: {
-          style: 'expanded'
+          style: 'expanded' // nested, compact, compressed, expanded.
         },
         files: {
           '<%= config.template %>css/font-awesome.css': '<%= config.template %>scss-fa/font-awesome.scss'
