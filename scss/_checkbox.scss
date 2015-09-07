@@ -1,0 +1,81 @@
+//====================================
+//              CHECKBOX             =
+//====================================
+.checkbox-custom {
+  input[type="checkbox"] {
+    display: none;
+    & + label {
+      padding-left: 30px;
+    }
+    &:not(:checked) + label:after {
+      background-image: url(../img/ui/checkbox/blue/icheck-blue-01.png);
+    }
+    &:not(:checked) + label:hover:after {
+      background-image: url(../img/ui/checkbox/blue/icheck-blue-02.png);
+    }
+    &:checked + label:after {
+      background-image: url(../img/ui/checkbox/blue/icheck-blue-03.png);
+    }
+  }
+  label {
+    @include prefix(user-select, none);
+    position: relative;
+    &:after {
+      content: "";
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+    }
+  }
+}
+//--------  End of checkbox  ---------//
+
+
+
+
+
+//=================================
+//              RADIO             =
+//=================================
+.radio-custom {
+  input[type="radio"] {
+    display: none;
+    & + label {
+      padding-left: 30px;
+    }
+    &:not(:checked) + label:after {
+      background-image: url(../img/ui/checkbox/blue/icheck-blue-11.png);
+    }
+    &:not(:checked) + label:hover:after {
+      background-image: url(../img/ui/checkbox/blue/icheck-blue-12.png);
+    }
+    &:checked + label:after {
+      background-image: url(../img/ui/checkbox/blue/icheck-blue-13.png);
+    }
+  }
+  label {
+    @include prefix(user-select, none);
+    position: relative;
+    &:after {
+      content: "";
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+    }
+  }
+}
+//--------  End of radio  ---------//
