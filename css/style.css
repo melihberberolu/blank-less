@@ -1939,6 +1939,18 @@ select:-moz-focusring {
   text-shadow: 0 0 0 #000;
 }
 
+select:not([multiple]) {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NTEuODQ3IiBoZWlnaHQ9IjQ1MS44NDciIHZpZXdCb3g9IjAgMCA0NTEuODQ3IDQ1MS44NDciPjxwYXRoIGQ9Ik0yMjUuOTIzIDM1NC43MDZjLTguMDk4IDAtMTYuMTk1LTMuMDkyLTIyLjM2OS05LjI2M2wtMTk0LjI4NC0xOTQuMjg2Yy0xMi4zNTktMTIuMzU5LTEyLjM1OS0zMi4zOTcgMC00NC43NTEgMTIuMzU0LTEyLjM1NCAzMi4zODgtMTIuMzU0IDQ0Ljc0OCAwbDE3MS45MDUgMTcxLjkxNSAxNzEuOTA2LTE3MS45MDljMTIuMzU5LTEyLjM1NCAzMi4zOTEtMTIuMzU0IDQ0Ljc0NCAwIDEyLjM2NSAxMi4zNTQgMTIuMzY1IDMyLjM5MiAwIDQ0Ljc1MWwtMTk0LjI4MSAxOTQuMjg2Yy02LjE3NyA2LjE3Mi0xNC4yNzQgOS4yNTctMjIuMzY5IDkuMjU3eiIvPjwvc3ZnPg==");
+  background-repeat: no-repeat;
+  background-size: 5%;
+  background-position: center right 10px;
+}
+
 .test {
   box-shadow: inset 0 0 0 1px red, 0 0 0 1px red;
 }
