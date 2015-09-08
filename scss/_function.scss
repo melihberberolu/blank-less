@@ -6,7 +6,9 @@ $default-rem-value : 16px;
 @function px-to-rem($val) {
   @return $val / $default-rem-value;
 }
-
+@function strip-unit ($num ) {
+  @return $num / ($num * 0 + 1);
+}
 ////////////
 // prefix //
 ////////////
