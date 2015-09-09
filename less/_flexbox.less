@@ -1,0 +1,350 @@
+//===================================
+//              FLEXBOX             =
+//===================================
+
+// flex container
+.flex-display() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox; // 2011 (IE 10)
+  display: flex;
+}
+
+
+
+.flex-display-inline() {
+  display: -webkit-inline-box;
+  display: -moz-inline-box;
+  display: inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+
+
+.flex-direction(@value) {
+  & when (@value = column) {
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  & when (@value = row) {
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  & when (@value = row-reverse) {
+    -webkit-box-direction: reverse;
+    -moz-box-direction: reverse;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  }
+  & when (@value = column-reverse) {
+    -webkit-box-direction: reverse;
+    -moz-box-direction: reverse;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+}
+
+
+
+.flex-wrap(@value) {
+  -webkit-flex-wrap: @value;
+      -ms-flex-wrap: @value;
+      -moz-flex-wrap: @value;
+          flex-wrap: @value;
+}
+
+
+
+.flex-justify-content(@value) {
+  & when (@value = flex-start) {
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+  & when (@value = flex-end) {
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+  & when (@value = center) {
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  & when (@value = space-between) {
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  & when (@value = space-around) {
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+}
+
+
+.flex-align-items(@value) {
+  & when (@value = flex-start) {
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+  & when (@value = flex-end) {
+    -webkit-box-align: end;
+    -moz-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
+  & when (@value = center) {
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  & when (@value = baseline) {
+    -webkit-box-align: baseline;
+    -moz-box-align: baseline;
+    -webkit-align-items: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+  }
+  & when (@value = stretch) {
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+
+
+.flex-align-content(@value) {
+  & when (@value = flex-start) {
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+  }
+  & when (@value = flex-end) {
+    -webkit-align-content: flex-end;
+    -ms-flex-line-pack: end;
+    align-content: flex-end;
+  }
+  & when (@value = center) {
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+  }
+  & when (@value = space-between) {
+    -webkit-align-content: space-between;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+  }
+  & when (@value = space-around) {
+    -webkit-align-content: space-around;
+    -ms-flex-line-pack: distribute;
+    align-content: Space-around;
+  }
+  & when (@value = stretch) {
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+  }
+}
+
+
+
+// flex items
+.flex(@value) {
+  -webkit-box-flex: @value;
+     -moz-box-flex: @value;
+      -webkit-flex: @value;
+          -ms-flex: @value;
+              flex: @value;
+}
+
+
+
+.flex-order(@value) {
+  -webkit-box-ordinal-group: @value;
+     -moz-box-ordinal-group: @value;
+             -ms-flex-order: @value;
+              -webkit-order: @value;
+                      order: @value;
+}
+
+
+
+.flex-align-self(@value) {
+  -ms-flex-item-align: @value;
+   -webkit-align-self: @value;
+      -moz-align-self: @value;
+           align-self: @value;
+}
+//--------  End of flexbox  ---------//
+
+
+
+
+
+
+
+
+
+//==========================================
+//              HELPER CLASSES             =
+//==========================================
+// flex
+.flex-display {
+  .flex-display();
+}
+.flex-display-inline {
+  .flex-display-inline();
+}
+
+// direction
+.flex-row {
+  .flex-direction(row);
+}
+.flex-col {
+  .flex-direction(row);
+}
+.flex-row-reverse {
+  .flex-direction(row);
+}
+.flex-col-reverse {
+  .flex-direction(row);
+}
+
+
+// wrap
+.flex-wrap {
+  .flex-wrap(wrap);
+}
+.flex-nowrap {
+  .flex-wrap(nowrap);
+}
+.flex-wrap-reverse {
+  .flex-wrap(wrap-reverse);
+}
+
+
+// justify-content
+.flex-justify-start {
+  .flex-justify-content(flex-start);
+}
+.flex-justify-end {
+  .flex-justify-content(flex-end);
+}
+.flex-justify-center {
+  .flex-justify-content(center);
+}
+.flex-justify-between {
+  .flex-justify-content(space-between);
+}
+.flex-justify-around {
+  .flex-justify-content(space-around);
+}
+
+
+// align-items
+.flex-items-start {
+  .flex-align-items(flex-start);
+}
+.flex-items-end {
+  .flex-align-items(flex-end);
+}
+.flex-items-center {
+  .flex-align-items(center);
+}
+.flex-items-baseline {
+  .flex-align-items(baseline);
+}
+.flex-items-stretch {
+  .flex-align-items(stretch);
+}
+
+
+// align content
+.flex-content-start {
+  .flex-align-content(flex-start);
+}
+.flex-content-end {
+  .flex-align-content(flex-end);
+}
+.flex-content-center {
+  .flex-align-content(center);
+}
+.flex-content-between {
+  .flex-align-content(space-between);
+}
+.flex-content-around {
+  .flex-align-content(space-around);
+}
+.flex-content-stretch {
+  .flex-align-content(stretch);
+}
+
+
+// align-self
+.flex-self-auto {
+  .flex-align-self(auto);
+}
+.flex-self-start {
+  .flex-align-self(flex-start);
+}
+.flex-self-end {
+  .flex-align-self(flex-end);
+}
+.flex-self-center {
+  .flex-align-self(center);
+}
+.flex-self-baseline {
+  .flex-align-self(baseline);
+}
+.flex-self-stretch {
+  .flex-align-self(stretch);
+}
+
+
+.flex-grow {
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+
+//--------  End of helper classes  ---------//
