@@ -1553,7 +1553,7 @@ select:not([multiple]) {
   -ms-appearance: none;
   -o-appearance: none;
   appearance: none;
-  background-image: url($form-icon-select1);
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABkCAMAAAABisbMAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAACEUExURQAAAGNjY2BgYGJiYmBgYICAgGJiYmNjY2JiYmRkZGFhYWNjY2ZmZmRkZGJiYmNjY2NjY2NjY2FhYWNjY15eXmRkZGNjY2JiYmlpaV1dXWNjY2JiYmZmZmNjY2JiYmRkZGhoaGJiYlpaWmFhYWRkZGRkZF5eXmNjY2NjY2NjY2NjY2NjY/SFPv4AAAArdFJOUwCfIDwYBKvfYJdUlRQXkfuW8xWTE5KQcBEWEpQem5eUFp4RHZwcG6edmh/EA9J3AAABDUlEQVRYw+3U1w6CQBCF4bUg2BURe+/O+7+fAqKwbpmBxHgx5w7i/wU1ixA8Ho/H4/H+cs7EKRU4DWiQBCk43wCgWcf3+/AZVKrp5WkFQBKmYRykwuEIQBKmvVeQCMsrAEmY995BJNx3ACQh08fCBbKz/xfP3z+7ivDc3A3bMwTj3MddT9AERU8SgpGiJwgddY8WtD1S6Cy0PUrwTT1C8DfG3ir4bUtvEWb23iigeoOwHaB6rdDF9hqB0CuF7prQC9HqS+8H6fwPa7YXhixQ+69vQXp+m4Dr9QK21wn4Xi1QepVA678Fai8L9D4vFOmzQrH+IxTtU6F4nwhl+uhsYs6fUSjZ83g8Ho/H+/kehCKDfVIQ7iEAAAAASUVORK5CYII=");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center right 10px;

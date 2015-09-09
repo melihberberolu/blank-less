@@ -210,7 +210,7 @@ select:-moz-focusring {
 //=========================================
 select:not([multiple]) {
   @include prefix(appearance, none);
-  background-image: url($form-icon-select1);
+  background-image: url($form-icon-select-arrow-sharp);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center right 10px;
