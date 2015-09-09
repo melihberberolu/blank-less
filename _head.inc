@@ -61,11 +61,6 @@
 
   <title>Blank</title>
 
-  <!--[if lt IE 10]>
-    <script type="text/javascript" src="js/html5shiv.js"></script>
-    <script type="text/javascript" src="js/modernizr-2.8.3.js"></script>
-  <![endif]-->
-
   <?php include("_scripts.inc"); ?>
 
 </head>
