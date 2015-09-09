@@ -9,12 +9,12 @@
 @import "../scss-bootstrap/_mixins";
 @import "_vars";
 @import "_function";
+@import "_easing";
 @import "_media";
 @import "_triangle";
-@import "_easing";
 
-@import "_flexbox";
 @import "_space";
+@import "_flexbox";
 // @import "_font-size";
 // @import "_animate";
 // @import "_animate-functions";
@@ -28,7 +28,6 @@
 
 
 
-
 //=====================================
 //             MAIN STYLES            =
 //=====================================
@@ -38,10 +37,11 @@
 
 
 
-
 //=====================================
 //               PLUGINS              =
 //=====================================
+
+
 
 
 
