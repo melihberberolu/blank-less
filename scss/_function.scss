@@ -1,14 +1,19 @@
 $default-rem-value : 16px;
 
-@function rem-to-px($val) {
-  @return $val * $default-rem-value;
-}
-@function px-to-rem($val) {
-  @return $val / $default-rem-value;
-}
 @function strip-unit ($num ) {
   @return $num / ($num * 0 + 1);
 }
+@function rem-to-px($val) {
+  @return $val * $default-rem-value + 0px;
+}
+@function px-to-rem($val) {
+  @return strip-unit($val) / strip-unit($default-rem-value);
+}
+
+
+
+
+
 ////////////
 // prefix //
 ////////////
@@ -23,10 +28,13 @@ $default-rem-value : 16px;
 
 
 
+
 // cross browser
-@mixin browser($browser: Mozilla) {
-  body[data-browser*="#{$browser}"] & {
-    @content;
+@mixin browser($browsers: Mozilla) {
+  @each $browser in $browsers {
+    body[data-browser*="#{$browser}"] & {
+      @content;
+    }
   }
 }
 
@@ -333,9 +341,38 @@ $default-rem-value : 16px;
   display: inline-flex;
 }
 @mixin flex-direction($value) {
-  -webkit-flex-direction: $value;
-      -ms-flex-direction: $value;
-          flex-direction: $value;
+  @if $value == column {
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  @else if $value == row {
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  @else if $value == row-reverse {
+    -webkit-box-direction: reverse;
+    -moz-box-direction: reverse;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  }
+  @else if $value == column-reverse {
+    -webkit-box-direction: reverse;
+    -moz-box-direction: reverse;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
 }
 @mixin flex-wrap($value) {
   -webkit-flex-wrap: $value;
@@ -448,4 +485,42 @@ $default-rem-value : 16px;
   @keyframes #{$anim-name} {
     @content;
   }
+}
+
+
+
+
+
+
+
+// hidden visually
+@mixin hidden-visually {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+%hidden-visually {
+  @include hidden-visually;
+}
+
+
+
+
+
+
+// image replace
+@mixin img-replace {
+  text-indent: 102%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+
+}
+%img-replace {
+  @include img-replace;
 }

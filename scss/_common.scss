@@ -150,17 +150,11 @@
 
 
 /////////////////
-//hidden input //
+//hidden visually //
 /////////////////
+.hidden-visually,
 .hidden-input {
-  position: absolute;
-  overflow: hidden;
-  width: 0;
-  height: 0;
-  visibility: hidden;
-  opacity: 0;
-  @include scale(0);
-  z-index: -999;
+  @include hidden-visually;
 }
 
 
