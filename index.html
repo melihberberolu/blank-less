@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9"> <![endif]-->
-<!--[if IE 9]>    <html class="no-js lt-ie10"> <![endif]-->
-<!--[if gt IE 9]><!-->
+<!doctype html>
 <html class="no-js" lang="tr" xmlns="http://www.w3.org/1999/xhtml">
-<!--<![endif]-->
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta charset="utf-8">
@@ -61,13 +55,16 @@
 
   <title>Blank</title>
 
-
   <!--[if lt IE 10]>
     <script type="text/javascript" src="js/old-browsers.js"></script>
   <![endif]-->
-  <script>if(/MSIE 1/.test(navigator.userAgent)) document.write('<script src="js//ie-console-fix.js"><\/script>')</script>
-  <script>if(/MSIE 1/.test(navigator.userAgent)) document.write('<script src="js//html5shiv.js"><\/script>')</script>
-  <script>if(/MSIE 1/.test(navigator.userAgent)) document.write('<script src="js//modernizr-2.8.3.js"><\/script>')</script>
+  <script type="text/javascript">
+    if(/MSIE 1/.test(navigator.userAgent)) {
+      document.write('<script src="js//ie-console-fix.js"><\/script>');
+      document.write('<script src="js//html5shiv.js"><\/script>');
+      document.write('<script src="js//modernizr.min.js"><\/script>');
+    }
+  </script>
 
   <!-- fonts -->
 
@@ -80,13 +77,11 @@
   <!--<script type="text/javascript" data-main="js/config" src="js/lib/require.min.js"></script>-->
 
   <!-- jquery -->
-  <!--<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+  <!--<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
   <!--<script>window.jQuery || document.write('<script src="js//jquery.min.js"><\/script>')</script>-->
   <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
-
-  <script type="text/javascript" src="http://127.0.0.1:35729/livereload.js"></script>
 
 </head>
 <body>

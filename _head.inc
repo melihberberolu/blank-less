@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9"> <![endif]-->
-<!--[if IE 9]>    <html class="no-js lt-ie10"> <![endif]-->
-<!--[if gt IE 9]><!-->
+<!doctype html>
 <html class="no-js" lang="tr" xmlns="http://www.w3.org/1999/xhtml">
-<!--<![endif]-->
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta charset="utf-8">
