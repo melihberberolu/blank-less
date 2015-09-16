@@ -5,28 +5,28 @@
 !    omer@aslanbakan.com
 !    http://aslanbakan.com
 */
-@import "../scss-bootstrap/_variables";
-@import "../scss-bootstrap/_mixins";
-@import "_vars";
+@import "../scss-bootstrap/_variables.scss";
+@import "../scss-bootstrap/_mixins.scss";
+@import "_vars.scss";
 
-@import "_function";
-@import "_easing";
-@import "_data-uri-icons";
+@import "_function.scss";
+@import "_easing.scss";
+@import "_data-uri-icons.scss";
 
-@import "_media";
-@import "_triangle";
+@import "_media.scss";
+@import "_triangle.scss";
 
-@import "_space";
-@import "_flexbox";
-// @import "_font-size";
-// @import "_animate";
-// @import "_animate-functions";
+@import "_space.scss";
+@import "_flexbox.scss";
+// @import "_font-size.scss";
+// @import "_animate.scss";
+// @import "_animate-functions.scss";
 
-@import "_fonts";
-// @import "_fonts2";
-@import "_icon";
-// @import "_checkbox";
-@import "_common";
+@import "_fonts.scss";
+// @import "_fonts2.scss";
+@import "_icon.scss";
+// @import "_checkbox.scss";
+@import "_common.scss";
 
 
 
