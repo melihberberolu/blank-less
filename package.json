@@ -9,7 +9,7 @@
   "repository": {
     "type": "git",
     "private": true,
-    "url": "//"
+    "url": "http://github.com/eomerx/blank-less.git"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
