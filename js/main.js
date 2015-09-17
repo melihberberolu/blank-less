@@ -39,8 +39,6 @@ $("document").ready(function() {
 
 
 
-
-
 }); //document.ready
 //-----  End of JQUERY DOCUMENT READY   -----//
 ///////////////////////////////////////////////
