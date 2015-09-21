@@ -1,0 +1,84 @@
+.triangle(@direction: left; @width: 20px; @height: 20px; @color: inherit ) {
+
+  display: inline-block;
+  height: 0;
+  width: 0;
+  // For improved appearance in some Webkit browsers
+  .rotate(360deg);
+
+  & when (@direction = up) {
+    // For up and down, width gets two borders but height only one,
+    // so divide second border-width value by 2
+    border-width: @height (@width / 2);
+  }
+  & when (@direction = down) {
+    // For up and down, width gets two borders but height only one,
+    // so divide second border-width value by 2
+    border-width: @height (@width / 2);
+  }
+  & when (@direction = right) {
+    // For right and left, height gets two borders but width only one,
+    // so divide first border-width value by 2
+    border-width: (@height / 2) @width;
+  }
+  & when (@direction = left) {
+    // For right and left, height gets two borders but width only one,
+    // so divide first border-width value by 2
+    border-width: (@height / 2) @width;
+  }
+
+  border-style: solid;
+
+
+  // STANDARD TRIANGLES
+  border-color: transparent;
+  & when (@direction = up) {
+    border-bottom-color: @color;
+    border-top-width: 0;
+  }
+  & when (@direction = right) {
+    border-left-color: @color;
+    border-right-width: 0;
+  }
+  & when (@direction = down) {
+    border-top-color: @color;
+    border-bottom-width: 0;
+  }
+  & when (@direction = left) {
+    border-right-color: @color;
+    border-left-width: 0;
+  }
+
+
+  // CORNER TRIANGLES
+  & when (@direction = top-right) {
+    border-top-color: @color;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: @color;
+    border-width: (@height / 2) (@width / 2);
+  }
+  & when (@direction = top-left) {
+    border-top-color: @color;
+    border-bottom-color: transparent;
+    border-left-color: @color;
+    border-right-color: transparent;
+    border-width: (@height / 2) (@width / 2);
+  }
+
+  & when (@direction = bottom-right) {
+    border-top-color: transparent;
+    border-bottom-color: @color;
+    border-left-color: transparent;
+    border-right-color: @color;
+    border-width: (@height / 2) (@width / 2);
+  }
+  & when (@direction = bottom-left) {
+    border-top-color: transparent;
+    border-bottom-color: @color;
+    border-left-color: @color;
+    border-right-color: transparent;
+    border-width: (@height / 2) (@width / 2);
+  }
+
+}
