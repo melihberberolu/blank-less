@@ -168,7 +168,7 @@ module.exports = function(grunt) {
         files: ['<%= config.template %>less/**/*.less'],
         tasks: ['less:stylecss'],
         options: {
-          spawn: true,
+          spawn: true
           // livereload: 35729
         },
       },
@@ -176,7 +176,7 @@ module.exports = function(grunt) {
         files: ['<%= config.template %>scss/**/*.scss'],
         tasks: ['sass:stylecss'],
         options: {
-          spawn: true,
+          spawn: true
           // livereload: 35729
         },
       },
@@ -259,8 +259,8 @@ module.exports = function(grunt) {
           cleancss: false,
           optimization: false,
           relativeUrls: true,
-          sourceMap: true,
           // dumpLineNumbers: "comments", // comments, mediaquery, all.
+          // sourceMap: true
           // modifyVars: {
           //   imgPath: '',
           //   bgColor: ''
@@ -277,8 +277,8 @@ module.exports = function(grunt) {
           cleancss: false,
           optimization: false,
           relativeUrls: true,
-          sourceMap: true,
           // dumpLineNumbers: "comments", // comments, mediaquery, all.
+          // sourceMap: true
           // modifyVars: {
           //   imgPath: '',
           //   bgColor: ''
@@ -295,8 +295,8 @@ module.exports = function(grunt) {
           cleancss: false,
           optimization: false,
           relativeUrls: true,
-          sourceMap: true,
           // dumpLineNumbers: "all", // comments, mediaquery, all.
+          // sourceMap: true
           // modifyVars: {
           //   imgPath: '',
           //   bgColor: ''
