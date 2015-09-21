@@ -334,6 +334,7 @@ module.exports = function(grunt) {
     sass: {
       stylecss: {
         options: {
+          sourcemap: "none",
           style: 'expanded' // nested, compact, compressed, expanded.
         },
         files: {
@@ -342,6 +343,7 @@ module.exports = function(grunt) {
       },
       bootstrap: {
         options: {
+          sourcemap: "none",
           style: 'expanded' // nested, compact, compressed, expanded.
         },
         files: {
@@ -350,6 +352,7 @@ module.exports = function(grunt) {
       },
       fontawesome: {
         options: {
+          sourcemap: "none",
           style: 'expanded' // nested, compact, compressed, expanded.
         },
         files: {
