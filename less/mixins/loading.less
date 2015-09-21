@@ -1,0 +1,68 @@
+//=========================================
+//              WEB FONT LOAD             =
+//=========================================
+.web-font-preload() {
+  html.wf-loading {
+    body {
+      p,a,div,header,footer,aside,main,span,b,li,input,select,textarea,i,em,span,label,button,strong {
+        color: transparent !important;
+      }
+      input {
+        &:-moz-placeholder            { color: transparent !important; }
+        &::-moz-placeholder           { color: transparent !important; }
+        &:-ms-input-placeholder       { color: transparent !important; }
+        &::-webkit-input-placeholder  { color: transparent !important; }
+      }
+    }
+  }
+}
+//--------  End of web font load  ---------//
+
+
+//////////////
+// loading  //
+//////////////
+.loading(@width: 36px, @height: 36px, @color:red, @duration: 0.7s, @bg-color:rgba(0,0,0,.1), @border: 3px) {
+  &:after {
+    content: "";
+    margin: 0;
+    font-size: 0.4em;
+    position: absolute;
+    text-indent: -9999em;
+    border-top: @border solid rgba(0, 0, 0, 0.1);
+    border-right: @border solid rgba(0, 0, 0, 0.1);
+    border-bottom: @border solid rgba(0, 0, 0, 0.1);
+    border-left: @border solid @color;
+    .prefix(animation, spin @duration infinite linear);
+    border-radius: 50%;
+    width: @width;
+    height: @height;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
+
+
+
+
+/////////
+// dim //
+/////////
+.dim(@color: rgba(255,255,255,0.6)) {
+  position: relative;
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: @color;
+    z-index: 110;
+  }
+}
