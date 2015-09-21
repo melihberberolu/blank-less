@@ -169,6 +169,7 @@ module.exports = function(grunt) {
         tasks: ['less:stylecss'],
         options: {
           spawn: true,
+          relativeUrls: true
           // livereload: 35729
         },
       },
@@ -258,6 +259,7 @@ module.exports = function(grunt) {
           compress: false,
           cleancss: false,
           optimization: false,
+          relativeUrls: true,
           // dumpLineNumbers: "comments", // comments, mediaquery, all.
           // sourceMap: true
           // modifyVars: {
@@ -275,6 +277,7 @@ module.exports = function(grunt) {
           compress: false,
           cleancss: false,
           optimization: false,
+          relativeUrls: true,
           // dumpLineNumbers: "comments", // comments, mediaquery, all.
           // sourceMap: true
           // modifyVars: {
@@ -292,6 +295,7 @@ module.exports = function(grunt) {
           compress: false,
           cleancss: false,
           optimization: false,
+          relativeUrls: true,
           // dumpLineNumbers: "all", // comments, mediaquery, all.
           // sourceMap: true
           // modifyVars: {
