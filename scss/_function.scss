@@ -32,7 +32,7 @@ $default-rem-value : 16px;
 // cross browser
 @mixin browser($browsers: Mozilla) {
   @each $browser in $browsers {
-    body[data-browser*="#{$browser}"] & {
+    html[data-browser*="#{$browser}"] & {
       @content;
     }
   }
@@ -215,7 +215,7 @@ $default-rem-value : 16px;
 
 
 
-@mixin selected($color, $background) {
+@mixin selection($color, $background) {
   &::selection {
     background: $background;
     color: $color;
@@ -354,13 +354,6 @@ $default-rem-value : 16px;
 
 
 
-///////////////
-// selection //
-///////////////
-@mixin selection($text-color, $background-color) {
-  &::-moz-selection {color: $text-color; background-color: $background-color;}
-  &::selection {color: $text-color; background-color: $background-color;}
-}
 
 
 
@@ -406,6 +399,7 @@ $default-rem-value : 16px;
 %hidden-visually {
   @include hidden-visually;
 }
+
 
 
 

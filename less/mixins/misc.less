@@ -1,0 +1,168 @@
+//////////////
+// loading  //
+//////////////
+.loading(@width: 36px, @height: 36px, @color:red, @duration: 0.7s, @bg-color:rgba(0,0,0,.1), @border: 3px) {
+  &:after {
+    content: "";
+    margin: 0;
+    font-size: 0.4em;
+    position: absolute;
+    text-indent: -9999em;
+    border-top: @border solid rgba(0, 0, 0, 0.1);
+    border-right: @border solid rgba(0, 0, 0, 0.1);
+    border-bottom: @border solid rgba(0, 0, 0, 0.1);
+    border-left: @border solid @color;
+    .prefix(animation, spin @duration infinite linear);
+    border-radius: 50%;
+    width: @width;
+    height: @height;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
+
+
+
+
+/////////
+// dim //
+/////////
+.dim(@color: rgba(255,255,255,0.6)) {
+  position: relative;
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: @color;
+    z-index: 110;
+  }
+}
+
+
+
+
+
+
+//////////////////////
+// Placeholder text //
+//////////////////////
+.placeholder(@color: #BFBFBF) {
+  &:-moz-placeholder            { color: @color; }
+  &::-moz-placeholder           { color: @color; }
+  &:-ms-input-placeholder       { color: @color; }
+  &::-webkit-input-placeholder  { color: @color; }
+  &::placeholder                { color: @color; }
+}
+
+
+/////////////
+// opacity //
+/////////////
+.opacity(@opacity) {
+  opacity: @opacity;
+  @opacity-ie: (@opacity * 100);
+  filter: ~"alpha(opacity=@{opacity-ie})";
+}
+
+
+
+///////////////
+// selection //
+///////////////
+.selection(@color, @background) {
+  &::selection {
+    background: @background;
+    color: @color;
+  }
+  &::-moz-selection {
+    background: @background;
+    color: @color;
+  }
+}
+
+
+
+
+/////////
+//font //
+/////////
+.f1() { font-family: @font1; }
+.f2() { font-family: @font2; }
+.f3() { font-family: @font3; }
+.f4() { font-family: @font4; }
+.f5() { font-family: @font5; }
+
+
+
+
+////////////////
+// custom css //
+////////////////
+.mp0() {
+  margin: 0;
+  padding: 0;
+}
+.btn() {
+  background-color: transparent;
+  border:0;
+  outline:none;
+  margin: 0;
+  padding: 0;
+}
+.tr() {
+  border:0;
+  outline:none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+.full() {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.absolute() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+
+
+
+// hidden visually
+.hidden-visually() {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+
+
+
+
+
+
+// image replace
+.img-replace() {
+  text-indent: 102%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+}

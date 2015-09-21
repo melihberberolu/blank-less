@@ -1,7 +1,7 @@
 //=========================================
 //              WEB FONT LOAD             =
 //=========================================
-.web-font-preload {
+.web-font-preload() {
   html.wf-loading {
     body {
       p,a,div,header,footer,aside,main,span,b,li,input,select,textarea,i,em,span,label,button,strong {
@@ -187,26 +187,14 @@ i.icon-10x{ font-size: 700%; }
   display: inline-block;
   .prefix(animation, spin 4s infinite linear);
 }
-@-moz-keyframes spin {
-  0 { -moz-transform: rotate(0deg) }
-  100% { -moz-transform: rotate(359deg) }
-}
-@-webkit-keyframes spin {
-  0 { -webkit-transform: rotate(0deg) }
-  100% { -webkit-transform: rotate(359deg) }
-}
-@-o-keyframes spin {
-  0 { -o-transform: rotate(0deg) }
-  100% { -o-transform: rotate(359deg) }
-}
-@-ms-keyframes spin {
-  0 { -ms-transform: rotate(0deg) }
-  100% { -ms-transform: rotate(359deg) }
-}
-@keyframes spin {
-  0 { transform: rotate(0deg) }
-  100% { transform: rotate(359deg) }
-}
+.keyframes(spin, {
+  0% {
+    .rotate(0deg);
+  }
+  100% {
+    .rotate(359deg);
+  }
+});
 //-----  End of ICON CLASS ANIMATION  ------//
 
 
@@ -257,7 +245,7 @@ select:not([multiple]) {
 //////////////////
 // test classes //
 //////////////////
-.test {
+.test1 {
   box-shadow: inset 0 0 0 1px red, 0 0 0 1px red;
 }
 .test2 {

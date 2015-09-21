@@ -165,7 +165,7 @@ module.exports = function(grunt) {
         },
       },*/
       less: {
-        files: ['<%= config.template %>less/*.less'],
+        files: ['<%= config.template %>less/**/*.less'],
         tasks: ['less:stylecss'],
         options: {
           spawn: true,
@@ -173,7 +173,7 @@ module.exports = function(grunt) {
         },
       },
       sass: {
-        files: ['<%= config.template %>scss/*.scss'],
+        files: ['<%= config.template %>scss/**/*.scss'],
         tasks: ['sass:stylecss'],
         options: {
           spawn: true,

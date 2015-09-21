@@ -1,0 +1,20 @@
+.clear-after() {
+  &:after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    clear:both;
+  }
+}
+.clear-before() {
+  &:before {
+    content: "";
+    display: block;
+    visibility: hidden;
+    clear:both;
+  }
+}
+.clearfix() {
+  .clear-after();
+  .clear-before();
+}

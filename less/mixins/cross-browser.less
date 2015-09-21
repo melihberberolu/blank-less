@@ -1,0 +1,5 @@
+.browser(@browser: Mozilla, @content) {
+  html[data-browser*="@{browser}"] & {
+    @content();
+  }
+}

@@ -1,3 +1,5 @@
+$add-flex-styles: false;
+
 //===================================
 //              FLEXBOX             =
 //===================================
@@ -233,13 +235,13 @@
   @include flex-direction(row);
 }
 .flex-col {
-  @include flex-direction(row);
+  @include flex-direction(column);
 }
 .flex-row-reverse {
-  @include flex-direction(row);
+  @include flex-direction(row-reverse);
 }
 .flex-col-reverse {
-  @include flex-direction(row);
+  @include flex-direction(column-reverse);
 }
 
 
@@ -334,9 +336,7 @@
 
 
 .flex-grow {
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+  @include flex(1 1 auto);
 }
 
 

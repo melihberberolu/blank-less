@@ -1,0 +1,18 @@
+////////////////
+//transitions //
+////////////////
+.trans(@duration :0.1s ) {
+  .prefix(transition, all @duration linear);
+}
+.transition(@value) {
+  .prefix(transition, @value);
+}
+.trans-delay(@delay1 :0.1s) {
+  .prefix(transition-delay, @delay1);
+}
+///////////////
+// animation //
+///////////////
+.animation(@keyframe_name, @duration, @ease) {
+  .prefix(animation, @keyframe_name @duration @ease);
+}

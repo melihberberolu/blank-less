@@ -1,0 +1,18 @@
+// keyframes
+.keyframes(@anim-name, @content) {
+  @-moz-keyframes @anim-name {
+    @content();
+  }
+  @-webkit-keyframes @anim-name {
+    @content();
+  }
+  @-o-keyframes @anim-name {
+    @content();
+  }
+  @-ms-keyframes @anim-name {
+    @content();
+  }
+  @keyframes @anim-name {
+    @content();
+  }
+}
