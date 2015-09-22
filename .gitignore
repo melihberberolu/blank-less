@@ -20,6 +20,9 @@ logs
 ### SASS ###
 .sass-cache
 
+## ui images converted to bas64
+img/ui/
+
 ## Runtime data ##
 pids
 *.seed
