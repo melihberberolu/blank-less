@@ -82,14 +82,13 @@
   <!--<script>window.jQuery || document.write('<script src="js//jquery.min.js"><\/script>')</script>-->
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/custom-checkbox.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
 
   <script type="text/javascript" src="http://127.0.0.1:35729/livereload.js"></script>
 
 </head>
 <body>
-
-
 
 
 
@@ -557,18 +556,44 @@
                   </div>
                 </div>
                 <div class="form-group">
+                  <div class="checkbox checkbox-custom">
+                    <input type="checkbox" value="">
+                    <label>
+                      Checkbox
+                    </label>
+                  </div>
+                  <div class="checkbox checkbox-custom checkbox-fill">
+                    <input type="checkbox" value="">
+                    <label>
+                      Checkbox
+                    </label>
+                  </div>
+                  <div class="checkbox checkbox-custom">
+                    <input type="checkbox" value="" disabled>
+                    <label>
+                      Checkbox
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
                   <label class="col-lg-2 control-label">Radios</label>
                   <div class="col-lg-10">
-                    <div class="radio">
+                    <div class="radio radio-custom">
+                      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
                       <label>
-                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
                         Option one is this
                       </label>
                     </div>
-                    <div class="radio">
+                    <div class="radio radio-custom">
+                      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
                       <label>
-                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
                         Option two can be something else
+                      </label>
+                    </div>
+                    <div class="radio radio-custom">
+                      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option1" disabled>
+                      <label>
+                        Option one is this
                       </label>
                     </div>
                   </div>
