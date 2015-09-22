@@ -190,14 +190,14 @@ module.exports = function(grunt) {
         },
       },*/
       css: {
-        files: ['<%= config.template %>css/*.css'],
+        files: ['<%= config.template %>css/**/*.css'],
         options: {
           spawn: false,
           livereload: 35729
         },
       },
       lessBootstrap: {
-        files: ['<%= config.template %>less-bootstrap/*.less'],
+        files: ['<%= config.template %>less-bootstrap/**/*.less'],
         tasks: ['less:bootstrap'],
         options: {
           spawn: false,
@@ -205,7 +205,7 @@ module.exports = function(grunt) {
         },
       },
       sassBootstrap: {
-        files: ['<%= config.template %>scss-bootstrap/*.scss'],
+        files: ['<%= config.template %>scss-bootstrap/**/*.scss'],
         tasks: ['sass:bootstrap'],
         options: {
           spawn: false,
