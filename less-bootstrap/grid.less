@@ -24,6 +24,9 @@
   @media (min-width: @screen-lg-min) {
     width: @container-lg;
   }
+  @media (min-width: @screen-xl-min) {
+    width: @container-xl;
+  }
 }
 
 
@@ -34,8 +37,15 @@
 
 .container-fluid {
   .container-fixed();
-  @media (min-width: @screen-lg-min) {
-    max-width: 1340px;
+  & when (@is-extra-large-active = false) {
+    @media (min-width: @screen-lg-min) {
+      max-width: 1340px;
+    }
+  }
+  & when (@is-extra-large-active = true) {
+    @media (min-width: @screen-xl-min) {
+      max-width: 1720px;
+    }
   }
 }
 
@@ -99,4 +109,14 @@
 
 @media (min-width: @screen-lg-min) {
   .make-grid(lg);
+}
+
+
+// Extra Large grid
+//
+// Columns, offsets, pushes, and pulls for the extra large desktop device range.
+& when (@is-extra-large-active = true) {
+  @media (min-width: @screen-xl-min) {
+    .make-grid(xl);
+  }
 }

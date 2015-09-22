@@ -25,27 +25,61 @@
 
 // Visibility utilities
 // Note: Deprecated .visible-xs, .visible-sm, .visible-md, and .visible-lg as of v3.2.0
-.visible-xs,
-.visible-sm,
-.visible-md,
-.visible-lg {
-  .responsive-invisibility();
+& when (@is-extra-large-active = false) {
+  .visible-xs,
+  .visible-sm,
+  .visible-md,
+  .visible-lg {
+    .responsive-invisibility();
+  }
+}
+& when (@is-extra-large-active = true) {
+  .visible-xs,
+  .visible-sm,
+  .visible-md,
+  .visible-lg,
+  .visible-xl {
+    .responsive-invisibility();
+  }
 }
 
-.visible-xs-block,
-.visible-xs-inline,
-.visible-xs-inline-block,
-.visible-sm-block,
-.visible-sm-inline,
-.visible-sm-inline-block,
-.visible-md-block,
-.visible-md-inline,
-.visible-md-inline-block,
-.visible-lg-block,
-.visible-lg-inline,
-.visible-lg-inline-block {
-  display: none !important;
+
+& when (@is-extra-large-active = false) {
+  .visible-xs-block,
+  .visible-xs-inline,
+  .visible-xs-inline-block,
+  .visible-sm-block,
+  .visible-sm-inline,
+  .visible-sm-inline-block,
+  .visible-md-block,
+  .visible-md-inline,
+  .visible-md-inline-block,
+  .visible-lg-block,
+  .visible-lg-inline,
+  .visible-lg-inline-block {
+    display: none !important;
+  }
 }
+& when (@is-extra-large-active = true) {
+  .visible-xs-block,
+  .visible-xs-inline,
+  .visible-xs-inline-block,
+  .visible-sm-block,
+  .visible-sm-inline,
+  .visible-sm-inline-block,
+  .visible-md-block,
+  .visible-md-inline,
+  .visible-md-inline-block,
+  .visible-lg-block,
+  .visible-lg-inline,
+  .visible-lg-inline-block,
+  .visible-xl-block,
+  .visible-xl-inline,
+  .visible-xl-inline-block {
+    display: none !important;
+  }
+}
+
 
 .visible-xs {
   @media (max-width: @screen-xs-max) {
@@ -110,25 +144,73 @@
   }
 }
 
-.visible-lg {
-  @media (min-width: @screen-lg-min) {
-    .responsive-visibility();
+& when (@is-extra-large-active = false) {
+  .visible-lg {
+    @media (min-width: @screen-lg-min) {
+      .responsive-visibility();
+    }
+  }
+  .visible-lg-block {
+    @media (min-width: @screen-lg-min) {
+      display: block !important;
+    }
+  }
+  .visible-lg-inline {
+    @media (min-width: @screen-lg-min) {
+      display: inline !important;
+    }
+  }
+  .visible-lg-inline-block {
+    @media (min-width: @screen-lg-min) {
+      display: inline-block !important;
+    }
   }
 }
-.visible-lg-block {
-  @media (min-width: @screen-lg-min) {
-    display: block !important;
+
+& when (@is-extra-large-active = true) {
+
+  .visible-lg {
+    @media (min-width: @screen-lg-min) and (max-width: @screen-lg-max) {
+      .responsive-visibility();
+    }
   }
-}
-.visible-lg-inline {
-  @media (min-width: @screen-lg-min) {
-    display: inline !important;
+  .visible-lg-block {
+    @media (min-width: @screen-lg-min) and (max-width: @screen-lg-max) {
+      display: block !important;
+    }
   }
-}
-.visible-lg-inline-block {
-  @media (min-width: @screen-lg-min) {
-    display: inline-block !important;
+  .visible-lg-inline {
+    @media (min-width: @screen-lg-min) and (max-width: @screen-lg-max) {
+      display: inline !important;
+    }
   }
+  .visible-lg-inline-block {
+    @media (min-width: @screen-lg-min) and (max-width: @screen-lg-max) {
+      display: inline-block !important;
+    }
+  }
+
+  .visible-xl {
+    @media (min-width: @screen-xl-min) {
+      .responsive-visibility();
+    }
+  }
+  .visible-xl-block {
+    @media (min-width: @screen-xl-min) {
+      display: block !important;
+    }
+  }
+  .visible-xl-inline {
+    @media (min-width: @screen-xl-min) {
+      display: inline !important;
+    }
+  }
+  .visible-xl-inline-block {
+    @media (min-width: @screen-xl-min) {
+      display: inline-block !important;
+    }
+  }
+
 }
 
 .hidden-xs {
@@ -146,11 +228,26 @@
     .responsive-invisibility();
   }
 }
-.hidden-lg {
-  @media (min-width: @screen-lg-min) {
-    .responsive-invisibility();
+& when (@is-extra-large-active = false) {
+  .hidden-lg {
+    @media (min-width: @screen-lg-min) {
+      .responsive-invisibility();
+    }
   }
 }
+& when (@is-extra-large-active = true) {
+  .hidden-lg {
+    @media (min-width: @screen-lg-min) and (max-width: @screen-lg-max) {
+      .responsive-invisibility();
+    }
+  }
+  .hidden-xl {
+    @media (min-width: @screen-xl-min) {
+      .responsive-invisibility();
+    }
+  }
+}
+
 
 
 // Print utilities
