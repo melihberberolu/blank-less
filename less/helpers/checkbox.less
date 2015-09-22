@@ -62,7 +62,6 @@
       .prefix(transform, scale(0));
       color: @checkbox-color;
       font-family: FontAwesome;
-      font-size: @checkbox-width * 0.7;
       text-rendering: auto;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
@@ -128,7 +127,12 @@
       }
       &:before {
         content: "\f111";
-        font-size: @checkbox-width * 0.5;
+        & when (@checkbox-width > 20) {
+          font-size: @checkbox-width * 0.5;
+        }
+        & when (@checkbox-width <= 20) {
+          font-size: 10px;
+        }
       }
     }
   }
