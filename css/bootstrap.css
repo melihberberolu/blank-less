@@ -1578,7 +1578,7 @@ pre code {
 @media (max-width: 480px) {
   .container {
     min-width: 320px;
-    max-width: 320px;
+    max-width: 100%;
   }
 }
 @media (min-width: 480px) {
@@ -1594,11 +1594,6 @@ pre code {
 @media (min-width: 992px) {
   .container {
     width: 960px;
-  }
-}
-@media (min-width: 1280px) {
-  .container {
-    width: 1240px;
   }
 }
 .container-fluid {
