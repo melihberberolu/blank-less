@@ -10,7 +10,7 @@ $checkbox-border-width: 2px;
   input {
     display: none;
     &:not(:checked) + label:after {
-      border-color: fade($checkbox-color, 70%);
+      border-color: rgba($checkbox-color, .7);
     }
     &:not(:checked) + label:hover:after {
       border-color: $checkbox-color;
@@ -55,7 +55,7 @@ $checkbox-border-width: 2px;
       left: 0;
     }
     &:after {
-      border: $checkbox-border-width solid fade($checkbox-color, 80%);
+      border: $checkbox-border-width solid rgba($checkbox-color, .8);
     }
     &:before {
       z-index: 2;
@@ -130,6 +130,11 @@ $checkbox-border-width: 2px;
       &:before {
         content: "\f111";
         font-size: $checkbox-width * 0.5;
+        @if ($checkbox-width <= 20) {
+          @include browser(Firefox) {
+            font-size: 10px;
+          };
+        }
       }
     }
   }
