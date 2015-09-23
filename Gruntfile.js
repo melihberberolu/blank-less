@@ -341,9 +341,9 @@ module.exports = function(grunt) {
           update: false,
           compass: false,
           loadPath: [
+            '<%= config.template %>scss/plugins',
             '<%= config.template %>scss/elements',
             '<%= config.template %>scss/pages',
-            '<%= config.template %>scss/plugins',
           ],
           style: 'compact' // nested, compact, compressed, expanded.
         },
