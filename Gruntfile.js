@@ -335,7 +335,17 @@ module.exports = function(grunt) {
       stylecss: {
         options: {
           sourcemap: "none",
-          style: 'expanded' // nested, compact, compressed, expanded.
+          precision: 5,
+          check: false,
+          lineNumbers: false,
+          update: false,
+          compass: false,
+          loadPath: [
+            '<%= config.template %>scss/elements',
+            '<%= config.template %>scss/pages',
+            '<%= config.template %>scss/plugins',
+          ],
+          style: 'compact' // nested, compact, compressed, expanded.
         },
         files: {
           '<%= config.template %>css/style.css': '<%= config.template %>scss/style.scss'
@@ -344,7 +354,12 @@ module.exports = function(grunt) {
       bootstrap: {
         options: {
           sourcemap: "none",
-          style: 'expanded' // nested, compact, compressed, expanded.
+          precision: 5,
+          check: false,
+          lineNumbers: false,
+          update: false,
+          compass: false,
+          style: 'compact' // nested, compact, compressed, expanded.
         },
         files: {
           '<%= config.template %>css/bootstrap.css': '<%= config.template %>scss-bootstrap/bootstrap.scss'
@@ -353,7 +368,12 @@ module.exports = function(grunt) {
       fontawesome: {
         options: {
           sourcemap: "none",
-          style: 'expanded' // nested, compact, compressed, expanded.
+          precision: 5,
+          check: false,
+          lineNumbers: false,
+          update: false,
+          compass: false,
+          style: 'compact' // nested, compact, compressed, expanded.
         },
         files: {
           '<%= config.template %>css/font-awesome.css': '<%= config.template %>scss-fa/font-awesome.scss'

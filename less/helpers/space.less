@@ -58,19 +58,21 @@
   .make-space(@prefix: lg; @value:0;  );
 }
 // large screens
-/*@media (min-width: @screen-xl) {
-  .make-space(@prefix: xl; @value:200; );
-  .make-space(@prefix: xl; @value:150; );
-  .make-space(@prefix: xl; @value:100; );
-  .make-space(@prefix: xl; @value:50; );
-  .make-space(@prefix: xl; @value:40; );
-  .make-space(@prefix: xl; @value:30; );
-  .make-space(@prefix: xl; @value:20; );
-  .make-space(@prefix: xl; @value:15; );
-  .make-space(@prefix: xl; @value:10; );
-  .make-space(@prefix: xl; @value:5;  );
-  .make-space(@prefix: xl; @value:0;  );
-}*/
+& when (@is-extra-large-active = true) {
+  @media (min-width: @screen-xl) {
+    .make-space(@prefix: xl; @value:200; );
+    .make-space(@prefix: xl; @value:150; );
+    .make-space(@prefix: xl; @value:100; );
+    .make-space(@prefix: xl; @value:50; );
+    .make-space(@prefix: xl; @value:40; );
+    .make-space(@prefix: xl; @value:30; );
+    .make-space(@prefix: xl; @value:20; );
+    .make-space(@prefix: xl; @value:15; );
+    .make-space(@prefix: xl; @value:10; );
+    .make-space(@prefix: xl; @value:5;  );
+    .make-space(@prefix: xl; @value:0;  );
+  }
+}
 
 
 

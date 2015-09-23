@@ -144,3 +144,8 @@
 @media(min-width: (@screen-lg)) {
   .flex-styles(lg);
 }
+& when (@is-extra-large-active = true) {
+  @media(min-width: (@screen-xl)) {
+    .flex-styles(xl);
+  }
+}

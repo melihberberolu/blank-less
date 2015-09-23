@@ -5,47 +5,48 @@
 !    omer@aslanbakan.com
 !    http://aslanbakan.com
 */
+// bnootstrap
 @import "../scss-bootstrap/_variables.scss";
 @import "../scss-bootstrap/_mixins.scss";
+
+// custom variables
 @import "_vars.scss";
 
-@import "_function.scss";
-@import "_easing.scss";
-@import "_data-uri-icons.scss";
 
-@import "_media.scss";
-@import "_triangle.scss";
-
-@import "_space.scss";
-@import "_flexbox.scss";
-// @import "_font-size.scss";
-// @import "_animate.scss";
-// @import "_animate-functions.scss";
-
-@import "_fonts.scss";
-// @import "_fonts2.scss";
-@import "_icon.scss";
-@import "_checkbox.scss";
-@import "_common.scss";
-
-
-
-
-//=====================================
-//             MAIN STYLES            =
-//=====================================
+////////////
+// mixins //
+////////////
+@import "mixins/prefix";
+@import "mixins/unit-conversion";
+@import "mixins/clearfix";
+@import "mixins/button-theme";
+@import "mixins/cross-browser";
+@import "mixins/flexbox";
+@import "mixins/keyframes";
+@import "mixins/loading";
+@import "mixins/transform";
+@import "mixins/transition";
+@import "mixins/columns";
+@import "mixins/media";
+@import "mixins/triangle";
+@import "mixins/misc";
+@import "mixins/easing";
+// @import "mixins/animate-functions";
 
 
+/////////////
+// helpers //
+/////////////
+@import "helpers/data-uri-icons";
+@import "helpers/space";
+@import "helpers/flexbox";
+@import "helpers/checkbox";
+// @import "helpers/font-size";
+// @import "helpers/animate";
+@import "helpers/common";
 
 
-
-
-//=====================================
-//               PLUGINS              =
-//=====================================
-
-
-
-
-
+@import "_fonts";
+// @import "_fonts2";
+@import "_icon";
 
