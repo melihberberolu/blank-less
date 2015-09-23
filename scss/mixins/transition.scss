@@ -1,0 +1,18 @@
+////////////////
+//transitions //
+////////////////
+@mixin trans($duration :0.1s ) {
+  @include prefix(transition, all $duration linear);
+}
+@mixin transition($value) {
+  @include prefix(transition, $value);
+}
+@mixin trans-delay($delay1 :0.1s) {
+  @include prefix(transition-delay, $delay1);
+}
+///////////////
+// animation //
+///////////////
+@mixin animation($keyframe_name, $duration, $ease) {
+  @include prefix(animation, $keyframe_name $duration $ease);
+}

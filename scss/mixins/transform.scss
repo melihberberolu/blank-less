@@ -1,0 +1,27 @@
+@mixin rotate($degrees) {
+  @include prefix(transform, rotate($degrees));;
+}
+
+@mixin scale($ratio) {
+  @include prefix(transform, scale($ratio));
+}
+
+@mixin translate($x, $y) {
+  @include prefix(transform, translate($x, $y));
+}
+
+@mixin skew($x, $y) {
+  @include prefix(transform, skew($x, $y));
+}
+
+@mixin translate3d($x, $y, $z) {
+  @include prefix(transform, translate3d($x, $y, $z));
+}
+
+@mixin rotateX($degrees) {
+  @include prefix(transform, rotateX($degrees));
+}
+
+@mixin rotateY($degrees) {
+  @include prefix(transform, rotateY($degrees));
+}

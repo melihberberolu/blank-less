@@ -1,0 +1,152 @@
+@mixin flex-styles($prefix) {
+  // flex
+  .#{$prefix}-flex-display {
+    @include flex-display();
+  }
+  .#{$prefix}-flex-display-inline {
+    @include flex-display-inline();
+  }
+
+  // direction
+  .#{$prefix}-flex-row {
+    @include flex-direction(row);
+  }
+  .#{$prefix}-flex-col {
+    @include flex-direction(col);
+  }
+  .#{$prefix}-flex-row-reverse {
+    @include flex-direction(row-reverse);
+  }
+  .#{$prefix}-flex-col-reverse {
+    @include flex-direction(column-reverse);
+  }
+
+  //========================================
+  //               RESPONSIVE              =
+  //========================================
+  .#{$prefix}-flex-row {
+    @include flex-direction(row);
+  }
+  .#{$prefix}-flex-col {
+    @include flex-direction(column);
+  }
+
+
+  // wrap
+  .#{$prefix}-flex-wrap {
+    @include flex-wrap(wrap);
+  }
+  .#{$prefix}-flex-nowrap {
+    @include flex-wrap(nowrap);
+  }
+  .#{$prefix}-flex-wrap-reverse {
+    @include flex-wrap(wrap-reverse);
+  }
+
+
+  // justify-content
+  .#{$prefix}-flex-justify-start {
+    @include flex-justify-content(flex-start);
+  }
+  .#{$prefix}-flex-justify-end {
+    @include flex-justify-content(flex-end);
+  }
+  .#{$prefix}-flex-justify-center {
+    @include flex-justify-content(center);
+  }
+  .#{$prefix}-flex-justify-between {
+    @include flex-justify-content(space-between);
+  }
+  .#{$prefix}-flex-justify-around {
+    @include flex-justify-content(space-around);
+  }
+
+
+  // align-items
+  .#{$prefix}-flex-items-start {
+    @include flex-align-items(flex-start);
+  }
+  .#{$prefix}-flex-items-end {
+    @include flex-align-items(flex-end);
+  }
+  .#{$prefix}-flex-items-center {
+    @include flex-align-items(center);
+  }
+  .#{$prefix}-flex-items-baseline {
+    @include flex-align-items(baseline);
+  }
+  .#{$prefix}-flex-items-stretch {
+    @include flex-align-items(stretch);
+  }
+
+
+  // align content
+  .#{$prefix}-flex-content-start {
+    @include flex-align-content(flex-start);
+  }
+  .#{$prefix}-flex-content-end {
+    @include flex-align-content(flex-end);
+  }
+  .#{$prefix}-flex-content-center {
+    @include flex-align-content(center);
+  }
+  .#{$prefix}-flex-content-between {
+    @include flex-align-content(space-between);
+  }
+  .#{$prefix}-flex-content-around {
+    @include flex-align-content(space-around);
+  }
+  .#{$prefix}-flex-content-stretch {
+    @include flex-align-content(stretch);
+  }
+
+
+  // align-self
+  .#{$prefix}-flex-self-auto {
+    @include flex-align-self(auto);
+  }
+  .#{$prefix}-flex-self-start {
+    @include flex-align-self(flex-start);
+  }
+  .#{$prefix}-flex-self-end {
+    @include flex-align-self(flex-end);
+  }
+  .#{$prefix}-flex-self-center {
+    @include flex-align-self(center);
+  }
+  .#{$prefix}-flex-self-baseline {
+    @include flex-align-self(baseline);
+  }
+  .#{$prefix}-flex-self-stretch {
+    @include flex-align-self(stretch);
+  }
+
+
+  .#{$prefix}-flex-grow {
+    @include flex(1 1 auto);
+  }
+}
+//--------  End of helper classes  ---------//
+
+
+
+
+
+// main function definition
+@mixin add-flexbox-styles($breakpoints: $grid-breakpoints) {
+  @each $breakpoint-name, $breakpoint-value in $breakpoints {
+    // if xs value = 0, set it global without media queries
+    @if($breakpoint-value == 0) {
+      @include flex-styles($breakpoint-name);
+    }
+    // breakpoint values that not equal to 0
+    @else {
+      @media screen and (min-width: $breakpoint-value) {
+        @include flex-styles($breakpoint-name);
+      }
+    }
+  }
+}
+
+
+@include add-flexbox-styles;

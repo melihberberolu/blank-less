@@ -1,0 +1,20 @@
+@mixin clear-after() {
+  &:after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    clear:both;
+  }
+}
+@mixin clear-before() {
+  &:before {
+    content: "";
+    display: block;
+    visibility: hidden;
+    clear:both;
+  }
+}
+@mixin clearfix() {
+  @include clear-after();
+  @include clear-before();
+}

@@ -1,0 +1,129 @@
+//////////////////////
+// Placeholder text //
+//////////////////////
+@mixin placeholder($color: #BFBFBF) {
+  &:-moz-placeholder            { color: $color; }
+  &::-moz-placeholder           { color: $color; }
+  &:-ms-input-placeholder       { color: $color; }
+  &::-webkit-input-placeholder  { color: $color; }
+  &::placeholder                { color: $color; }
+}
+
+
+
+
+@mixin opacity($opacity) {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$opacity*100})";
+    filter: alpha(opacity=( $opacity * 100 ));
+    -moz-opacity: $opacity;
+    -khtml-opacity: $opacity;
+    opacity: $opacity;
+}
+
+
+
+
+
+@mixin selection($color, $background) {
+  &::selection {
+    background: $background;
+    color: $color;
+  }
+  &::-moz-selection {
+    background: $background;
+    color: $color;
+  }
+}
+
+
+
+
+
+/////////
+//font //
+/////////
+@mixin f1() { font-family: $font1; }
+@mixin f2() { font-family: $font2; }
+@mixin f3() { font-family: $font3; }
+@mixin f4() { font-family: $font4; }
+@mixin f5() { font-family: $font5; }
+
+
+
+
+
+
+////////////////
+// custom css //
+////////////////
+@mixin mp0() {
+  margin: 0;
+  padding: 0;
+}
+@mixin btn() {
+  background-color: transparent;
+  border:0;
+  outline:none;
+  margin: 0;
+  padding: 0;
+}
+@mixin tr() {
+  border:0;
+  outline:none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+@mixin full() {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+@mixin absolute() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+
+
+
+
+
+
+
+// hidden visually
+@mixin hidden-visually {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+%hidden-visually {
+  @include hidden-visually;
+}
+
+
+
+
+
+
+
+// image replace
+@mixin img-replace {
+  text-indent: 102%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+
+}
+%img-replace {
+  @include img-replace;
+}

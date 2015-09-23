@@ -1,0 +1,49 @@
+@mixin button-theme($text-color, $bg-color, $border-color, $text-hover-color, $bg-hover-color, $border-hover-color, $text-active-color, $bg-active-color, $border-active-color ) {
+  color: $text-color;
+  background-color: $bg-color;
+  border-color: $border-color;
+  &.hover,
+  &:hover {
+    color: $text-hover-color;
+    background-color: $bg-hover-color;
+    border-color: $border-hover-color;
+  }
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    // color: $text-active-color;
+    background-color: $bg-active-color;
+    border-color: $border-active-color;
+  }
+}
+
+@mixin button-darken($color) {
+  color: #fff;
+  background-color: $color;
+  &.hover,
+  &:hover {
+    background-color: darken($color, 20%);
+  }
+  &.focus,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: lighten($color, 20%);
+  }
+}
+
+@mixin button-lighten($color) {
+  color: #fff;
+  background-color: $color;
+  &.hover,
+  &:hover {
+    background-color: lighten($color, 20%);
+  }
+  &.focus,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: darken($color, 20%);
+  }
+}
