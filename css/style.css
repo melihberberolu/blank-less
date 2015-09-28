@@ -4,6 +4,11 @@
 *    omer@aslanbakan.com
 *    http://aslanbakan.com
 */
+/*@screen-xs: 320px;
+@screen-sm: 480px;
+@screen-md: 768px;
+@screen-lg: 992px;
+@screen-xl: 1280px;*/
 @media (min-width: 0) {
   .xs-p-0 {
     padding: 0px;
