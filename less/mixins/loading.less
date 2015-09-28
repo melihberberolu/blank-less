@@ -52,7 +52,7 @@
 /////////
 // dim //
 /////////
-.dim(@color: rgba(255,255,255,0.6)) {
+.dim(@color: rgba(255,255,255,0.6), @z-index: 99) {
   position: relative;
   &:before {
     content: "";
@@ -63,6 +63,6 @@
     top: 0;
     left: 0;
     background-color: @color;
-    z-index: 110;
+    z-index: @z-index;
   }
 }
