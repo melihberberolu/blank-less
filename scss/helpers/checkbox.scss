@@ -6,7 +6,6 @@ $checkbox-border-width: 2px;
 
 .radio-custom,
 .checkbox-custom {
-  margin-bottom: $checkbox-width * 0.67;
   input {
     display: none;
     &:not(:checked) + label:after {

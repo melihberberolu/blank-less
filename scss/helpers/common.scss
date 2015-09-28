@@ -2,8 +2,12 @@
 //              COMMON STYLES              =
 //==========================================
 // font family
-.f1 { @include f1(); }
-.f2 { @include f2(); }
+.f1 { @include f1; }
+.f2 { @include f2; }
+.f3 { @include f3; }
+.f4 { @include f4; }
+.f5 { @include f5; }
+
 
 // font weight
 @mixin font-weight-classes() {
@@ -21,7 +25,6 @@ $max-font-size: 50;
   }
 }
 // @include font-size-classes;
-
 
 
 
@@ -165,8 +168,8 @@ i.icon-10x{ font-size: 700%; }
   @include prefix(animation, spin 4s infinite linear);
 }
 @include keyframes(spin) {
-  0% { @include prefix(transform, rotate(0deg)) }
-  100% { @include prefix(transform, rotate(359deg)) }
+  0% { @include rotate(0deg) }
+  100% { @include rotate(359deg) }
 }
 //-----  End of ICON CLASS ANIMATION  ------//
 
