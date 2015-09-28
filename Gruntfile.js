@@ -166,7 +166,7 @@ module.exports = function(grunt) {
       },*/
       less: {
         files: ['<%= config.template %>less/**/*.less'],
-        tasks: ['less:stylecss'],
+        tasks: ['less_imports', 'less:stylecss'],
         options: {
           spawn: true
           // livereload: 35729
@@ -322,6 +322,24 @@ module.exports = function(grunt) {
 
 
 
+
+    /**
+    npm install grunt-less-imports --save-dev
+    grunt.loadNpmTasks('grunt-less-imports');
+     */
+    less_imports: {
+      options: {
+        // banner: '// Compiled stylesheet'
+      },
+      styles: {
+        src: [
+            '<%= config.template %>less/plugins/*.less',
+            '<%= config.template %>less/elements/*.less',
+            '<%= config.template %>less/pages/*.less'
+          ],
+          dest: '<%= config.template %>less/less-import.less'
+      }
+    },
 
 
     ////////////////
@@ -493,6 +511,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-less-imports');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-requirejs');

@@ -1,11 +1,6 @@
 ///////////////
 // variables //
 ///////////////
-// @screen-sm: 480px;
-// @screen-md: 768px;
-// @screen-lg: 992px;
-// @screen-xl: 1600px;
-
 
 
 
@@ -14,8 +9,9 @@
 
 
 // global
-.make-space(@prefix: xs);
-
+@media (min-width: 0) {
+  .make-space(@prefix: xs);
+}
 
 // mobile
 @media (min-width: @screen-sm) {
