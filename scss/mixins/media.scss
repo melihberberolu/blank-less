@@ -1,62 +1,40 @@
-//  Author: Rafal Bromirski
-//  www: http://rafalbromirski.com/
-//  github: http://github.com/paranoida/sass-mediaqueries
-//
-//  Licensed under a MIT License
-//
-//  Version:
-//  1.5.1
-
-// --- screen ------------------------------------------------------------------
-
-@mixin screen($res-min, $res-max, $orientation: false) {
-  @if $orientation {
-    @media screen and (min-width: $res-min) and (max-width: $res-max)
-    and (orientation:#{$orientation}) {
-      @content;
-    }
-  }
-  @else {
-    @media screen and (min-width: $res-min) and (max-width: $res-max) {
-      @content;
-    }
-  }
-}
-
-@mixin screen-max($res) {
-  @media screen and (max-width: $res) {
+@mixin screen($min-width, max-width) {
+  @media screen and (min-width: $min-width) and (max-width: (max-width - 1)) {
     @content;
   }
 }
 
-@mixin screen-min($res) {
-  @media screen and (min-width: $res) {
+
+
+
+
+
+@mixin screen-max($max-width) {
+  @media screen and (max-width: ($max-width - 1)) {
     @content;
   }
 }
 
-@mixin screen-height($res-min, $res-max, $orientation: false) {
-  @if $orientation {
-    @media screen and (min-height: $res-min) and (max-height: $res-max)
-    and (orientation:#{$orientation}) {
-      @content;
-    }
-  }
-  @else {
-    @media screen and (min-height: $res-min) and (max-height: $res-max) {
-      @content;
-    }
-  }
-}
-
-@mixin screen-max-height($res) {
-  @media screen and (max-height: $res) {
+@mixin screen-min($min-width) {
+  @media screen and (min-width: $min-width) {
     @content;
   }
 }
 
-@mixin screen-min-height($res) {
-  @media screen and (min-height: $res) {
+@mixin screen-height($min-height, $max-height) {
+  @media screen and (min-height: $min-height) and (max-height: ($max-height - 1)) {
+    @content;
+  }
+}
+
+@mixin screen-max-height($max-height) {
+  @media screen and (max-height: ($max-height - 1)) {
+    @content;
+  }
+}
+
+@mixin screen-min-height($min-height) {
+  @media screen and (min-height: $min-height) {
     @content;
   }
 }
