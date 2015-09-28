@@ -1,5 +1,8 @@
 .browser(@browser: Mozilla, @content) {
-  html[data-browser*="@{browser}"] & {
-    @content();
+  .for(@browser);
+  .-each(@value) {
+    html[data-browser*="@{value}"] & {
+      @content();
+    }
   }
 }
