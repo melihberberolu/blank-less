@@ -1,14 +1,6 @@
-.screen(@min-width, @max-width, @orientation: false, @content) {
-  & when (@orientation) {
-    @media screen and (min-width: @min-width) and (max-width: @max-width)
-    and (orientation:@orientation) {
-      @content();
-    }
-  }
-  & when (default()) {
-    @media screen and (min-width: @min-width) and (max-width: @max-width) {
-      @content();
-    }
+.screen(@min-width, @max-width, @content) {
+  @media screen and (min-width: @min-width) and (max-width: @max-width) {
+    @content();
   }
 }
 
@@ -18,7 +10,7 @@
 
 
 .screen-max(@max-width, @content) {
-  @media screen and (max-width: @max-width) {
+  @media screen and (max-width: (@max-width - 1)) {
     @content();
   }
 }
@@ -29,22 +21,14 @@
   }
 }
 
-.screen-height(@min-height, @max-height, @orientation: false, @content) {
-  & when (@orientation) {
-    @media screen and (min-height: @min-height) and (max-height: @max-height)
-    and (orientation:@orientation) {
-      @content();
-    }
-  }
-  & when (default()) {
-    @media screen and (min-height: @min-height) and (max-height: @max-height) {
-      @content();
-    }
+.screen-height(@min-height, @max-height, @content) {
+  @media screen and (min-height: @min-height) and (max-height: (@max-height - 1)) {
+    @content();
   }
 }
 
 .screen-max-height(@max-height, @content) {
-  @media screen and (max-height: @max-height) {
+  @media screen and (max-height: (@max-height - 1)) {
     @content();
   }
 }
