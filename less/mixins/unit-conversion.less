@@ -1,10 +1,8 @@
-@default-rem-value : 16px;
-
 ///////////////
 // rem to px //
 ///////////////
-.rem-to-px(@val) {
-  @px: unit(unit(@val) * @default-rem-value, px);
+.rem-to-px(@val, @default-rem-value: 16px) {
+  @value: unit(unit(@val) * unit(@default-rem-value), px);
 }
 
 
@@ -12,6 +10,6 @@
 ///////////////
 // px to rem //
 ///////////////
-.px-to-rem(@val) {
-  @rem: unit(unit(@val) / unit(@default-rem-value), rem);
+.px-to-rem(@val, @default-rem-value: 16px) {
+  @value: unit(unit(@val) / unit(@default-rem-value), rem);
 }
