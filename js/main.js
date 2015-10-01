@@ -181,8 +181,7 @@ $(window).load(function() {
 ///////////////////////////////////////////////
 ///////////////////////////////////////////////
 ///////////////////////////////////////////////
-(function() {
-
+(function(window, document, undefined) {
   //=============================================
   //              PRINT WINDOW SIZE             =
   //=============================================
@@ -207,7 +206,7 @@ $(window).load(function() {
   browser.nua = navigator.userAgent;
   browser = {
     userAgent      : navigator.userAgent,
-    html           : document.documentElement.classList,
+    htmlClass      : document.documentElement.classList,
     webkit         : /webkit/gi.test(this.nua),
     gecko          : /gecko/gi.test(this.nua),
     mobile         : /Mobile/gi.test(this.nua),
@@ -248,4 +247,4 @@ $(window).load(function() {
   document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("window-size-info").setAttribute("title", browserVariables);
   });
-})();
+})(window, document);
