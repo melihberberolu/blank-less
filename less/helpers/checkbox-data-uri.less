@@ -1,0 +1,139 @@
+@checkbox-width: 18px;
+@checkbox-color: #000;
+@checkbox-border-width: 2px;
+@checkbox-is-square: true;
+
+
+
+.radio-custom,
+.checkbox-custom {
+  input {
+    display: none;
+    &:not(:checked) + label:after {
+      border-color: fade(@checkbox-color, 70%);
+    }
+    &:not(:checked) + label:hover:after {
+      border-color: @checkbox-color;
+    }
+    &:checked + label:after {
+      border-color: @checkbox-color;
+    }
+    &:checked + label:before {
+      .prefix(transform, scale(1));
+    }
+    &[disabled] {
+      & + label {
+        cursor: not-allowed;
+        cursor: disabled;
+        &:after,
+        &:hover:after,
+        &:hover:before,
+        &:before {
+          color: #C5C5C5;
+          border-color: #C5C5C5;
+        }
+      }
+    }
+  }
+  label,
+  label:before,
+  label:after {
+    .trans(0.08s);
+    line-height: @checkbox-width;
+  }
+  label {
+    .prefix(user-select, none);
+    position: relative;
+    padding-left: @checkbox-width * 1.2;
+    &:before,
+    &:after {
+      content: "";
+      width: @checkbox-width;
+      height: @checkbox-width;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &:after {
+      border: @checkbox-border-width solid fade(@checkbox-color, 80%);
+      & when (@checkbox-is-square = false) {
+        border-radius: 100%;
+      }
+    }
+    &:before {
+      z-index: 2;
+      .prefix(transform, scale(0));
+      background-repeat: no-repeat;
+      & when (@checkbox-is-square = true) {
+        background-size: 70%;
+      }
+      & when (@checkbox-is-square = false) {
+        border-radius: 100%;
+        background-size: 60%;
+      }
+      background-position: center center;
+    }
+  }
+}
+
+
+
+
+
+//====================================
+//              CHECKBOX             =
+//====================================
+.checkbox-custom {
+  input[type="checkbox"] {
+    & + label {
+      &:before {
+        background-image: data-uri("../../img/ui/font-awesome/black/check.svg");
+      }
+    }
+  }
+  &.checkbox-fill {
+    input[type="checkbox"] {
+      & + label {
+        &:before {
+          background-image: data-uri("../../img/ui/font-awesome/white/check.svg");
+          .prefix(transition-delay, 0.05s);
+        }
+      }
+      &:checked + label:after {
+        background-color: @checkbox-color;
+      }
+      &:checked + label:before {
+        .prefix(transform, scale(1));
+      }
+    }
+
+  }
+}
+//--------  End of checkbox  ---------//
+
+
+
+
+
+
+
+
+
+
+//====================================
+//              RADIO             =
+//====================================
+.radio-custom {
+  input[type="radio"] {
+    & + label {
+      &:after {
+        border-radius: @checkbox-width;
+      }
+      &:before {
+        background-size: 50%;
+        background-image: data-uri("../../img/ui/font-awesome/black/circle.svg");
+      }
+    }
+  }
+}
+//--------  End of radio  ---------//

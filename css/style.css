@@ -1861,15 +1861,15 @@
 }
 .radio-custom input:not(:checked) + label:after,
 .checkbox-custom input:not(:checked) + label:after {
-  border-color: rgba(51, 122, 183, 0.7);
+  border-color: rgba(0, 0, 0, 0.7);
 }
 .radio-custom input:not(:checked) + label:hover:after,
 .checkbox-custom input:not(:checked) + label:hover:after {
-  border-color: #337ab7;
+  border-color: #000000;
 }
 .radio-custom input:checked + label:after,
 .checkbox-custom input:checked + label:after {
-  border-color: #337ab7;
+  border-color: #000000;
 }
 .radio-custom input:checked + label:before,
 .checkbox-custom input:checked + label:before {
@@ -1906,7 +1906,7 @@
   -ms-transition: all 0.08s linear;
   -o-transition: all 0.08s linear;
   transition: all 0.08s linear;
-  line-height: 20px;
+  line-height: 18px;
 }
 .radio-custom label,
 .checkbox-custom label {
@@ -1916,44 +1916,40 @@
   -o-user-select: none;
   user-select: none;
   position: relative;
-  padding-left: 24px;
+  padding-left: 21.6px;
 }
 .radio-custom label:before,
 .checkbox-custom label:before,
 .radio-custom label:after,
 .checkbox-custom label:after {
   content: "";
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   position: absolute;
   top: 0;
   left: 0;
 }
 .radio-custom label:after,
 .checkbox-custom label:after {
-  border: 2px solid rgba(51, 122, 183, 0.8);
+  border: 2px solid rgba(0, 0, 0, 0.8);
 }
 .radio-custom label:before,
 .checkbox-custom label:before {
   z-index: 2;
-  text-align: center;
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
   -ms-transform: scale(0);
   -o-transform: scale(0);
   transform: scale(0);
-  color: #337ab7;
-  font-family: FontAwesome;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center center;
 }
 .checkbox-custom input[type="checkbox"] + label:before {
-  content: "\f00c";
-  font-size: 14px;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTc5MiIgaGVpZ2h0PSIxNzkyIiB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xNjcxIDU2NnEwIDQwLTI4IDY4bC03MjQgNzI0LTEzNiAxMzZxLTI4IDI4LTY4IDI4dC02OC0yOGwtMTM2LTEzNi0zNjItMzYycS0yOC0yOC0yOC02OHQyOC02OGwxMzYtMTM2cTI4LTI4IDY4LTI4dDY4IDI4bDI5NCAyOTUgNjU2LTY1N3EyOC0yOCA2OC0yOHQ2OCAyOGwxMzYgMTM2cTI4IDI4IDI4IDY4eiIvPjwvc3ZnPg==");
 }
 .checkbox-custom.checkbox-fill input[type="checkbox"] + label:before {
-  color: #fff;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTc5MiIgaGVpZ2h0PSIxNzkyIiB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xNjcxIDU2NnEwIDQwLTI4IDY4bC03MjQgNzI0LTEzNiAxMzZxLTI4IDI4LTY4IDI4dC02OC0yOGwtMTM2LTEzNi0zNjItMzYycS0yOC0yOC0yOC02OHQyOC02OGwxMzYtMTM2cTI4LTI4IDY4LTI4dDY4IDI4bDI5NCAyOTUgNjU2LTY1N3EyOC0yOCA2OC0yOHQ2OCAyOGwxMzYgMTM2cTI4IDI4IDI4IDY4eiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==");
   -webkit-transition-delay: 0.05s;
   -moz-transition-delay: 0.05s;
   -ms-transition-delay: 0.05s;
@@ -1961,10 +1957,9 @@
   transition-delay: 0.05s;
 }
 .checkbox-custom.checkbox-fill input[type="checkbox"]:checked + label:after {
-  background-color: #337ab7;
+  background-color: #000000;
 }
 .checkbox-custom.checkbox-fill input[type="checkbox"]:checked + label:before {
-  color: #fff;
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
@@ -1972,14 +1967,11 @@
   transform: scale(1);
 }
 .radio-custom input[type="radio"] + label:after {
-  border-radius: 20px;
+  border-radius: 18px;
 }
 .radio-custom input[type="radio"] + label:before {
-  content: "\f111";
-  font-size: 10px;
-}
-html[data-browser*="Firefox"] .radio-custom input[type="radio"] + label:before {
-  font-size: 10px;
+  background-size: 50%;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTc5MiIgaGVpZ2h0PSIxNzkyIiB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xNjY0IDg5NnEwIDIwOS0xMDMgMzg1LjV0LTI3OS41IDI3OS41LTM4NS41IDEwMy0zODUuNS0xMDMtMjc5LjUtMjc5LjUtMTAzLTM4NS41IDEwMy0zODUuNSAyNzkuNS0yNzkuNSAzODUuNS0xMDMgMzg1LjUgMTAzIDI3OS41IDI3OS41IDEwMyAzODUuNXoiLz48L3N2Zz4=");
 }
 .f1 {
   font-family: Arial, Helvetica, sans-serif;

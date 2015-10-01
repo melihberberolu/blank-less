@@ -1,6 +1,7 @@
 @checkbox-width: 20px;
 @checkbox-color: #337AB7;
 @checkbox-border-width: 2px;
+@checkbox-is-square: true;
 
 
 
@@ -55,6 +56,9 @@
     }
     &:after {
       border: @checkbox-border-width solid fade(@checkbox-color, 80%);
+      & when (@checkbox-is-square = false) {
+        border-radius: 100%;
+      }
     }
     &:before {
       z-index: 2;

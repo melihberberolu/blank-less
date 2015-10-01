@@ -24,7 +24,8 @@
   while (length--) {
     method = methods[length];
     // define undefined methods as noops to prevent errors
-    if (!console[method])
+    if (!console[method]) {
       console[method] = noop;
+    }
   }
 })();
