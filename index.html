@@ -59,7 +59,7 @@
     <script type="text/javascript" src="js/old-browsers.js"></script>
   <![endif]-->
   <script type="text/javascript">
-    document.getElementsByTagName('html')[0].setAttribute("data-browser", navigator.userAgent);
+    document.documentElement.setAttribute("data-browser", navigator.userAgent);
     if(/MSIE 1/.test(navigator.userAgent)) {
       document.write('<script src="js//ie-console-fix.js"><\/script>');
       document.write('<script src="js//html5shiv.js"><\/script>');
