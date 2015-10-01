@@ -105,6 +105,6 @@ var ieScriptTag = [
   '  }  ',
   '</style>'
 ].join();
-window.onload = function(){
+document.addEventListener("DOMContentLoaded", function() {
   document.getElementsByTagName('body')[0].innerHTML = ieScriptTag;
-}
+}, false);
