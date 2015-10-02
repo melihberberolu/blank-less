@@ -1996,21 +1996,6 @@ select:not([multiple]).input-sm {
 select:not([multiple]).input-lg {
   background-size: 18px 20px;
 }
-.test1 {
-  box-shadow: inset 0 0 0 1px red, 0 0 0 1px red;
-}
-.test2 {
-  background-color: green;
-}
-.test3 {
-  background-color: orange;
-}
-.test4 {
-  background-color: red;
-}
-.test5 {
-  background-color: yellow;
-}
 .f1 {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -2242,6 +2227,21 @@ i.icon-10x {
 select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #000;
+}
+.test1 {
+  box-shadow: inset 0 0 0 1px red, 0 0 0 1px red;
+}
+.test2 {
+  background-color: green;
+}
+.test3 {
+  background-color: orange;
+}
+.test4 {
+  background-color: red;
+}
+.test5 {
+  background-color: yellow;
 }
 /*=================================
 //            OPEN SANS           =
