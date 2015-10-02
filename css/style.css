@@ -1973,6 +1973,44 @@
   background-size: 50%;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTc5MiIgaGVpZ2h0PSIxNzkyIiB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xNjY0IDg5NnEwIDIwOS0xMDMgMzg1LjV0LTI3OS41IDI3OS41LTM4NS41IDEwMy0zODUuNS0xMDMtMjc5LjUtMjc5LjUtMTAzLTM4NS41IDEwMy0zODUuNSAyNzkuNS0yNzkuNSAzODUuNS0xMDMgMzg1LjUgMTAzIDI3OS41IDI3OS41IDEwMyAzODUuNXoiLz48L3N2Zz4=");
 }
+select:not([multiple]) {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: 14px 16px;
+  background-position: right 12px center;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgNjMuNCAzMDcuMSAxODAuMyIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDYzLjQgMzA3LjEgMTgwLjMiPjxwYXRoIGZpbGw9IiM2MjYyNjIiIGQ9Ik0zMDIuNCA4MC44bC0xMS4xLTExLjFjLTYuMS02LjEtMTYuMS02LjEtMjIuMiAwbC0xMTUuNSAxMTQtMTE1LjctMTE1LjdjLTYuMS02LjEtMTYuMS02LjEtMjIuMiAwbC0xMS4xIDExLjFjLTYuMSA2LjEtNi4xIDE2LjEgMCAyMi4ybDEzNy44IDEzNy44YzYuMSA2LjEgMTYuMSA2LjEgMjIuMiAwbDEzNy44LTEzNi4xYzYuMi02LjEgNi4yLTE2LjEgMC0yMi4yeiIvPjwvc3ZnPg==");
+  padding-right: 36px;
+}
+select:not([multiple]) option {
+  padding: 2px 10px;
+}
+select:not([multiple]).input-sm {
+  background-size: 10px 14px;
+}
+select:not([multiple]).input-lg {
+  background-size: 18px 20px;
+}
+.test1 {
+  box-shadow: inset 0 0 0 1px red, 0 0 0 1px red;
+}
+.test2 {
+  background-color: green;
+}
+.test3 {
+  background-color: orange;
+}
+.test4 {
+  background-color: red;
+}
+.test5 {
+  background-color: yellow;
+}
 .f1 {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -2204,39 +2242,6 @@ i.icon-10x {
 select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #000;
-}
-select:not([multiple]) {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-  appearance: none;
-  background: #ffffff url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgOTcuMSA0NTEuOCAyNTcuNiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDk3LjEgNDUxLjggMjU3LjYiPjxwYXRoIGZpbGw9IiM2MjYyNjIiIGQ9Ik0yMjUuOSAzNTQuN2MtOC4xIDAtMTYuMi0zLjEtMjIuNC05LjNsLTE5NC4yLTE5NC4yYy0xMi40LTEyLjQtMTIuNC0zMi40IDAtNDQuOCAxMi40LTEyLjQgMzIuNC0xMi40IDQ0LjcgMGwxNzEuOSAxNzEuOSAxNzEuOS0xNzEuOWMxMi40LTEyLjQgMzIuNC0xMi40IDQ0LjcgMCAxMi40IDEyLjQgMTIuNCAzMi40IDAgNDQuOGwtMTk0LjIgMTk0LjJjLTYuMiA2LjItMTQuMyA5LjMtMjIuNCA5LjN6Ii8+PC9zdmc+) no-repeat scroll right 12px center / 14px 16px padding-box;
-  padding-right: 36px;
-}
-select:not([multiple]) option {
-  padding: 2px 10px;
-}
-select:not([multiple]).input-sm {
-  background-size: 10px 14px;
-}
-select:not([multiple]).input-lg {
-  background-size: 18px 20px;
-}
-.test1 {
-  box-shadow: inset 0 0 0 1px red, 0 0 0 1px red;
-}
-.test2 {
-  background-color: green;
-}
-.test3 {
-  background-color: orange;
-}
-.test4 {
-  background-color: red;
-}
-.test5 {
-  background-color: yellow;
 }
 /*=================================
 //            OPEN SANS           =
