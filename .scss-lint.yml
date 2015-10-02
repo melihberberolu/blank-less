@@ -1,6 +1,7 @@
 # Default application configuration that all configurations inherit from.
 
 scss_files: "**/*.scss"
+exclude: "**/*.css"
 plugin_directories: ['.scss-linters']
 
 # List of gem names to load custom linters from (make sure they are already
@@ -61,7 +62,7 @@ linters:
     present: true
 
   HexLength:
-    enabled: true
+    enabled: false
     style: short # or 'long'
 
   HexNotation:
@@ -221,13 +222,13 @@ linters:
     properties: []
 
   VendorPrefix:
-    enabled: true
+    enabled: false
     identifier_list: base
     additional_identifiers: []
     excluded_identifiers: []
 
   ZeroUnit:
-    enabled: true
+    enabled: false
 
   Compass::*:
     enabled: false
