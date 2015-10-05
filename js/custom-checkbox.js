@@ -21,7 +21,7 @@
         label.setAttribute("for", isId);
       }
     }
-  }
+  };
   document.addEventListener("DOMContentLoaded", function() {
     setIdForInputs("checkbox-custom");
     setIdForInputs("radio-custom");
