@@ -1,0 +1,89 @@
+@mixin grid-guideline(
+   $gutter: 20px,
+    $column: 12,
+    $container-xs: 320px,
+    $container-sm: 480px,
+    $container-md: 768px,
+    $container-lg: 960px
+  ) {
+
+  $width: $container-xs;
+  background-size: $width / $column;
+  $gutter-percent: percentage( $gutter / 2 / $width / $column * 100 );
+  background-image: linear-gradient( to right,
+      #F9DDEA 0%,
+      #eee 1%,
+      #eeaccb 1%,
+      #eeaccb$gutter-percent,
+      #b4f8a3$gutter-percent,
+      #b4f8a3 100 - $gutter-percent,
+      #eeaccb 100 - $gutter-percent,
+      #eeaccb 99%,
+      #eee 99%,
+      #eeaccb 100%
+  );
+  @include screen-min($container-sm) {
+    $width: $container-sm;
+    background-size: $width / $column;
+    $gutter-percent: percentage( $gutter / 2 / $width / $column * 100 );
+    background-image: linear-gradient( to right,
+        #eeaccb 0%,
+        #eee 1%,
+        #eeaccb 1%,
+        #eeaccb$gutter-percent,
+        #b4f8a3$gutter-percent,
+        #b4f8a3 100 - $gutter-percent,
+        #eeaccb 100 - $gutter-percent,
+        #eeaccb 99%,
+        #eee 99%,
+        #eeaccb 100%
+    );
+  }
+  @include screen-min($container-md) {
+    $width: $container-md;
+    background-size: $width / $column;
+    $gutter-percent: percentage( $gutter / 2 / $width / $column * 100 );
+    background-image: linear-gradient( to right,
+        #eeaccb 0%,
+        #eee 1%,
+        #eeaccb 1%,
+        #eeaccb$gutter-percent,
+        #b4f8a3$gutter-percent,
+        #b4f8a3 100 - $gutter-percent,
+        #eeaccb 100 - $gutter-percent,
+        #eeaccb 99%,
+        #eee 99%,
+        #eeaccb 100%
+    );
+  }
+  @include screen-min($container-lg) {
+    $width: $container-lg;
+    background-size: $width / $column;
+    $gutter-percent: percentage( $gutter / 2 / $width / $column * 100 );
+    background-image: linear-gradient( to right,
+        #eeaccb 0%,
+        #eee 1%,
+        #eeaccb 1%,
+        #eeaccb$gutter-percent,
+        #b4f8a3$gutter-percent,
+        #b4f8a3 100 - $gutter-percent,
+        #eeaccb 100 - $gutter-percent,
+        #eeaccb 99%,
+        #eee 99%,
+        #eeaccb 100%
+    );
+  }
+}
+
+
+.row {
+  @include grid-guideline();
+  [class*="col-"] {
+    box-shadow: inset 0 0 0 1px blue;
+  }
+}
+[class*="col-"]{
+  .row {
+    background-image: none;
+  }
+}

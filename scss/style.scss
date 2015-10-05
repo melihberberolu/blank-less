@@ -19,7 +19,9 @@
 @import "mixins/prefix";
 @import "mixins/unit-conversion";
 @import "mixins/clearfix";
+@import "mixins/media";
 @import "mixins/button-theme";
+@import "mixins/grid-guideline";
 @import "mixins/cross-browser";
 @import "mixins/flexbox";
 @import "mixins/keyframes";
@@ -27,7 +29,6 @@
 @import "mixins/transform";
 @import "mixins/transition";
 @import "mixins/columns";
-@import "mixins/media";
 @import "mixins/triangle";
 @import "mixins/misc";
 @import "mixins/easing";
