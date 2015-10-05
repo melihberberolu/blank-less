@@ -1845,11 +1845,11 @@
 .checkbox-custom label:before,
 .radio-custom label:after,
 .checkbox-custom label:after {
-  -webkit-transition: all 0.08s linear;
-  -moz-transition: all 0.08s linear;
-  -ms-transition: all 0.08s linear;
-  -o-transition: all 0.08s linear;
-  transition: all 0.08s linear;
+  -webkit-transition: 0.08s;
+  -moz-transition: 0.08s;
+  -ms-transition: 0.08s;
+  -o-transition: 0.08s;
+  transition: 0.08s;
   line-height: 18px;
 }
 .radio-custom label,
