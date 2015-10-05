@@ -1,0 +1,143 @@
+$checkbox-width: 20px;
+$checkbox-color: #337AB7;
+$checkbox-border-width: 2px;
+$checkbox-is-square: true;
+
+
+
+.radio-custom,
+.checkbox-custom {
+  input {
+    display: none;
+    &:not(:checked) + label:after {
+      border-color: rgba($checkbox-color, 70%);
+    }
+    &:not(:checked) + label:hover:after {
+      border-color: $checkbox-color;
+    }
+    &:checked + label:after {
+      border-color: $checkbox-color;
+    }
+    &:checked + label:before {
+      @include prefix(transform, scale(1));
+    }
+    &[disabled] {
+      & + label {
+        cursor: not-allowed;
+        cursor: disabled;
+        &:after,
+        &:hover:after,
+        &:hover:before,
+        &:before {
+          color: #C5C5C5;
+          border-color: #C5C5C5;
+        }
+      }
+    }
+  }
+  label,
+  label:before,
+  label:after {
+    @include transition(0.08s);
+    line-height: $checkbox-width;
+  }
+  label {
+    @include prefix(user-select, none);
+    position: relative;
+    padding-left: $checkbox-width * 1.2;
+    &:before,
+    &:after {
+      content: "";
+      width: $checkbox-width;
+      height: $checkbox-width;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &:after {
+      border: $checkbox-border-width solid rgba($checkbox-color, 80%);
+      @if $checkbox-is-square == false {
+        border-radius: 100%;
+      }
+    }
+    &:before {
+      z-index: 2;
+      text-align: center;
+      @include prefix(transform, scale(0));
+      color: $checkbox-color;
+      font-family: FontAwesome;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  }
+}
+
+
+
+
+
+//====================================
+//              CHECKBOX             =
+//====================================
+.checkbox-custom {
+  input[type="checkbox"] {
+    & + label {
+      &:before {
+        content: "\f00c";
+        font-size: $checkbox-width * 0.7;
+      }
+    }
+  }
+  &.checkbox-fill {
+    input[type="checkbox"] {
+      & + label {
+        &:before {
+          color: #fff;
+          @include prefix(transition-delay, 0.05s);
+        }
+      }
+      &:checked + label:after {
+        background-color: $checkbox-color;
+      }
+      &:checked + label:before {
+        color: #fff;
+        @include prefix(transform, scale(1));
+      }
+    }
+
+  }
+}
+//--------  End of checkbox  ---------//
+
+
+
+
+
+
+
+
+
+
+//====================================
+//              RADIO             =
+//====================================
+.radio-custom {
+  input[type="radio"] {
+    & + label {
+      &:after {
+        border-radius: $checkbox-width;
+      }
+      &:before {
+        content: "\f111";
+        font-size: $checkbox-width * 0.5;
+        @if $checkbox-width <= 20 {
+          @include browser(Firefox) {
+            font-size: 10px;
+          };
+        }
+      }
+    }
+  }
+}
+//--------  End of radio  ---------//

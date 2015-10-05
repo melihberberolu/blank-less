@@ -1,6 +1,7 @@
-$checkbox-width: 20px;
-$checkbox-color: #337AB7;
+$checkbox-width: 18px;
+$checkbox-color: #000;
 $checkbox-border-width: 2px;
+$checkbox-is-square: true;
 
 
 
@@ -9,7 +10,7 @@ $checkbox-border-width: 2px;
   input {
     display: none;
     &:not(:checked) + label:after {
-      border-color: rgba($checkbox-color, .7);
+      border-color: fade($checkbox-color, 70%);
     }
     &:not(:checked) + label:hover:after {
       border-color: $checkbox-color;
@@ -37,7 +38,7 @@ $checkbox-border-width: 2px;
   label,
   label:before,
   label:after {
-    @include trans(0.08s);
+    @include transition(0.08s);
     line-height: $checkbox-width;
   }
   label {
@@ -54,20 +55,24 @@ $checkbox-border-width: 2px;
       left: 0;
     }
     &:after {
-      border: $checkbox-border-width solid rgba($checkbox-color, .8);
+      border: $checkbox-border-width solid fade($checkbox-color, 80%);
+      @if $checkbox-is-square == false {
+        border-radius: 100%;
+      }
     }
     &:before {
       z-index: 2;
-      text-align: center;
       @include prefix(transform, scale(0));
-      color: $checkbox-color;
-      font-family: FontAwesome;
-      font-size: $checkbox-width * 0.7;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+      background-repeat: no-repeat;
+      @if $checkbox-is-square == true {
+        background-size: 70%;
+      }
+      @if $checkbox-is-square == false {
+        border-radius: 100%;
+        background-size: 60%;
+      }
+      background-position: center center;
     }
-
   }
 }
 
@@ -82,8 +87,7 @@ $checkbox-border-width: 2px;
   input[type="checkbox"] {
     & + label {
       &:before {
-        content: "\f00c";
-        font-size: $checkbox-width * 0.7;
+        background-image: inline-image($checkbox-color);
       }
     }
   }
@@ -91,7 +95,7 @@ $checkbox-border-width: 2px;
     input[type="checkbox"] {
       & + label {
         &:before {
-          color: #fff;
+          background-image: inline-image(#fff);
           @include prefix(transition-delay, 0.05s);
         }
       }
@@ -99,7 +103,6 @@ $checkbox-border-width: 2px;
         background-color: $checkbox-color;
       }
       &:checked + label:before {
-        color: #fff;
         @include prefix(transform, scale(1));
       }
     }
@@ -127,13 +130,8 @@ $checkbox-border-width: 2px;
         border-radius: $checkbox-width;
       }
       &:before {
-        content: "\f111";
-        font-size: $checkbox-width * 0.5;
-        @if ($checkbox-width <= 20) {
-          @include browser(Firefox) {
-            font-size: 10px;
-          };
-        }
+        background-size: 50%;
+        background-image: inline-image($checkbox-color);
       }
     }
   }
