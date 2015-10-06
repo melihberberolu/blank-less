@@ -1,44 +1,3 @@
-//////////////////////
-// Placeholder text //
-//////////////////////
-@mixin placeholder($color: #BFBFBF) {
-  &:-moz-placeholder            { color: $color; }
-  &::-moz-placeholder           { color: $color; }
-  &:-ms-input-placeholder       { color: $color; }
-  &::-webkit-input-placeholder  { color: $color; }
-  &::placeholder                { color: $color; }
-}
-
-
-
-
-@mixin opacity($opacity) {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$opacity*100})";
-    filter: alpha(opacity=( $opacity * 100 ));
-    -moz-opacity: $opacity;
-    -khtml-opacity: $opacity;
-    opacity: $opacity;
-}
-
-
-
-
-
-@mixin selection($color, $background) {
-  &::selection {
-    background: $background;
-    color: $color;
-  }
-  &::-moz-selection {
-    background: $background;
-    color: $color;
-  }
-}
-
-
-
-
-
 /////////
 //font //
 /////////
@@ -96,19 +55,7 @@
 
 
 // hidden visually
-@mixin hidden-visually {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-%hidden-visually {
-  @include hidden-visually;
-}
+
 
 
 
