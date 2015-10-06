@@ -23,8 +23,8 @@
     "grunt-contrib-uglify": "^0.5.1",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-less-imports": "^1.1.0",
-    "grunt-shell": "^1.1.2",
-    "node-neat": "^1.7.2"
+    "grunt-sass-import": "^0.1.0",
+    "grunt-shell": "^1.1.2"
   },
   "license": "MIT"
 }

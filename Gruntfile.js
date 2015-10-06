@@ -174,7 +174,7 @@ module.exports = function(grunt) {
       },
       sass: {
         files: ['<%= config.template %>scss/**/*.scss'],
-        tasks: ['sass:stylecss'],
+        tasks: ['sass_import' ,'sass:stylecss'],
         options: {
           spawn: true
           // livereload: 35729
@@ -401,6 +401,26 @@ module.exports = function(grunt) {
 
 
 
+    /**
+    npm install grunt-sass-import --save-dev
+    grunt.loadNpmTasks('grunt-sass-import');
+    */
+    sass_import: {
+      options: {
+        basePath: '<%= config.template %>scss/'
+      },
+      dist: {
+        files: {
+          'scss-import.scss': [
+            "plugins/*",
+            "elements/*",
+            "pages/*"
+          ]
+        }
+      }
+    },
+
+
 
 
     /////////////
@@ -513,10 +533,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-less-imports');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-sass-import');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-contrib-handlebars');
   grunt.loadNpmTasks('grunt-shell');
 
-  grunt.registerTask('default', ['less', 'concat', 'uglify']);
+  grunt.registerTask('default', ['less_import', 'less', 'concat', 'uglify']);
 };
