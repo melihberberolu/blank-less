@@ -6,8 +6,8 @@
 !    http://aslanbakan.com
 */
 // bnootstrap
-@import "../scss-bootstrap/_variables.scss";
-@import "../scss-bootstrap/_mixins.scss";
+@import "../scss-bootstrap/_variables";
+@import "../scss-bootstrap/_mixins";
 
 // custom variables
 @import "_vars.scss";
@@ -19,32 +19,38 @@
 @import "mixins/prefix";
 @import "mixins/unit-conversion";
 @import "mixins/clearfix";
+@import "mixins/placeholder";
+@import "mixins/opacity";
+@import "mixins/selection";
+@import "mixins/hidden-visually";
 @import "mixins/media";
 @import "mixins/button-theme";
-@import "mixins/grid-guideline";
+// @import "mixins/grid-guideline";
 @import "mixins/cross-browser";
+@import "mixins/transform";
+@import "mixins/transition";
+@import "mixins/animation";
 @import "mixins/flexbox";
 @import "mixins/keyframes";
 @import "mixins/loading";
-@import "mixins/transform";
-@import "mixins/transition";
 @import "mixins/columns";
 @import "mixins/triangle";
 @import "mixins/misc";
 @import "mixins/easing";
-// @import "mixins/animate-functions";
+// @import "mixins/animatecss-functions";
 
 
 /////////////
 // helpers //
 /////////////
+@import "helpers/selectbox";
 @import "helpers/data-uri-icons";
 @import "helpers/space";
 @import "helpers/flexbox";
-// @import "helpers/checkbox-data-uri";
-@import "helpers/checkbox-font-awesome";
+@import "helpers/checkbox-data-uri";
+// @import "helpers/checkbox-font-awesome";
 // @import "helpers/font-size";
-// @import "helpers/animate";
+// @import "helpers/animatecss";
 @import "helpers/common";
 
 
