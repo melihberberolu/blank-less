@@ -1,18 +1,15 @@
-////////////////
-//transitions //
-////////////////
-@mixin trans($duration :0.1s ) {
-  @include prefix(transition, all $duration linear);
+@mixin trans($duration: 300ms) {
+  @include prefix(transition, all $duration ease-out);
 }
+
 @mixin transition($value) {
   @include prefix(transition, $value);
 }
-@mixin trans-delay($delay1 :0.1s) {
-  @include prefix(transition-delay, $delay1);
+
+@mixin transition-delay($delay: 100ms) {
+  @include prefix(transition-delay, $delay);
 }
-///////////////
-// animation //
-///////////////
-@mixin animation($keyframe_name, $duration, $ease) {
-  @include prefix(animation, $keyframe_name $duration $ease);
+
+@mixin transition-timing($type: ease-out) {
+  @include prefix(transition-timing-function, $type);
 }

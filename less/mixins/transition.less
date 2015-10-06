@@ -1,18 +1,15 @@
-////////////////
-//transitions //
-////////////////
-.trans(@duration :0.1s ) {
-  .prefix(transition, all @duration linear);
+.trans(@duration: 300ms) {
+  .prefix(transition, all @duration ease-out);
 }
+
 .transition(@value) {
   .prefix(transition, @value);
 }
-.trans-delay(@delay1 :0.1s) {
-  .prefix(transition-delay, @delay1);
+
+.transition-delay(@delay: 100ms) {
+  .prefix(transition-delay, @delay);
 }
-///////////////
-// animation //
-///////////////
-.animation(@keyframe_name, @duration, @ease) {
-  .prefix(animation, @keyframe_name @duration @ease);
+
+.transition-timing(@type: ease-out) {
+  .prefix(transition-timing-function, @type);
 }
