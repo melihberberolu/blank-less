@@ -1,0 +1,31 @@
+@mixin animation($anim-name, $duration, $delay: 0, $type: ease-out) {
+  @include prefix(animation, $anim-name $duration $type $delay);
+}
+
+@mixin animation-name($anim-name) {
+  @include prefix(animation-name, $anim-name);
+}
+
+@mixin animation-delay($delay) {
+  @include prefix(animation-delay, $delay);
+}
+
+@mixin animation-iteration($count: infinite) {
+  @include prefix(animation-iteration-count, $count);
+}
+
+@mixin animation-direction($type: reverse) {
+  @include prefix(animation-direction, $type);
+}
+
+@mixin animation-timing($type: ease-out) {
+  @include prefix(animation-timing-function, $type);
+}
+
+@mixin animation-fill-mode($type: forward) {
+  @include prefix(animation-fill-mode, $type);
+}
+
+@mixin animation-play-state($type: running) {
+  @include prefix(animation-play-state, $type);
+}

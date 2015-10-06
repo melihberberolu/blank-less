@@ -1,0 +1,31 @@
+.animation(@anim-name, @duration, @delay: 0, @type: ease-out) {
+  .prefix(animation, @anim-name @duration @type @delay);
+}
+
+.animation-name(@anim-name) {
+  .prefix(animation-name, @anim-name);
+}
+
+.animation-delay(@delay) {
+  .prefix(animation-delay, @delay);
+}
+
+.animation-iteration(@count: infinite) {
+  .prefix(animation-iteration-count, @count);
+}
+
+.animation-direction(@type: reverse) {
+  .prefix(animation-direction, @type);
+}
+
+.animation-timing(@type: ease-out) {
+  .prefix(animation-timing-function, @type);
+}
+
+.animation-fill-mode(@type: forward) {
+  .prefix(animation-fill-mode, @type);
+}
+
+.animation-play-state(@type: running) {
+  .prefix(animation-play-state, @type);
+}
