@@ -333,11 +333,11 @@ module.exports = function(grunt) {
       },
       styles: {
         src: [
-            '<%= config.template %>less/plugins/*.less',
-            '<%= config.template %>less/elements/*.less',
-            '<%= config.template %>less/pages/*.less'
-          ],
-          dest: '<%= config.template %>less/less-import.less'
+          '<%= config.template %>less/plugins/*.less',
+          '<%= config.template %>less/elements/*.less',
+          '<%= config.template %>less/pages/*.less'
+        ],
+        dest: '<%= config.template %>less/less-import.less'
       }
     },
 
