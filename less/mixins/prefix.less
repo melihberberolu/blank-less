@@ -1,7 +1,7 @@
-.prefix(@property, @value) {
-  -webkit-@{property}: @value;
-     -moz-@{property}: @value;
-      -ms-@{property}: @value;
-       -o-@{property}: @value;
-          @{property}: @value;
+.prefix(@css-property, @property-values, @prefixes: webkit moz ms o) {
+  .for(@prefixes);
+  .-each(@value) {
+    -@{value}-@{css-property}: @property-values;
+  }
+  @{css-property}: @property-values;
 }
