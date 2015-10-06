@@ -35,7 +35,7 @@ linters:
     enabled: true
 
   DeclarationOrder:
-    enabled: true
+    enabled: false
 
   DisableLinterReason:
     enabled: false
@@ -45,7 +45,7 @@ linters:
 
   ElsePlacement:
     enabled: true
-    style: same_line # or 'new_line'
+    style: new_line # or 'new_line'
 
   EmptyLineBetweenBlocks:
     enabled: false
@@ -58,7 +58,7 @@ linters:
     enabled: false
 
   FinalNewline:
-    enabled: true
+    enabled: false
     present: true
 
   HexLength:
@@ -66,7 +66,7 @@ linters:
     style: short # or 'long'
 
   HexNotation:
-    enabled: true
+    enabled: false
     style: lowercase # or 'uppercase'
 
   HexValidation:
@@ -104,7 +104,7 @@ linters:
 
   NestingDepth:
     enabled: true
-    max_depth: 5
+    max_depth: 9
     ignore_parent_selectors: false
 
   PlaceholderInExtend:
@@ -206,7 +206,7 @@ linters:
     enabled: false
 
   UnnecessaryMantissa:
-    enabled: true
+    enabled: false
 
   UnnecessaryParentReference:
     enabled: true
