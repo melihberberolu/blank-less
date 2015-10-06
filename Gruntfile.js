@@ -363,7 +363,7 @@ module.exports = function(grunt) {
             '<%= config.template %>scss/elements',
             '<%= config.template %>scss/pages',
           ],
-          style: 'compact' // nested, compact, compressed, expanded.
+          style: 'expanded' // nested, compact, compressed, expanded.
         },
         files: {
           '<%= config.template %>css/style.css': '<%= config.template %>scss/style.scss'
@@ -377,7 +377,7 @@ module.exports = function(grunt) {
           lineNumbers: false,
           update: false,
           compass: false,
-          style: 'compact' // nested, compact, compressed, expanded.
+          style: 'expanded' // nested, compact, compressed, expanded.
         },
         files: {
           '<%= config.template %>css/bootstrap.css': '<%= config.template %>scss-bootstrap/bootstrap.scss'
