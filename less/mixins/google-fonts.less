@@ -1,7 +1,7 @@
 .google-fonts(@font-family, @font-weight, @font-subset) {
   @font: replace(~"@{font-family}", ' ', '+', 'gi');
-  @families: replace(~"@{font-weight}", ' ', '+', 'gi');
-  @subset: replace(~"@{font-subset}", ' ', '+', 'gi');
+  @families: replace(~"@{font-weight}", ' ', ',', 'gi');
+  @subset: replace(~"@{font-subset}", ' ', ',', 'gi');
 
-  @import ~"url(http://fonts.googleapis.com/css?family=@{font}:@{families}&subset=@{subset})";
+  @import url(~"http://fonts.googleapis.com/css?family=@{font}:@{families}&subset=@{subset}");
 }
