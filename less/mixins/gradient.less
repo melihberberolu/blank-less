@@ -1,0 +1,59 @@
+.linear-gradient(@direction, @color-stops) {
+  // .gradient-direction-convert(@direction);
+  background: -webkit-linear-gradient(@direction, @color-stops);
+  background: -moz-linear-gradient(@direction, @color-stops);
+  background: -ms-linear-gradient(@direction, @color-stops);
+  background: -o-linear-gradient(@direction, @color-stops);
+  .gradient-direction-convert(@direction);
+}
+
+
+
+.gradient-direction-convert(@direction) {
+  @conversion-map-old:
+    bottom,
+    bottom left,
+    left bottom,
+    left,
+    top left,
+    left top,
+    top,
+    top right,
+    right top,
+    right,
+    right bottom,
+    bottom right
+  ;
+  @conversion-map-new:
+    to top,
+    to top right,
+    to right top,
+    to right,
+    to bottom right,
+    to right bottom,
+    to bottom,
+    to bottom left,
+    to left bottom,
+    to left,
+    to left top,
+    to top left
+  ;
+
+
+  .for(length(@conversion-map-old));
+  .-each(@value) {
+    & when (extract(@conversion-map-old, @value) = @direction) {
+      background: linear-gradient(extract(@conversion-map-new, @value), @color-stops);
+    }
+  }
+  & when (get-unit(@direction) = deg) {
+    & when (unit(@direction) <= 90) {
+      content: 1;
+      background: linear-gradient(90 - @direction, @color-stops);
+    }
+    & when (unit(@direction) >= 90) {
+      content: 2;
+      background: linear-gradient((90 - @direction) + 360deg, @color-stops);
+    }
+  }
+}

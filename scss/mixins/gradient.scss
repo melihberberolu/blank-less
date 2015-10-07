@@ -1,0 +1,38 @@
+@mixin linear-gradient($direction, $color-stops...) {
+
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient($direction, $color-stops);
+  background: -moz-linear-gradient($direction, $color-stops);
+  background: -ms-linear-gradient($direction, $color-stops);
+  background: -o-linear-gradient($direction, $color-stops);
+  background: linear-gradient(legacy-direction($direction), $color-stops);
+}
+
+
+/// Convert a direction to legacy syntax
+/// @param {Keyword | Angle} $value - Value to convert
+/// @require {function} is-direction
+/// @require {function} convert-angle
+/// @throw Cannot convert `#{$value}` to legacy syntax because it doesn't seem to be a direction.;
+@function legacy-direction($value) {
+  $conversion-map: (
+    bottom          : to top,
+    bottom left     : to top right,
+    left bottom     : to right top,
+    left            : to right,
+    top left        : to bottom right,
+    left top        : to right bottom,
+    top             : to bottom,
+    top right       : to bottom left,
+    right top       : to left bottom,
+    right           : to left,
+    right bottom    : to left top,
+    bottom right    : to top left
+  );
+
+  @if map-has-key($conversion-map, $value) {
+    @return map-get($conversion-map, $value);
+  }
+
+  @return 90deg - $value;
+}
