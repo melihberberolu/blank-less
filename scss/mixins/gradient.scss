@@ -34,5 +34,5 @@
     @return map-get($conversion-map, $value);
   }
 
-  @return 90deg - $value;
+  @return (90deg - $value + 360) % 360;
 }
