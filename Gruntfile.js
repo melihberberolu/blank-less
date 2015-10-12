@@ -34,27 +34,10 @@ module.exports = function(grunt) {
         ],
         dest: '<%= config.template %>js/master.js'
       },
-      bootstrap: {
-        src: [
-          '<%= config.template %>js/bs-js/transition.js',
-          '<%= config.template %>js/bs-js/alert.js',
-          '<%= config.template %>js/bs-js/button.js',
-          '<%= config.template %>js/bs-js/carousel.js',
-          '<%= config.template %>js/bs-js/collapse.js',
-          '<%= config.template %>js/bs-js/dropdown.js',
-          '<%= config.template %>js/bs-js/modal.js',
-          '<%= config.template %>js/bs-js/tooltip.js',
-          '<%= config.template %>js/bs-js/popover.js',
-          '<%= config.template %>js/bs-js/scrollspy.js',
-          '<%= config.template %>js/bs-js/tab.js',
-          '<%= config.template %>js/bs-js/affix.js'
-        ],
-        dest: "<%= config.template %>js/bootstrap.js"
-      },
       css: {
         src: [
-          "<%= config.template %>css/bootstrap.css",
           // "<%= config.template %>css/font-awesome.css",
+          "<%= config.template %>css/bootstrap.css",
           "<%= config.template %>css/style.css"
         ],
         dest: "<%= config.template %>css/master.css"
@@ -116,34 +99,10 @@ module.exports = function(grunt) {
           drop_console: true
         }
       },
-      jquery: {
-        src: '<%= config.template %>js/jquery.js',
-        dest: '<%= config.template %>js/jquery.min.js'
-      },
-      bootstrapjs: {
-        src: '<%= config.template %>js/bootstrap.js',
-        dest: '<%= config.template %>js/bootstrap.min.js'
-      },
       masterjs: {
         src: '<%= config.template %>js/master.js',
         dest: '<%= config.template %>js/master.min.js'
-      },
-      mainjs: {
-        src: '<%= config.template %>js/main.js',
-        dest: '<%= config.template %>js/main.min.js'
-      },
-      mastercss: {
-        src: '<%= config.template %>css/master.css',
-        dest: '<%= config.template %>css/master.min.css'
-      },
-      stylecss: {
-        src: '<%= config.template %>css/style.css',
-        dest: '<%= config.template %>css/style.min.css'
-      },
-      bootstrapcss: {
-        src: '<%= config.template %>css/bootstrap.css',
-        dest: '<%= config.template %>css/bootstrap.min.css'
-      },
+      }
     },
 
 
@@ -180,15 +139,6 @@ module.exports = function(grunt) {
           // livereload: 35729
         },
       },
-      /*
-      customcss : {
-        files: ['<%= config.template %>less/*.less'],
-        tasks: ['less:custom'],
-        options: {
-          spawn: true,
-          // livereload: 35729
-        },
-      },*/
       css: {
         files: ['<%= config.template %>css/**/*.css'],
         options: {
@@ -219,6 +169,7 @@ module.exports = function(grunt) {
           '*.php',
           '*.inc',
           '*.js',
+          '*.json',
           '*.jpg',
           '*.png',
           '*.gif',
@@ -226,15 +177,18 @@ module.exports = function(grunt) {
           '*.eot',
           '*.woff',
           '<%= config.template %>*/*.html',
+          '<%= config.template %>*/**/*.html',
           '<%= config.template %>*/*.php',
+          '<%= config.template %>*/**/*.php',
           '<%= config.template %>*/*.inc',
-          '<%= config.template %>*/*.js',
+          '<%= config.template %>*/**/*.inc',
+          '<%= config.template %>js/**/*.js',
           '<%= config.template %>*/*.jpg',
           '<%= config.template %>*/*.png',
           '<%= config.template %>*/*.gif',
           '<%= config.template %>*/*.svg',
-          '<%= config.template %>*/*.eot',
-          '<%= config.template %>*/*.woff',
+          '<%= config.template %>fonts/*.eot',
+          '<%= config.template %>fonts/*.woff',
         ],
         options: {
           spawn: false,
@@ -437,10 +391,10 @@ module.exports = function(grunt) {
       },
       target: {
         files: {
-          'site/templates/css/master.css': [
-            'site/templates/css/font-awesome.css',
-            'site/templates/css/bootstrap.css',
-            'site/templates/css/style.css'
+          '<%= config.template %>css/master.css': [
+            '<%= config.template %>css/font-awesome.css',
+            '<%= config.template %>css/bootstrap.css',
+            '<%= config.template %>css/style.css'
           ]
         }
       }
@@ -458,7 +412,7 @@ module.exports = function(grunt) {
       compile: {
         options: {
           name: "app",
-          baseUrl: "js",
+          baseUrl: "<%= config.template %>js",
           mainConfigFile: "js/config.js",
           out: "js/require-master.js",
           include: "lib/require.min.js",
@@ -540,4 +494,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-shell');
 
   grunt.registerTask('default', ['less_import', 'less', 'concat', 'uglify']);
+  grunt.registerTask('compress', ['concat:js', 'less', 'sass', 'cssmin']);
 };
