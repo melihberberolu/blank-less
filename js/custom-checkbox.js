@@ -8,7 +8,7 @@
       var label = elements[i].querySelector("label");
       var isId = input.id;
       // console.log('isId ' , isId);
-      var isFor = label.for;
+      var isFor = label.getAttribute("for");
       // console.log('isFor ' , isFor);
       if (!isId) {
         // console.log('if 1');
