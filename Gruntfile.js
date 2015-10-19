@@ -27,10 +27,16 @@ module.exports = function(grunt) {
       grunt.loadNpmTasks('grunt-contrib-concat');
     */
     concat: {
+      options: {
+        seperator: ";",
+        stripBanners: true
+      },
       js: {
         src: [
+          "<%= config.template %>js/iife-start.js",
           "<%= config.template %>js/jquery.min.js",
-          "<%= config.template %>js/main.js"
+          "<%= config.template %>js/main.js",
+          "<%= config.template %>js/iife-end.js"
         ],
         dest: '<%= config.template %>js/master.js'
       },
