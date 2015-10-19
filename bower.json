@@ -31,6 +31,7 @@
     "bootstrap": "latest",
     "magnific-popup": "latest",
     "select2": "latest",
+    "moment": "latest",
     "jquery-ui": "latest",
     "handlebars": "latest",
     "iCheck": "latest",
@@ -62,6 +63,7 @@
     "angular-cookies": "latest",
     "angular-loader": "latest",
     "angular-resource": "latest",
+    "angular-messages": "latest",
     "angular-sanitize": "latest"
   },
   "devDependencies": {}
