@@ -479,6 +479,12 @@ module.exports = function(grunt) {
       },
       livereload_http_server: {
         command: 'lr-http-server'
+      },
+      browser_sync_php_server: {
+        command: 'browser-sync start --proxy localhost:9898 --files ".htaccess, *.html, *.php, *.inc, *.js, *.json, *.jpg, *.png, *.gif, *.svg, *.eot, *.woff, <%= config.template %>*/*.html, <%= config.template %>*/**/*.html, <%= config.template %>*/*.php, <%= config.template %>*/**/*.php, <%= config.template %>*/*.inc, <%= config.template %>*/**/*.inc, <%= config.template %>js/**/*.js, <%= config.template %>*/*.jpg, <%= config.template %>*/*.png, <%= config.template %>*/*.gif, <%= config.template %>*/*.svg, <%= config.template %>fonts/*.eot, <%= config.template %>fonts/*.woff"'
+      },
+      browser_sync_http_server: {
+        command: 'browser-sync start --server --files ".htaccess, *.html, *.php, *.inc, *.js, *.json, *.jpg, *.png, *.gif, *.svg, *.eot, *.woff, <%= config.template %>*/*.html, <%= config.template %>*/**/*.html, <%= config.template %>*/*.php, <%= config.template %>*/**/*.php, <%= config.template %>*/*.inc, <%= config.template %>*/**/*.inc, <%= config.template %>js/**/*.js, <%= config.template %>*/*.jpg, <%= config.template %>*/*.png, <%= config.template %>*/*.gif, <%= config.template %>*/*.svg, <%= config.template %>fonts/*.eot, <%= config.template %>fonts/*.woff"'
       }
     }
 
@@ -501,4 +507,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['less_import', 'less', 'concat', 'uglify']);
   grunt.registerTask('compress', ['concat:js', 'less', 'sass', 'cssmin']);
+  grunt.registerTask('bs-php', ['shell:browser_sync_php_server']);
+  grunt.registerTask('bs-http', ['shell:browser_sync_http_server']);
 };

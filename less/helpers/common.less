@@ -54,7 +54,14 @@
 
 
 
-
+.fa() {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 
 
@@ -108,6 +115,22 @@
   opacity: 1;
 }
 
+
+
+
+.cursor-pointer {
+  cursor: pointer;
+}
+.cursor-help {
+  cursor: help;;
+}
+
+
+
+
+.non-select {
+  .prefix(user-select, none);
+}
 
 
 
@@ -190,5 +213,16 @@ i.icon-10x{ font-size: 700%; }
 select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #000;
+}
+input {
+  &:invalid {
+    box-shadow: none;
+  }
+  &:-moz-submit-invalid {
+    box-shadow: none;
+  }
+  &:-moz-ui-invalid {
+    box-shadow:none;
+  }
 }
 //--------  End of input styles  ---------//

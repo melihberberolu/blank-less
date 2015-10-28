@@ -62,9 +62,33 @@
   &.row-paddless {
     margin-left: 0;
     margin-right: 0;
-    > [class^=col-] {
+    > [class*=col-] {
       padding-left: 0;
       padding-right: 0;
+    }
+  }
+  &.row-pad-5 {
+    margin-left: -5px;
+    margin-right: -5px;
+    > [class*=col-] {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+  &.row-pad-10 {
+    margin-left: -10px;
+    margin-right: -10px;
+    > [class*=col-] {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  &.row-pad-20 {
+    margin-left: -20px;
+    margin-right: -20px;
+    > [class*=col-] {
+      padding-left: 20px;
+      padding-right: 20px;
     }
   }
 }
