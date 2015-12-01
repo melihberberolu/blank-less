@@ -42,6 +42,7 @@
     bottom: 0;
     right: 0;
     margin: auto;
+    z-index: 1000;
   }
 }
 
@@ -52,7 +53,7 @@
 /////////
 // dim //
 /////////
-.dim(@color: rgba(255,255,255,0.6), @z-index: 99) {
+.dim(@color: rgba(255,255,255,0.6), @z-index: 9999) {
   position: relative;
   &:before {
     content: "";

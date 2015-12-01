@@ -15,7 +15,9 @@
   "ignore": [
     "**/.*",
     "node_modules",
+    "node",
     "bower_components",
+    "bower",
     "test",
     "tests"
   ],
@@ -56,15 +58,15 @@
     "requirejs-handlebars": "latest"
   },
   "AngularDependencies": {
-    "angular": "latest",
     "angular-bootstrap": "latest",
-    "angular-route": "latest",
-    "angular-animate": "latest",
-    "angular-cookies": "latest",
-    "angular-loader": "latest",
-    "angular-resource": "latest",
-    "angular-messages": "latest",
-    "angular-sanitize": "latest"
+    "angular": "~1.4.7",
+    "angular-route": "~1.4.7",
+    "angular-animate": "~1.4.7",
+    "angular-cookies": "~1.4.7",
+    "angular-loader": "~1.4.7",
+    "angular-resource": "~1.4.7",
+    "angular-messages": "~1.4.7",
+    "angular-sanitize": "~1.4.7"
   },
   "devDependencies": {}
 }

@@ -1,0 +1,88 @@
+--recurse
+--links=no
+
+--exclude=*.cvs*
+--exclude=*.DS_Store*
+--exclude=*.ftl
+--exclude=*.git*
+--exclude=*.hg*
+--exclude=*.idea*
+--exclude=*.log
+--exclude=*.min.css
+--exclude=*.min.js
+--exclude=*.pack.js
+--exclude=*.sass
+--exclude=*.sql
+--exclude=*.svn*
+--exclude=*bower_components*
+--exclude=*bower*
+--exclude=*compiled*
+--exclude=*doc*
+--exclude=*images*
+--exclude=*log*
+--exclude=*node_modules*
+--exclude=*public_html*
+--exclude=*tmp*
+--exclude=*vender*
+--exclude=.#*
+--exclude=.git
+--exclude=bower_components
+--exclude=bower
+--exclude=*lib*
+--exclude=GPATH
+--exclude=GRTAGS
+--exclude=gruntfile.js
+--exclude=GTAGS
+--exclude=json
+--exclude=less-bootstrap
+--exclude=node_modules
+--exclude=tags
+--exclude=TAGS
+--tag-relative=yes
+--recurse=yes
+
+--langdef=html
+--langmap=html:.html
+--regex-html=/id="([a-zA-Z0-9_-]+)"/HTML┃id █ \1/i,html-id/
+
+--langdef=php
+--langmap=php:.php
+--regex-php=/id="([a-zA-Z0-9_-]+)"/PHP┃id █ \1/i,php-id/
+
+--langdef=less
+--langmap=less:.less
+--regex-less=/^[ t]*.([A-Za-z0-9_-]+)/LESS┃cls █ \1/c,class,classes/
+--regex-less=/^[ t]*#([A-Za-z0-9_-]+)/LESS┃id █ \1/i,id,ids/
+
+--langdef=scss
+--langmap=scss:.scss
+--regex-scss=/^[ t]*.([A-Za-z0-9_-]+)/SCSS┃cls █ \1/c,class,classes/
+--regex-scss=/^[ t]*#([A-Za-z0-9_-]+)/SCSS┃id █ \1/i,id,ids/
+
+--langdef=angularjs
+--langmap=angularjs:.js
+--regex-angularjs=/.*[.][\s]*controller\(['"]([a-zA-Z0-9_.]+)['"]/ANG┃ctrl █ \1/c,controller/
+--regex-angularjs=/.*[.][\s]*directive\(['"]([a-zA-Z0-9_.]+)['"]/ANG┃dir █ \1/d,directive/
+--regex-angularjs=/.*[.][\s]*service\(['"]([a-zA-Z0-9_.]+)['"]/ANG┃ser █ \1/s,service/
+--regex-angularjs=/.*[.][\s]*factory\(['"]([a-zA-Z0-9_.]+)['"]/ANG┃fac █ \1/f,factory/
+--regex-angularjs=/.*[.][\s]*module\(['"]([a-zA-Z0-9_\.]+)['"]/ANG┃mod █ \1/m,module/
+
+--langdef=js
+--langmap=js:.js
+--regex-js=/(,|(;|^)[ \t]*(var|let|([A-Za-z_$][A-Za-z0-9_$.]+\.)*))[ \t]*([A-Za-z0-9_$]+)[ \t]*=[ \t]*\{/JS┃obj █ \5/,object/
+--regex-js=/(,|(;|^)[ \t]*(var|let|([A-Za-z_$][A-Za-z0-9_$.]+\.)*))[ \t]*([A-Za-z0-9_$]+)[ \t]*=[ \t]*function[ \t]*\(/JS┃fn █ \5/,function/
+--regex-js=/(,|(;|^)[ \t]*(var|let|([A-Za-z_$][A-Za-z0-9_$.]+\.)*))[ \t]*([A-Za-z0-9_$]+)[ \t]*=[ \t]*\[/JS┃arr █ \5/,array/
+--regex-js=/(,|(;|^)[ \t]*(var|let|([A-Za-z_$][A-Za-z0-9_$.]+\.)*))[ \t]*([A-Za-z0-9_$]+)[ \t]*=[ \t]*[^"]'[^']*/JS┃str █ \5/,string/
+--regex-js=/(,|(;|^)[ \t]*(var|let|([A-Za-z_$][A-Za-z0-9_$.]+\.)*))[ \t]*([A-Za-z0-9_$]+)[ \t]*=[ \t]*(true|false)/JS┃bool █ \5/,boolean/
+--regex-js=/(,|(;|^)[ \t]*(var|let|([A-Za-z_$][A-Za-z0-9_$.]+\.)*))[ \t]*([A-Za-z0-9_$]+)[ \t]*=[ \t]*[0-9]+/JS┃num █ \5/,number/
+--regex-js=/(,|(;|^)[ \t]*(var|let|([A-Za-z_$][A-Za-z0-9_$.]+\.)*))[ \t]*([A-Za-z0-9_$]+)[ \t]*=[ \t]*.+([,;=]|$)/JS┃var █ \5/,variable/
+--regex-js=/(,|(;|^)[ \t]*(var|let|([A-Za-z_$][A-Za-z0-9_$.]+\.)*))[ \t]*([A-Za-z0-9_$]+)[ \t]*[ \t]*([,;]|$)/JS┃var █ \5/,variable/
+--regex-js=/function[ \t]+([A-Za-z0-9_$]+)[ \t]*\([^)]*\)/JS┃fn █ \1/,function/
+
+--regex-js=/(,|^)[ \t]*([A-Za-z_$][A-Za-z0-9_$]+)[ \t]*:[ \t]*\{/JS┃obj █ \2/,object/
+--regex-js=/(,|^)[ \t]*([A-Za-z_$][A-Za-z0-9_$]+)[ \t]*:[ \t]*function[ \t]*\(/JS┃fn █ \2/,function/
+--regex-js=/(,|^)[ \t]*([A-Za-z_$][A-Za-z0-9_$]+)[ \t]*:[ \t]*\[/JS┃arr █ \2/,array/
+--regex-js=/(,|^)[ \t]*([A-Za-z_$][A-Za-z0-9_$]+)[ \t]*:[ \t]*[^"]'[^']*/JS┃str █ \2/,string/
+--regex-js=/(,|^)[ \t]*([A-Za-z_$][A-Za-z0-9_$]+)[ \t]*:[ \t]*(true|false)/JS┃bool █ \2/,boolean/
+--regex-js=/(,|^)[ \t]*([A-Za-z_$][A-Za-z0-9_$]+)[ \t]*:[ \t]*[0-9]+/JS┃num █ \2/,number/
+--regex-js=/(,|^)[ \t]*([A-Za-z_$][A-Za-z0-9_$]+)[ \t]*:[ \t]*[^=]+([,;]|$)/JS┃var █ \2/,variable/
