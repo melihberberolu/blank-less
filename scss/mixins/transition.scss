@@ -4,6 +4,9 @@
 
 @mixin transition($value) {
   @include prefix(transition, $value);
+  @include browser(Mobile) {
+    @include prefix(transition, none);
+  };
 }
 
 @mixin transition-delay($delay: 100ms) {

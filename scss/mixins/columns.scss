@@ -1,25 +1,15 @@
 @mixin columns($args) {
-    -webkit-columns: $args;
-    -moz-columns: $args;
-    columns: $args;
+    @include prefix(columns, $args)
 }
 @mixin column-count($count) {
-    -webkit-column-count: $count;
-    -moz-column-count: $count;
-    column-count: $count;
+    @include prefix(column-count, $count)
 }
 @mixin column-gap($gap) {
-    -webkit-column-gap: $gap;
-    -moz-column-gap: $gap;
-    column-gap: $gap;
+    @include prefix(column-gap, $gap)
 }
 @mixin column-width($width) {
-    -webkit-column-width: $width;
-    -moz-column-width: $width;
-    column-width: $width;
+    @include prefix(column-width, $width)
 }
 @mixin column-rule($args) {
-    -webkit-column-rule: $args;
-    -moz-column-rule: $args;
-    column-rule: $args;
+    @include prefix(column-rule, $args)
 }

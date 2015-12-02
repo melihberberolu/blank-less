@@ -10,7 +10,7 @@
 
 
 .screen-max(@max-width, @content) {
-  @media screen and (max-width: (@max-width - 1)) {
+  @media screen and (max-width: (@max-width - 0.1)) {
     @content();
   }
 }
@@ -22,13 +22,13 @@
 }
 
 .screen-height(@min-height, @max-height, @content) {
-  @media screen and (min-height: @min-height) and (max-height: (@max-height - 1)) {
+  @media screen and (min-height: @min-height) and (max-height: (@max-height - 0.1)) {
     @content();
   }
 }
 
 .screen-max-height(@max-height, @content) {
-  @media screen and (max-height: (@max-height - 1)) {
+  @media screen and (max-height: (@max-height - 0.1)) {
     @content();
   }
 }

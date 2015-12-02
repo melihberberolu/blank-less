@@ -1,8 +1,27 @@
 $max-font-size: 50;
 $min-font-size: 5;
 
-@for $i from $min-font-size through $max-font-size {
-  .fz-#{$i} {
-    font-size: $i + px;
+@mixin font-loop-function($name) {
+  @for $i from $min-font-size through $max-font-size {
+    .#{$name}-fz-#{$i} {
+      font-size: $i + px;
+    }
   }
 }
+
+
+@each $breakpoint-name, $breakpoint-value in $breakpoints {
+  // if xs value = 0, set it global without media queries
+  @if($breakpoint-value == 0) {
+    @include font-loop-function($breakpoint-name);
+  }
+  // breakpoint values that not equal to 0
+  @else {
+    @media screen and (min-width: $breakpoint-value) {
+      @include font-loop-function($breakpoint-name);
+    }
+  }
+}
+
+
+

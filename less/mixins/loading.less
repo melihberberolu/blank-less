@@ -22,7 +22,7 @@
 //////////////
 // loading  //
 //////////////
-.loading(@width: 36px, @height: 36px, @color:red, @duration: 0.7s, @bg-color:rgba(0,0,0,.1), @border: 3px) {
+.loading(@width: 36px, @height: 36px, @color:red, @duration: 0.7s, @bg-color:rgba(0,0,0,.1), @border: 3px, @index: 1000) {
   &:after {
     content: "";
     margin: 0;
@@ -42,7 +42,7 @@
     bottom: 0;
     right: 0;
     margin: auto;
-    z-index: 1000;
+    z-index: @index;
   }
 }
 
@@ -53,7 +53,7 @@
 /////////
 // dim //
 /////////
-.dim(@color: rgba(255,255,255,0.6), @z-index: 9999) {
+.dim(@color: rgba(255,255,255,0.6), @index: 9999) {
   position: relative;
   &:before {
     content: "";
@@ -64,6 +64,6 @@
     top: 0;
     left: 0;
     background-color: @color;
-    z-index: @z-index;
+    z-index: @index;
   }
 }

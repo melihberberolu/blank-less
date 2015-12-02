@@ -1,4 +1,4 @@
-.grid-row(@column: 24; @gutter: 20px ) {
+.grid-row(@gutter: 20px) {
   .flex-display();
   .flex-direction(row);
   margin-left: @gutter / -2;
@@ -8,8 +8,8 @@
 
 
 
-.grid-col(@col, @column, @gutter) {
+.grid-col(@col, @columns, @gutter) {
   padding-left: @gutter / 2;
   padding-right: @gutter / 2;
-  width: percentage(@col / @column);
+  width: percentage(@col / @columns);
 }

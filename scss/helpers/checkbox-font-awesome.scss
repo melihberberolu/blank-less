@@ -10,7 +10,7 @@ $checkbox-is-square: true;
   input {
     display: none;
     &:not(:checked) + label:after {
-      border-color: rgba($checkbox-color, 70%);
+      border-color: rgba($checkbox-color, 70);
     }
     &:not(:checked) + label:hover:after {
       border-color: $checkbox-color;
@@ -45,7 +45,7 @@ $checkbox-is-square: true;
   label {
     @include prefix(user-select, none);
     position: relative;
-    padding-left: $checkbox-width * 1.2;
+    padding-left: $checkbox-width * 1.4;
     &:before,
     &:after {
       content: "";
@@ -56,7 +56,7 @@ $checkbox-is-square: true;
       left: 0;
     }
     &:after {
-      border: $checkbox-border-width solid rgba($checkbox-color, 80%);
+      border: $checkbox-border-width solid rgba($checkbox-color, 80);
       @if $checkbox-is-square == false {
         border-radius: 100%;
       }

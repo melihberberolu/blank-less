@@ -23,7 +23,7 @@
 /////////////
 // loading //
 /////////////
-@mixin loading($width: 36px, $height: 36px, $color:red, $duration: 0.7s, $bg-color:rgba(0,0,0,.1), $border: 3px) {
+@mixin loading($width: 36px, $height: 36px, $color:red, $duration: 0.7s, $bg-color:rgba(0,0,0,.1), $border: 3px, $index: 1000) {
   &:after {
     content: "";
     margin: 0;
@@ -43,6 +43,7 @@
     bottom: 0;
     right: 0;
     margin: auto;
+    z-index: $index;
   }
 }
 

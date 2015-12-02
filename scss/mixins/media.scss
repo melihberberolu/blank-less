@@ -1,5 +1,5 @@
 @mixin screen($min-width, $max-width) {
-  @media screen and (min-width: $min-width) and (max-width: ($max-width - 1)) {
+  @media screen and (min-width: $min-width) and (max-width: ($max-width - 0.1)) {
     @content;
   }
 }
@@ -10,7 +10,7 @@
 
 
 @mixin screen-max($max-width) {
-  @media screen and (max-width: ($max-width - 1)) {
+  @media screen and (max-width: ($max-width - 0.1)) {
     @content;
   }
 }
@@ -22,13 +22,13 @@
 }
 
 @mixin screen-height($min-height, $max-height) {
-  @media screen and (min-height: $min-height) and (max-height: ($max-height - 1)) {
+  @media screen and (min-height: $min-height) and (max-height: ($max-height - 0.1)) {
     @content;
   }
 }
 
 @mixin screen-max-height($max-height) {
-  @media screen and (max-height: ($max-height - 1)) {
+  @media screen and (max-height: ($max-height - 0.1)) {
     @content;
   }
 }
@@ -56,58 +56,7 @@
   }
 }
 
-// --- hdtv --------------------------------------------------------------------
 
-@mixin hdtv($standard: '1080') {
-  $device-min-width: false;
-  $device-min-height: false;
-
-  $standards: ('720p', 1280px, 720px)
-              ('1080', 1920px, 1080px)
-              ('2K', 2048px, 1080px)
-              ('4K', 4096px, 2160px);
-
-  @each $s in $standards {
-    @if $standard == nth($s, 1) {
-      $device-min-width: nth($s, 2);
-      $device-min-height: nth($s, 3);
-    }
-  }
-
-  @media only screen
-  and (min-device-width: $device-min-width)
-  and (min-device-height: $device-min-height)
-  and (min-width: $device-min-width)
-  and (min-height: $device-min-height) {
-    @content;
-  }
-}
-
-// --- iphone-3 ----------------------------------------------------------------
-
-@mixin iphone3($orientation: all) {
-  $device-min-width: 320px;
-  $device-max-width: 480px;
-  $device-pixel-ratio: 1;
-
-  @if $orientation == all {
-    @media only screen
-    and (min-device-width: $device-min-width)
-    and (max-device-width: $device-max-width)
-    and (-webkit-device-pixel-ratio: $device-pixel-ratio) {
-      @content;
-    }
-  }
-  @else {
-    @media only screen
-    and (min-device-width: $device-min-width)
-    and (max-device-width: $device-max-width)
-    and (-webkit-device-pixel-ratio: $device-pixel-ratio)
-    and (orientation:#{$orientation}) {
-      @content;
-    }
-  }
-}
 
 // --- iphone4 -----------------------------------------------------------------
 
