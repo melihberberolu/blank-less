@@ -409,6 +409,34 @@ module.exports = function(grunt) {
 
 
 
+    /////////////////
+    // autoprefixr //
+    /////////////////
+    /*
+    npm install grunt-autoprefixer --save-dev
+    grunt.loadNpmTasks('grunt-autoprefixer');
+     */
+    autoprefixer: {
+      options: {
+        browsers: [
+          'last 5 versions',
+          'ie 11',
+          'ie 10',
+          'safari 6'
+        ]
+      },
+      stylecss: {
+        src: "<%= config.template %>css/style.css",
+        dest: '<%= config.template %>css/style.css'
+      },
+      bootstrap: {
+        src: "<%= config.template %>css/bootstrap.css",
+        dest: '<%= config.template %>css/bootstrap.css'
+      },
+    },
+
+
+
 
     /*
       npm install grunt-contrib-requirejs --save-dev
@@ -501,6 +529,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-sass-import');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-contrib-handlebars');
   grunt.loadNpmTasks('grunt-shell');
