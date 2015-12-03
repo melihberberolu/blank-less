@@ -19,6 +19,10 @@
     // proper border colors.
     position: relative;
     z-index: 2;
+    // Bring the "active" form control to the front
+    @include hover-focus-active {
+      z-index: 3;
+    }
     @if $enable-flex {
       flex: 1;
     } @else {
@@ -97,7 +101,7 @@
     @include border-radius($border-radius-sm);
   }
   &.form-control-lg {
-    padding: $input-padding-x-lg $input-padding-x-lg;
+    padding: $input-padding-y-lg $input-padding-x-lg;
     font-size: $font-size-lg;
     @include border-radius($border-radius-lg);
   }
@@ -160,7 +164,7 @@
     }
     // Bring the "active" button to the front
     @include hover-focus-active {
-      z-index: 2;
+      z-index: 3;
     }
   }
 
@@ -176,6 +180,10 @@
     > .btn-group {
       z-index: 2;
       margin-left: -1px;
+      // Because specificity
+      @include hover-focus-active {
+        z-index: 3;
+      }
     }
   }
 }
