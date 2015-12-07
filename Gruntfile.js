@@ -162,7 +162,7 @@ module.exports = function(grunt) {
       },
       sassBootstrap: {
         files: ['<%= config.template %>scss-bootstrap/**/*.scss'],
-        tasks: ['sass:bootstrap'],
+        tasks: ['sass:bootstrap', 'autoprefixer:bootstrap'],
         options: {
           spawn: false,
           // livereload: 35729
