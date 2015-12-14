@@ -1,5 +1,10 @@
 @mixin flex-styles($prefix) {
   // flex
+  .#{$prefix}-flex-disable {
+    display: block;
+  }
+
+
   .#{$prefix}-flex-display {
     @include flex-display();
   }
