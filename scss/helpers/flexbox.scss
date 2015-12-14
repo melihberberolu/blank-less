@@ -8,8 +8,8 @@
   .#{$prefix}-flex-display {
     @include flex-display();
   }
-  .#{$prefix}-flex-display-inline {
-    @include flex-display-inline();
+  .#{$prefix}-flex-inline {
+    @include flex-inline();
   }
 
   // direction
