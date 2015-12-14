@@ -127,6 +127,24 @@
   }
 
 
+  // order
+  .#{$prefix}-flex-order-1 {
+    @include flex-order(1);
+  }
+  .#{$prefix}-flex-order-2 {
+    @include flex-order(2);
+  }
+  .#{$prefix}-flex-order-3 {
+    @include flex-order(3);
+  }
+  .#{$prefix}-flex-order-4 {
+    @include flex-order(4);
+  }
+  .#{$prefix}-flex-order-5 {
+    @include flex-order(5);
+  }
+
+
   .#{$prefix}-flex-grow {
     @include flex(1 1 auto);
   }
