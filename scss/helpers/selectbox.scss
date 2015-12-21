@@ -8,6 +8,10 @@ select:not([multiple]) {
   // background-image: url("../img/ui/select/12.svg");
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgNjMuNCAzMDcuMSAxODAuMyIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDYzLjQgMzA3LjEgMTgwLjMiPjxwYXRoIGZpbGw9IiM2MjYyNjIiIGQ9Ik0zMDIuNCA4MC44bC0xMS4xLTExLjFjLTYuMS02LjEtMTYuMS02LjEtMjIuMiAwbC0xMTUuNSAxMTQtMTE1LjctMTE1LjdjLTYuMS02LjEtMTYuMS02LjEtMjIuMiAwbC0xMS4xIDExLjFjLTYuMSA2LjEtNi4xIDE2LjEgMCAyMi4ybDEzNy44IDEzNy44YzYuMSA2LjEgMTYuMSA2LjEgMjIuMiAwbDEzNy44LTEzNi4xYzYuMi02LjEgNi4yLTE2LjEgMC0yMi4yeiIvPjwvc3ZnPg==");
   padding-right: 36px;
+  @include browser(MSIE) {
+    background-image: none;
+    padding-right: 10px;
+  };
   option {
     padding: 2px 10px;
   }

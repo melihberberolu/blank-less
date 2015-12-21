@@ -8,6 +8,10 @@ select:not([multiple]) {
   background-image: data-uri("../../img/ui/select/12.svg");
   padding-right: 32px;
   padding-left: 10px;
+  .browser(MSIE, {
+    background-image: none;
+    padding-right: 10px;
+  });
   option {
     padding: 2px 10px;
   }
