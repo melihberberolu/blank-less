@@ -70,9 +70,20 @@
   <!-- fonts -->
 
   <!-- css -->
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script type="text/javascript">
+    (function(a){a.loadCSS=function(b,h,c){var i=a.document; var j=i.createElement("link");var d;if(h){d=h;}else{var g=(i.body||i.getElementsByTagName("head")[0]).childNodes;d=g[g.length-1];}var e=i.styleSheets;j.rel="stylesheet"; j.href=b;j.media="only x";d.parentNode.insertBefore(j,(h?d:d.nextSibling));var f=function(l){var k=j.href;var m=e.length;while(m--){if(e[m].href===k){return l(); }}setTimeout(function(){f(l);});};j.onloadcssdefined=f;f(function(){j.media=c||"all";});return j;};if(typeof module!=="undefined"){module.exports=a.loadCSS; }}(this));
+      loadCSS("bower/jquery-ui-bootstrap/jquery.ui.theme.css");
+      loadCSS("css/font-awesome.css");
+      loadCSS("css/bootstrap.css");
+      loadCSS("css/style.css");
+      loadCSS("bower/jQuery-ui-Slider-Pips/dist/jquery-ui-slider-pips.css");
+  </script>
+
+  <!-- injector:css -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- endinjector -->
 
   <!-- require.js -->
   <!--<script type="text/javascript" data-main="js/config" src="js/lib/require.min.js"></script>-->

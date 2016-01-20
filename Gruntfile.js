@@ -440,6 +440,65 @@ module.exports = function(grunt) {
 
 
     /*
+    npm install grunt-angular-templates --save-dev
+    grunt.loadNpmTasks('grunt-angular-templates');
+    */
+    ngtemplates: {
+      mrzApp: {
+        src: '<%= config.template %>views/**/*.html',
+        dest: '<%= config.template %>views/templates.js',
+        options: {
+          url: function(url) {
+            return url.replace('.html', '').replace(/\//gi, ".");
+          },
+          htmlmin: {
+            collapseBooleanAttributes:      true,
+            collapseWhitespace:             true,
+            removeAttributeQuotes:          false,
+            removeComments:                 true,
+            removeEmptyAttributes:          false,
+            removeRedundantAttributes:      true,
+            removeScriptTypeAttributes:     false,
+            removeStyleLinkTypeAttributes:  false
+          }
+        }
+      }
+    },
+
+
+
+
+
+    /*
+    npm install grunt-injector --save-dev
+    grunt.loadNpmTasks('grunt-injector');
+     */
+    injector: {
+      options: {
+        addRootSlash: false,
+        bowerPrefix: "bow"
+      },
+      js: {
+        files: {
+          '<%= config.template %>index.html': [
+            '<%= config.template %>js/app/**/*.js'
+          ],
+        }
+      },
+      css: {
+        files: {
+          '<%= config.template %>index.html': [
+            '<%= config.template %>css/*.css'
+          ],
+        }
+      }
+    },
+
+
+
+
+
+    /*
       npm install grunt-contrib-requirejs --save-dev
       grunt.loadNpmTasks('grunt-contrib-requirejs');
     */
@@ -531,6 +590,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass-import');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-angular-templates');
+  grunt.loadNpmTasks('grunt-injector');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-contrib-handlebars');
   grunt.loadNpmTasks('grunt-shell');

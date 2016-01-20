@@ -22,13 +22,14 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "latest",
+    "jquery": "1.5.0",
     "modernizer": "latest",
     "html5shiv": "latest",
     "webfontloader": "latest",
     "bootstrap": "latest"
   },
   "otherDependencies": {
+    "jquery": "latest",
     "fontawesome": "latest",
     "bootstrap": "latest",
     "magnific-popup": "latest",
@@ -58,7 +59,6 @@
     "requirejs-handlebars": "latest"
   },
   "AngularDependencies": {
-    "angular-bootstrap": "latest",
     "angular": "~1.4.7",
     "angular-route": "~1.4.7",
     "angular-animate": "~1.4.7",
@@ -66,7 +66,9 @@
     "angular-loader": "~1.4.7",
     "angular-resource": "~1.4.7",
     "angular-messages": "~1.4.7",
-    "angular-sanitize": "~1.4.7"
+    "angular-sanitize": "~1.4.7",
+    "angular-ui-bootstrap": "latest",
+    "angular-ui-router": "latest",
   },
   "devDependencies": {}
 }
