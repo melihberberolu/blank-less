@@ -52,42 +52,7 @@ module.exports = function(grunt) {
 
 
 
-    /////////////
-    // js hint //
-    /////////////
-    /*
-      npm install grunt-contrib-jshint --save-dev
-      grunt.loadNpmTasks('grunt-contrib-jshint');
-    */
-    jshint: {
-      options: {
-        curly: true,
-        eqeqeq: true,
-        eqnull: true,
-        browser: true,
-        globals: {
-          jQuery: true
-        },
-      },
-      gruntjs: {
-        options: {
-          jshintrc: '<%= config.template %>js/.jshintrc'
-        },
-        src: ['Gruntfile.js']
-      },
-      mainjs: {
-        options: {
-          jshintrc: '<%= config.template %>js/.jshintrc'
-        },
-        src: ['<%= config.template %>js/main.js']
-      },
-      alljs: {
-        options: {
-          jshintrc: '<%= config.template %>js/.jshintrc'
-        },
-        src: ['<%= config.template %>js/*.js']
-      }
-    },
+
 
 
 
@@ -121,21 +86,21 @@ module.exports = function(grunt) {
       grunt.loadNpmTasks('grunt-contrib-watch');
     */
     watch: {
-      /*js: {
-        files: ['<%= config.template %>js/*.js'],
-        tasks: ['concat:js'],
-        options: {
-          spawn: false,
-          // livereload: 35729
-        },
-      },*/
+      // js: {
+      //   files: ['<%= config.template %>js/*.js'],
+      //   tasks: ['concat:js'],
+      //   options: {
+      //     spawn: false,
+      //     // livereload: 35729
+      //   },
+      // },
       less: {
         files: ['<%= config.template %>less/**/*.less'],
         tasks: ['less_imports', 'less:stylecss'],
         options: {
           spawn: true
           // livereload: 35729
-        },
+        }
       },
       sass: {
         files: ['<%= config.template %>scss/**/*.scss'],
@@ -143,30 +108,30 @@ module.exports = function(grunt) {
         options: {
           spawn: true
           // livereload: 35729
-        },
+        }
       },
       css: {
         files: ['<%= config.template %>css/**/*.css'],
         options: {
           spawn: false,
           livereload: 35729
-        },
+        }
       },
       lessBootstrap: {
         files: ['<%= config.template %>less-bootstrap/**/*.less'],
         tasks: ['less:bootstrap'],
         options: {
-          spawn: false,
+          spawn: false
           // livereload: 35729
-        },
+        }
       },
       sassBootstrap: {
         files: ['<%= config.template %>scss-bootstrap/**/*.scss'],
         tasks: ['sass:bootstrap', 'autoprefixer:bootstrap'],
         options: {
-          spawn: false,
+          spawn: false
           // livereload: 35729
-        },
+        }
       },
       livereload: {
         files: [
@@ -194,12 +159,12 @@ module.exports = function(grunt) {
           '<%= config.template %>*/*.gif',
           '<%= config.template %>*/*.svg',
           '<%= config.template %>fonts/*.eot',
-          '<%= config.template %>fonts/*.woff',
+          '<%= config.template %>fonts/*.woff'
         ],
         options: {
           spawn: false,
           livereload: 35729
-        },
+        }
       }
     },
 
@@ -218,7 +183,7 @@ module.exports = function(grunt) {
           compress: false,
           cleancss: false,
           optimization: false,
-          relativeUrls: true,
+          relativeUrls: true
           // dumpLineNumbers: "comments", // comments, mediaquery, all.
           // sourceMap: true
           // modifyVars: {
@@ -236,7 +201,7 @@ module.exports = function(grunt) {
           compress: false,
           cleancss: false,
           optimization: false,
-          relativeUrls: true,
+          relativeUrls: true
           // dumpLineNumbers: "comments", // comments, mediaquery, all.
           // sourceMap: true
           // modifyVars: {
@@ -254,7 +219,7 @@ module.exports = function(grunt) {
           compress: false,
           cleancss: false,
           optimization: false,
-          relativeUrls: true,
+          relativeUrls: true
           // dumpLineNumbers: "all", // comments, mediaquery, all.
           // sourceMap: true
           // modifyVars: {
@@ -265,19 +230,19 @@ module.exports = function(grunt) {
         files: {
           "<%= config.template %>css/font-awesome.css": "<%= config.template %>less-fa/font-awesome.less"
         }
-      },
-/*      custom: {
-        options: {
-          paths: ["less"],
-          compress: false,
-          cleancss: false,
-          optimization: false,
-          dumpLineNumbers: "comments" // comments, mediaquery, all.
-        },
-        files: {
-          "<%= config.template %>css/res.css": "<%= config.template %>less/res.less"
-        }
-      },*/
+      }
+      // custom: {
+      //   options: {
+      //     paths: ["less"],
+      //     compress: false,
+      //     cleancss: false,
+      //     optimization: false,
+      //     dumpLineNumbers: "comments" // comments, mediaquery, all.
+      //   },
+      //   files: {
+      //     "<%= config.template %>css/res.css": "<%= config.template %>less/res.less"
+      //   }
+      // }
     },
 
 
@@ -321,7 +286,7 @@ module.exports = function(grunt) {
           loadPath: [
             '<%= config.template %>scss/plugins',
             '<%= config.template %>scss/elements',
-            '<%= config.template %>scss/pages',
+            '<%= config.template %>scss/pages'
           ],
           style: 'expanded' // nested, compact, compressed, expanded.
         },
@@ -433,37 +398,10 @@ module.exports = function(grunt) {
       bootstrap: {
         src: "<%= config.template %>css/bootstrap.css",
         dest: '<%= config.template %>css/bootstrap.css'
-      },
-    },
-
-
-
-
-    /*
-    npm install grunt-angular-templates --save-dev
-    grunt.loadNpmTasks('grunt-angular-templates');
-    */
-    ngtemplates: {
-      mrzApp: {
-        src: '<%= config.template %>views/**/*.html',
-        dest: '<%= config.template %>views/templates.js',
-        options: {
-          url: function(url) {
-            return url.replace('.html', '').replace(/\//gi, ".");
-          },
-          htmlmin: {
-            collapseBooleanAttributes:      true,
-            collapseWhitespace:             true,
-            removeAttributeQuotes:          false,
-            removeComments:                 true,
-            removeEmptyAttributes:          false,
-            removeRedundantAttributes:      true,
-            removeScriptTypeAttributes:     false,
-            removeStyleLinkTypeAttributes:  false
-          }
-        }
       }
     },
+
+
 
 
 
@@ -482,14 +420,14 @@ module.exports = function(grunt) {
         files: {
           '<%= config.template %>index.html': [
             '<%= config.template %>js/app/**/*.js'
-          ],
+          ]
         }
       },
       css: {
         files: {
           '<%= config.template %>index.html': [
             '<%= config.template %>css/*.css'
-          ],
+          ]
         }
       }
     },
@@ -498,42 +436,6 @@ module.exports = function(grunt) {
 
 
 
-    /*
-      npm install grunt-contrib-requirejs --save-dev
-      grunt.loadNpmTasks('grunt-contrib-requirejs');
-    */
-    requirejs: {
-      compile: {
-        options: {
-          name: "app",
-          baseUrl: "<%= config.template %>js",
-          mainConfigFile: "js/config.js",
-          out: "js/require-master.js",
-          include: "lib/require.min.js",
-          preserveLicenseComments: false
-        }
-      }
-    },
-
-
-
-    /*
-      grunt.loadNpmTasks('grunt-contrib-handlebars');
-      npm install grunt-contrib-handlebars --save-dev
-    */
-    handlebars: {
-      all: {
-        files: {
-          "<%= config.template %>js/templates.js": ["<%= config.template %>js/views/**/*.hbs"]
-        }
-      },
-      options: {
-        namespace: 'Templates',
-        processName: function(filePath) {
-          return filePath.replace(/^js\/views\//, '').replace(/\.hbs$/, '');
-        }
-      }
-    },
 
 
 
@@ -576,12 +478,132 @@ module.exports = function(grunt) {
       }
     }
 
+
+
+
+
+
+
+
+    /*
+    npm install grunt-angular-templates --save-dev
+    grunt.loadNpmTasks('grunt-angular-templates');
+    */
+    // ngtemplates: {
+    //   appName: {
+    //     src: '<%= config.template %>views/**/*.html',
+    //     dest: '<%= config.template %>views/templates.js',
+    //     options: {
+    //       url: function(url) {
+    //         return url.replace('.html', '').replace(/\//gi, ".");
+    //       },
+    //       htmlmin: {
+    //         collapseBooleanAttributes:      true,
+    //         collapseWhitespace:             true,
+    //         removeAttributeQuotes:          false,
+    //         removeComments:                 true,
+    //         removeEmptyAttributes:          false,
+    //         removeRedundantAttributes:      true,
+    //         removeScriptTypeAttributes:     false,
+    //         removeStyleLinkTypeAttributes:  false
+    //       }
+    //     }
+    //   }
+    // },
+
+
+
+
+
+
+    /*
+      npm install grunt-contrib-requirejs --save-dev
+      grunt.loadNpmTasks('grunt-contrib-requirejs');
+    */
+    // requirejs: {
+    //   compile: {
+    //     options: {
+    //       name: "app",
+    //       baseUrl: "<%= config.template %>js",
+    //       mainConfigFile: "js/config.js",
+    //       out: "js/require-master.js",
+    //       include: "lib/require.min.js",
+    //       preserveLicenseComments: false
+    //     }
+    //   }
+    // },
+
+
+
+    /*
+      grunt.loadNpmTasks('grunt-contrib-handlebars');
+      npm install grunt-contrib-handlebars --save-dev
+    */
+    // handlebars: {
+    //   all: {
+    //     files: {
+    //       "<%= config.template %>js/templates.js": ["<%= config.template %>js/views/**/*.hbs"]
+    //     }
+    //   },
+    //   options: {
+    //     namespace: 'Templates',
+    //     processName: function(filePath) {
+    //       return filePath.replace(/^js\/views\//, '').replace(/\.hbs$/, '');
+    //     }
+    //   }
+    // },
+
+
+
+
+
+
+    /////////////
+    // js hint //
+    /////////////
+    /*
+      npm install grunt-contrib-jshint --save-dev
+      grunt.loadNpmTasks('grunt-contrib-jshint');
+    */
+    // jshint: {
+    //   options: {
+    //     curly: true,
+    //     eqeqeq: true,
+    //     eqnull: true,
+    //     browser: true,
+    //     globals: {
+    //       jQuery: true
+    //     }
+    //   },
+    //   gruntjs: {
+    //     options: {
+    //       jshintrc: '<%= config.template %>js/.jshintrc'
+    //     },
+    //     src: ['Gruntfile.js']
+    //   },
+    //   mainjs: {
+    //     options: {
+    //       jshintrc: '<%= config.template %>js/.jshintrc'
+    //     },
+    //     src: ['<%= config.template %>js/main.js']
+    //   },
+    //   alljs: {
+    //     options: {
+    //       jshintrc: '<%= config.template %>js/.jshintrc'
+    //     },
+    //     src: ['<%= config.template %>js/*.js']
+    //   }
+    // },
+
+
+
+
   });
 
 
   // 3. Where we tell Grunt we plan to use this plug-in.
   grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
+  // grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
@@ -590,10 +612,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass-import');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-autoprefixer');
-  grunt.loadNpmTasks('grunt-angular-templates');
+  // grunt.loadNpmTasks('grunt-angular-templates');
   grunt.loadNpmTasks('grunt-injector');
-  grunt.loadNpmTasks('grunt-contrib-requirejs');
-  grunt.loadNpmTasks('grunt-contrib-handlebars');
+  // grunt.loadNpmTasks('grunt-contrib-requirejs');
+  // grunt.loadNpmTasks('grunt-contrib-handlebars');
   grunt.loadNpmTasks('grunt-shell');
 
   grunt.registerTask('default', ['less_import', 'less', 'concat', 'uglify']);
