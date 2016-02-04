@@ -35,6 +35,7 @@
     "magnific-popup": "latest",
     "select2": "latest",
     "moment": "latest",
+    "fecha": "latest",
     "jquery-ui": "latest",
     "handlebars": "latest",
     "iCheck": "latest",
@@ -50,8 +51,8 @@
     "lodash": "latest",
     "taffy": "*",
     "scriptjs": "latest",
-    "underscore": "latest"
-
+    "underscore": "latest",
+    "es6-promise": "latest"
   },
   "requirejsDependencies": {
     "requirejs": "latest",
@@ -59,14 +60,15 @@
     "requirejs-handlebars": "latest"
   },
   "AngularDependencies": {
-    "angular": "~1.4.7",
-    "angular-route": "~1.4.7",
-    "angular-animate": "~1.4.7",
-    "angular-cookies": "~1.4.7",
-    "angular-loader": "~1.4.7",
-    "angular-resource": "~1.4.7",
-    "angular-messages": "~1.4.7",
-    "angular-sanitize": "~1.4.7",
+    "angular": "~1.4.9",
+    "angular-route": "~1.4.9",
+    "angular-animate": "~1.4.9",
+    "angular-cookies": "~1.4.9",
+    "angular-loader": "~1.4.9",
+    "angular-resource": "~1.4.9",
+    "angular-messages": "~1.4.9",
+    "angular-sanitize": "~1.4.9",
+    "angular-local-storage": "latest",
     "angular-ui-bootstrap": "latest",
     "angular-ui-router": "latest",
   },
