@@ -53,7 +53,7 @@
   background-clip: padding-box;
   border: $dropdown-border-width solid $dropdown-border-color;
   @include border-radius($border-radius);
-  @include box-shadow(0 6px 12px rgba(0,0,0,.175));
+  @include box-shadow($dropdown-box-shadow);
 }
 
 // Dividers (basically an `<hr>`) within the dropdown
@@ -70,7 +70,6 @@
   padding: 3px 20px;
   clear: both;
   font-weight: normal;
-  line-height: $line-height;
   color: $dropdown-link-color;
   text-align: inherit; // For `<button>`s
   white-space: nowrap; // prevent links from randomly breaking onto new lines
@@ -147,9 +146,8 @@
 // Dropdown section headers
 .dropdown-header {
   display: block;
-  padding: 3px 20px;
+  padding: 5px 20px;
   font-size: $font-size-sm;
-  line-height: $line-height;
   color: $dropdown-header-color;
   white-space: nowrap; // as with > li > a
 }
@@ -161,7 +159,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: ($zindex-dropdown - 10);
+  z-index: $zindex-dropdown-backdrop;
 }
 
 // Right aligned dropdowns
